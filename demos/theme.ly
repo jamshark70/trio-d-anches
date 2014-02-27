@@ -1,7 +1,13 @@
 \version "2.18.0"
 \include "english.ly"
 
-\markup { Score in C }
+\header {
+  title = "Theme and Variations"
+  subtitle = "(work in progress)"
+  composer = "H. James Harkins"
+  copyright = "(c) 2014 H. James Harkins. Not licensed for performance yet."
+  poet = "Score in C"
+}
 
 global = {
   \tempo Tranquillo 4. = 63
@@ -25,12 +31,12 @@ global = {
       \relative c' {
         e4--\p e8-- e4-- e8-- e4-- e8 ~
         e2. e4-- e8 ~
-        e4. e4-- e8 ~ e4. ~
-        e4. e4--\< e8-- e4-- e8 ~
+        e4. d4-- d8 ~ d4. ~
+        d4. e4--\< e8-- e4-- e8 ~
         e2.\mp\> ~ e4. ~
         e2. r4.\!
-        e4--\p e8-- e4-- e8-- e4-- e8 ~
-        e4. ~ e4\< e8-- e4-- e8\> ~
+        d4--\p d8-- d4-- d8-- d4-- d8 ~
+        d4. ~ d4\< e8-- e4-- e8\> ~
         e2. ~ e4 r8\! r4.
         R2.
         e4--\p e8-- e4.-- e4\mp^\markup { \italic "espr." } ( g8 )
@@ -63,13 +69,13 @@ global = {
         cs4--\p cs8-- cs4-- cs8-- cs4-- cs8 ~
         cs2. cs4-- cs8 ~
         cs4. cs4-- cs8 ~ cs4. ~
-        cs4. cs4--\< cs4-- \breathe cs4-- (
+        cs4. cs4--\< cs4-- \breathe cs4 (
         f,!2.\mf\> g4. ~
         g2. ) r4.\!
         cs4--\p cs8-- cs4-- cs8-- cs4-- cs8 ~
         cs4. ~ cs4 cs8-- cs4-- cs8 ~
         \tupletSpan 1*6/8
-        \tuplet 4/3 { cs4 f,! ( \< d' e cs' b'2\> g,4--\! ) }
+        \tuplet 4/3 { cs4 f,!^\markup { \italic "espr." } ( \< d' e cs' b'2\> g,4--\! ) }
         R2.
         cs,4--\p cs8-- cs4-- cs8-- ~ cs4. ~
         cs4. d4-- d8--\< d4-- d8 ~
@@ -91,12 +97,12 @@ global = {
         \clef tenor
         d4--\p d8-- d4-- d8-- d4-- d8 ~
         d2. d4-- d8 ~
-        d4. d4-- d8 ~ d4. ~
-        d4. d4--\< d8-- d4-- d8 ~
+        d4. e4-- e8 ~ e4. ~
+        e4. d4--\< d8-- d4-- d8 ~
         d2.\mp\> ~ d4. ~
-        d2. r4.\>
-        d4--\p d8-- d4-- d8-- d4-- d8 ~
-        d4. ~ d4\< d8-- d4-- d8\> ~
+        d2. r4.\!
+        e4--\p e8-- e4-- e8-- e4-- e8 ~
+        e4. ~ e4\< d8-- d4-- d8\> ~
         d2. ~ d4 r8\! r4.
         R2.
         d4--\p d8-- d4-- d8-- ~ d4. ~
