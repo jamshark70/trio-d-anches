@@ -1,6 +1,14 @@
 \version "2.18.0"
 \include "english.ly"
 
+#(set-global-staff-size 16)
+
+\paper {
+  left-margin = 1.8\cm
+  line-width = 18.2\cm
+  right-margin = 1\cm
+}
+
 \header {
   title = "Theme and Variations"
   subtitle = "(work in progress)"
@@ -123,8 +131,237 @@ global = {
   }
 }
 
-%{
-convert-ly (GNU LilyPond) 2.18.0  convert-ly: Processing `'...
-Applying conversion: 2.17.0, 2.17.4, 2.17.5, 2.17.6, 2.17.11, 2.17.14,
-2.17.15, 2.17.18, 2.17.19, 2.17.20, 2.17.25, 2.17.27, 2.17.29, 2.17.97
-%}
+
+% \pageBreak
+
+globalA = {
+  \tempo "Poco più mosso" 4. = 72
+  \time 12/8
+  s1.*24
+}
+
+\markup {
+  \column {
+    \vspace #2
+    \wordwrap { \bold { A variation } }
+  }
+}
+
+sfmpMarkup = \markup { \dynamic sf \dynamic mp }
+sfmp = #(make-dynamic-script sfmpMarkup)
+
+\score {
+  \new StaffGroup <<
+    \new Staff \with {
+      instrumentName = "Oboe"
+      shortInstrumentName = "Ob."
+    } <<
+      \globalA
+      \relative c' {
+        r2. cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8
+        cs4 cs8\! r4. r2.
+        e4\mf\> e8 e4 e8 e4 e8\! r4.
+        r4. cs4\mf\> cs8 cs4 cs8 cs4 cs8
+        cs4 cs8 cs4 cs8 e4 e8 e4 e8
+        e4 e8\! r4. r2.
+        r4. cs4\mf\> cs8 cs4 cs8 cs4 cs8\!
+        r2. e4\mp\< e8 e4 e8
+        e4 e8 e4 e8 d4\mf\> d8 d4 d8
+        d4 d8 d4 cs8 cs4 cs8 cs4 cs8\!
+        R1.*2
+        r4. cs4\p\< cs8 e4 e8 e4 e8
+        e4 e8\mf r4. d4->\sfmp\> d8 d4 d8
+        d4\! r8 b''4->\sfmp\> b8 b4 b8 b4 b8
+        b4 b8\! r4. r4. e,,4\f\> e8
+        e4 e8 e4 e8 e4 e8\p e4->\mp g8 (
+        e4. ~ e4 ) g8-> ( e4. ~ e8 ) r8 r8
+        r2. g4.\mf\> ( e4. ~
+        e2.\p\< ) d2.
+        e2.\f\> ( f2. 
+        g4. ~ g4\! ) r8 r4. d4\pp d8
+        d4 d8 r4. r4. cs4 r8
+        b''2.->\sfz
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Clarinet"
+      shortInstrumentName = "Cl."
+    } <<
+      \globalA
+      \relative c' {
+        R1.
+        cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8\! r4. cs4\mf\> cs8
+        cs4 cs8 cs4 cs8\! r4. cs4\mf\> cs8
+        cs4 cs8 cs4 cs8\! r4. d4\mf\> d8
+        d4 d8 d4 d8 cs4 cs8 cs4 cs8\!
+        r4. cs4\mf\> cs8 cs4 cs8 cs4 cs8\!
+        R1.
+        cs4\p\< cs8 cs4 cs8 d4 d8 f,4->\f\> f8
+        f4 f8 f4 f8 e'4 e8 e4 e8
+        e4 e8 e4 cs8 cs4 cs8 cs4 cs8\!
+        r4. r8 r8 cs8\p cs4 cs8 cs4 cs8
+        d4 d8 cs4 cs8 e4 e8 cs4 cs8
+        r2. r4. r8 r8 f,8->\sfmp\>
+        f4 f8 f4 f8 f4 f8\! r4.
+        cs''4->\sfmp\> cs8 cs4 cs8 cs4 cs8\! r8 r8 g8->\mf\>
+        g4 g8 g4 g8 g4 g8\p cs,4\f\> cs8
+        cs4 cs8 cs4 cs8 cs4 cs8\p r4.
+        r8 r8 d8\pp d4 r8 r4. g8->\mp\< ( e4 ~
+        e4 ) r8 g8 ( e4 ~ e4\mf ) r8 r4.
+        r2. a,2.\mp\<
+        bf1.\f\> ~
+        bf4. ~ bf4\! r8 r4. cs4\pp cs8
+        cs4 cs8 r4. r4. e4 r8
+        b'2.->\sfz
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Bassoon"
+      shortInstrumentName = "Bsn."
+    } <<
+      \globalA
+      \relative c' {
+        \clef tenor
+        cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8 cs4 cs8\! r4.
+        r4. cs4\mf\> cs8 cs4 cs8 cs4 cs8\!
+        r2. cs4\mf\> cs8 cs4 cs8
+        cs4 cs8\! r4. e4\mf\> e8 e4 e8
+        e4 e8 e4 e8 d4 d8 d4 d8
+        d4 d8\! r4. r2.
+        r2. cs4\mf\> cs8 cs4 cs8
+        cs4 cs8\! r4. cs4\mp\< cs8 d4 d8
+        d4 d8 d4 d8 g,4->\f\> g8 g4 g8
+        g4 g8 g4 cs8 cs4 cs8 cs4 cs8\!
+        r4. r8 r8 cs8\p cs4 cs8 cs4 cs8
+        e4 e8 cs4 cs8 d4 d8 cs4 cs8
+        r4. cs4\p\< cs8 d4 d8 d4 d8
+        d4 d8 d4\mf d8 r4. e4->\sfmp\> e8
+        e4 e8 e4 e8 e4\! r8 r4.
+        cs4.\mf\> ( d e8\p ) r8 r8 d4\f\> d8
+        d4 d8 d4 d8 d4 d8\p r4.
+        r8 r8 cs8\pp cs4 r8 r2.
+        g'8->\mp ( e4 ~ e4 ) r8 r2.
+        cs4.\mp\< ( d e2. )
+        d1.\f\> ~
+        d4. ~ d4\! r8 r4. e4\pp e8
+        e4 e8 b'4.->\fp\> ~ b4. d,4\pp r8
+      }
+    >>
+  >>
+}
+
+
+\markup {
+  \column {
+    \vspace #2
+    \wordwrap { \bold { Another variation (not quite finished) } }
+  }
+}
+
+globalB = {
+  \tempo 4. = 72
+  \time 6/8 s2.*6
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*4
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*10
+}
+
+subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
+% subff = #(make-dynamic-script subffMarkup)
+
+\score {
+  \new StaffGroup <<
+    \new Staff \with {
+      instrumentName = "Oboe"
+      shortInstrumentName = "Ob."
+    } <<
+      \globalB
+      \relative c' {
+        r8 r8 cs8-.\mp d ( cs ) b'-> ~
+        b4 r8 cs, ( d ) cs-.
+        b'4.\< ~ b8 a4->\f\> ~
+        a4. r4.\!
+        R2.
+        r8 r8 cs,-.\mp d ( cs ) b'->\< ~
+        b4. a8\mf\> ( gs ) fss ~ ( fss4 gs8\p )
+        cs->_\subffMarkup ( cs' ) r8 e,,4 ( cs8 )
+        r8 r cs-.\mp e-- r8 r8
+        cs\< ( gs' ) cs,-. e4. ~
+        e4. cs8->\f ( cs' ) cs,\mp
+        e4 ( cs8_\markup { \italic "cresc." } ) b'4.-> a8 ( d,4 )
+        b'4.-> a8 ( cs,4 )
+        \tuplet 3/2 { b'16-> ( d, b' } d,4 ) \tuplet 3/2 { cs'16-> ( fs, cs' } fs,4 )
+        fs32->\< ( e fs e fs4 ) f!32-> ( c'! d gs ds'8 ) r8
+        cs,8->\ff ( cs' ) r8 d,,8\p ( cs ) r8
+        cs8->\mf ( cs' ) cs,-.\p d4 ( cs8 )
+        e8\< ( cs ) d ( cs ) e ( cs )
+        d4-> e8-> ~ e4 cs'8->\mf ~
+        cs4. b'4.-> ~
+        b4. cs,4.->
+        e8-> ( b'4 )
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Clarinet"
+      shortInstrumentName = "Cl."
+    } <<
+      \globalB
+      \relative c' {
+        r8 r8 cs-.\mp e ( cs ) gs'-> ~
+        gs4 r8 cs, ( e ) cs-.
+        gs'\< ( a gs ~ gs4. ~
+        gs4.\f\> ) r4.\!
+        R2.
+        r8 r8 cs, e ( cs ) gs'8\<
+        a ( gs ) b ~ b4.\mf\> r4.\!
+        cs,8->_\subffMarkup ( cs' ) cs,-.\mf\> d4 ( cs8 )
+        cs\mp ( cs' ) cs,-. d ( cs ) bs-.
+        cs\< ( b' ) cs,-. d4 ( cs8
+        d4. ) cs'8->\f ( cs' ) r8
+        d,,4\mp ( cs8_\markup { \italic "cresc." } ) d8 ( e4 ) b'4.->
+        a8 ( d,4 ) f,4.->
+        \tuplet 3/2 { c'!16-> ( e c } e4 ) g,4.->
+        e''32->\< ( a, e' a, e'4 ) g,,4.->
+        cs8->\ff ( cs' ) cs,-.\p d ( cs ) r8
+        cs'8->\mf ( cs' ) r8 e,,4\p ( cs8 )
+        d4->\mp\< e-> f,->
+        d'-> e8-> ~ e4 cs'8->\mf ~
+        cs2.
+        cs4.-> b'->
+        d,8-> ( cs4 )
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Bassoon"
+      shortInstrumentName = "Bsn."
+    } <<
+      \globalB
+      \relative c {
+        \clef bass
+        cs8->\f\> ( cs'\! ) r8 r4.
+        r8 cs,->\f\> ( cs'\! ) r4.
+        r4. cs4\mf\< d8 ~ (
+        d4\f cs8 ) d\> ( cs ) cs
+        e ( d ) cs bs4 ( cs8\p )
+        cs,8->\f ( cs' ) r8 r4.
+        R1*9/8
+        cs,,8->_\subffMarkup ( cs' ) r8 r4.
+        cs8\mp ( cs' ) r8 r4.
+        R2.
+        f,,!8-> ( f'! ) r8 r4.
+        cs,8->\mf ( cs' ) r8 f,!8->_\markup { \italic "cresc." } ( f'! ) r8 g,8 ( c'! ) r8
+        f,,!8 ( a' ) r8 d ( e4 )
+        g,4.-> \tuplet 3/2 { d'16-> ( a d } a4 )
+        g4.->\< e'32-> ( d e d e8 ) r8
+        cs,,8->\ff ( cs' ) r8 r4.
+        cs8->\mf ( cs' ) r8 r4.
+        R2.
+        f!8\mp\< ( cs ) d ( cs b bf )
+        a\mf ( b! a ) d ( a ) a
+        b4 ( a8 ) r4.
+        a,8 ( a' ) a ( b a ) d
+      }
+    >>
+  >>
+}
