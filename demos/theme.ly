@@ -285,10 +285,10 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         R2.
         r8 r8 cs,-.\mp d ( cs ) b'->\< ~
         b4. a8\mf\> ( gs ) fss ~ ( fss4 gs8\p )
-        cs->_\subffMarkup ( cs' ) r8 e,,4 ( cs8 )
+        cs->_\subffMarkup ( cs' ) r8 e,,4\mf\> ( cs8\! )
         r8 r cs-.\mp e-- r8 r8
         cs\< ( gs' ) cs,-. e4. ~
-        e4. cs8->\f ( cs' ) cs,\mp
+        e4. cs8->\f ( cs' ) cs,-.\mp
         e4 ( cs8_\markup { \italic "cresc." } ) b'4.-> a8 ( d,4 )
         b'4.-> a8 ( cs,4 )
         \tuplet 3/2 { b'16-> ( d, b' } d,4 ) \tuplet 3/2 { cs'16-> ( fs, cs' } fs,4 )
@@ -296,22 +296,27 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         cs,8->\ff ( cs' ) r8 d,,8\p ( cs ) r8
         cs8->\mf ( cs' ) cs,-.\p d4 ( cs8 )
         e8\< ( cs ) d ( cs ) e ( cs )
-        d4-> e8-> ~ e4 cs'8->\mf ~
-        cs4. b'4.-> ~
+        d4-> e8-> ~ e4 cs'8->\f ~
+        cs4.\> b'4.-> ~
         b4. cs,4.->
-        d8-> ( b'4 ) d,8-> ( cs4 )
-        c!8-> ( cs4 ) \tuplet 4/3 { gs'8-. b-. gs,-. b-. }
-        \tuplet 3/2 { fs'16-> ( c! fs } c4 ~ c8 fs ) r8
-        r8 r8 e,16 ( fs ) as ( b c8. b16
+        d8->\mf ( b'4 ) d,8->\< ( cs4 )
+        c!8-> ( cs4 ) \tuplet 4/3 { gs'8-.\f\< b-. gs,-. b-. }
+        \tuplet 3/2 { fs'16->\> ( c! fs } c4 ~ c8 fs\! ) r8
+        r8 r8 e,16\mf ( fs ) as\< ( b c8. b16
         as8 ) fs'16 ( gs fs gs ) b ( gs c,! gs' b8 )
-        f!16-. g!-. d'4-> bf,,8-> ( bf' ) f'-.
+        f!16-. g!-. d'4->\ff bf,,8-> ( bf' ) f'-.\f
         af ( f ) c-> ~ c4 r8
-        af'8-. d4-> bf,,8-> ( bf' ) r8
+        af'8-.\mf d4-> bf,,8->\sfz ( bf' ) r8
         r8 gs'4\p\< a8-.\f d4->
-        \tuplet 3/2 { e,16 ( [ f g } a8 ) ] r8 r8 e4-> ~
-        e4. ~ e8 r8 r8
-        e4. ( f
-        g4. ) r4.
+        \tuplet 3/2 { e,16->\ff ( [ f g } a8 ) ] r8 r8 e4->\sfz\> ~
+        e4. ~ e8\! r8 r8
+        e4.\mp ( f\<
+        g4. ~ g4 ) \breathe d,8->\sfp ~
+        d2. ~
+        d4 r8 \tuplet 3/2 { b'16\f ( cs e } b'8 ) d,,8->\sfp ~
+        d4. ~ \tuplet 4/3 { d8 [ r8 e-.\f\< cs-. ] }
+        e16-. cs-. e-. bf'-. c32 ( e fs a\! d8 ) d,,4->\sfp ~
+        d4 r8 d4.->\ff
       }
     >>
     \new Staff \with {
@@ -325,7 +330,7 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         gs'\< ( a gs ~ gs4. ~
         gs4.\f\> ) r4.\!
         R2.
-        r8 r8 cs, e ( cs ) gs'8\<
+        r8 r8 cs,-. e ( cs ) gs'8-.\<
         a ( gs ) b ~ b4.\mf\> r4.\!
         cs,8->_\subffMarkup ( cs' ) cs,-.\mf\> d4 ( cs8 )
         cs\mp ( cs' ) cs,-. d ( cs ) bs-.
@@ -338,22 +343,28 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         cs8->\ff ( cs' ) cs,-.\p d ( cs ) r8
         cs'8->\mf ( cs' ) r8 e,,4\p ( cs8 )
         d4->\mp\< e-> f,->
-        d'-> e8-> ~ e4 cs'8->\mf ~
-        cs2.
+        d'-> e8-> ~ e4 cs'8->\f ~
+        cs2.\>
         cs4.-> b'->
-        e,8-> ( cs4 ) e8-> ( b'4 )
-        gs8-> ( b4 ) \tuplet 4/3 { c,8-. cs-. f!-. g!-. }
-        \tuplet 3/2 { gs16-> ( b gs } b4 ~ b8 gs8 ) r8
-        r8 e,16 ( fs ) c'-. gs'-. b4 fs32 ( gs fs gs
+        e,8->\mf ( cs4 ) e8->\< ( b'4 )
+        gs8-> ( b4 ) \tuplet 4/3 { c,8-.\f\< cs-. f!-. g!-. }
+        \tuplet 3/2 { gs16->\> ( b gs } b4 ~ b8 gs8\! ) r8
+        r8 e,16\mf ( fs ) c'-. gs'-. b4\< fs32 ( gs fs gs
         b8 ) c,4 d e8
-        c8-. f4-> bf,8-> ( bf' ) f-.
-        gf ( f ) d' ~ d4 r8
-        gf,-. c,4-> bf8-> ( bf' ) r8
+        c8-. f4->\ff bf,8-> ( bf' ) f-.\f
+        gf ( f ) d'-> ~ d4 r8
+        gf,-.\mf c,4-> bf8->\sfz ( bf' ) r8
         r8 fs4\p\< cs8-.\f c4->
-        r8 r8 \tuplet 3/2 { e,,16 ( [ f g ] } a8 ) e4-> ~
-        e4. ~ e8 r8 r8
-        e4. ( f
-        g ) r4.
+        r8 r8 \tuplet 3/2 { e,,16\mp ( [ f g ] } a8 ) e4->\sfz\> ~
+        e4. ~ e8\! r8 r8
+        e4.\mp ( f\<
+        g ~ g4 ) \breathe e'8->\sfp ~
+        e2. ~
+        e4 \tupletSpan 8 \tuplet 3/2 { e,16\f\< ( [ fs g ] b [ cs e ] } b'8\! ) e,8->\sfp ~
+        \tupletSpan \default
+        e4. ~ \tuplet 4/3 { e8 [ r8 b'-.\f\< e,-. ] }
+        b'16-. e,-. b'-. c-. e32 ( fs a b\! ds8 ) e,,4->\sfp ~
+        e4 r8 e4.->\ff
       }
     >>
     \new Staff \with {
@@ -382,24 +393,30 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         cs8->\mf ( cs' ) r8 r4.
         R2.
         f!8\mp\< ( cs ) d ( cs b bf )
-        a\mf ( b! a ) d ( a ) a
-        b4 ( a8 ) r4.
-        a,8 ( a' ) a ( b a ) d ~ (
-        d a ) b ( a ) e' ( d )
-        c ( b ) a ~ ( a4 gs8 )
-        r4. a4 ( gs8 )
+        a\f ( b! a ) d\> ( a ) a
+        b4 ( a8\! ) r4.
+        a,8\mf ( a' ) a ( b a ) d ~ (
+        d\< a ) b ( a ) e' ( d )
+        c\> ( b ) a ~ ( a4 gs8\! )
+        r4. a4\mp\< ( gs8 )
         a4 ( b8 ) a4 ( gs8 )
-        a-. bf4-> bf,,8-> ( bf' ) r8
-        r8 r8 bf'-. bf,-> ( bf' ) d-.
-        ef4 ( d8 ) r8 r8 bf-.
-        bf,,16 ( c ) e-. a-. cs-. fs-. c'-. r r ef,-. f-. b?-.
-        \clef tenor \tuplet 3/2 { e16 ( [ f g } a8 ) ] r8 r8 r8 \clef bass bf,,,8->
-        bf' ( d' ) r8 bf,16 ( bf' ) d ( bf d bf )
-        \clef tenor d ( bf d bf a bf ) d ( bf a bf d e )
-        a ( f e c bf a ) r4.
+        a-. bf4->\ff bf,,8-> ( bf' ) r8
+        r8 r8 bf'-.\f bf,->\> ( bf' ) d-.
+        ef4 ( d8\mp ) r8 r8 bf-.
+        bf,,16\f\> ( c ) e-. a-. cs-.\< fs-. c'-. r r ef,-. f-. b?-.
+        \clef tenor \tuplet 3/2 { e16->\ff ( [ f g } a8 ) ] r8 r8 r8 \clef bass bf,,,8->
+        bf'\> ( d' ) r8 bf,16\mp ( bf' ) d ( bf d bf )
+        \clef tenor d ( bf d bf a bf ) d\< ( bf a bf d e )
+        a ( f e c bf a ) \clef bass f ( ef ) b-. g-. cs,8
+        cs''4.\sfp ~ cs4 r8
+        \tupletSpan 8
+        \tuplet 3/2 { cs,,16\f\< ( d e g a bf } c?8\! ) r8 r8 cs'8->\sfp ~
+        cs4. ~ cs8 r8 r8
+        r4. r8 cs4->\sfp ~
+        cs4 r8 cs4.->\ff
       }
     >>
   >>
   \layout {}
-  \midi {}
+%  \midi {}
 }
