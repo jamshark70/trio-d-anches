@@ -299,7 +299,19 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         d4-> e8-> ~ e4 cs'8->\mf ~
         cs4. b'4.-> ~
         b4. cs,4.->
-        e8-> ( b'4 )
+        d8-> ( b'4 ) d,8-> ( cs4 )
+        c!8-> ( cs4 ) \tuplet 4/3 { gs'8-. b-. gs,-. b-. }
+        \tuplet 3/2 { fs'16-> ( c! fs } c4 ~ c8 fs ) r8
+        r8 r8 e,16 ( fs ) as ( b c8. b16
+        as8 ) fs'16 ( gs fs gs ) b ( gs c,! gs' b8 )
+        f!16-. g!-. d'4-> bf,,8-> ( bf' ) f'-.
+        af ( f ) c-> ~ c4 r8
+        af'8-. d4-> bf,,8-> ( bf' ) r8
+        r8 gs'4\p\< a8-.\f d4->
+        \tuplet 3/2 { e,16 ( [ f g } a8 ) ] r8 r8 e4-> ~
+        e4. ~ e8 r8 r8
+        e4. ( f
+        g4. ) r4.
       }
     >>
     \new Staff \with {
@@ -329,7 +341,19 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         d'-> e8-> ~ e4 cs'8->\mf ~
         cs2.
         cs4.-> b'->
-        d,8-> ( cs4 )
+        e,8-> ( cs4 ) e8-> ( b'4 )
+        gs8-> ( b4 ) \tuplet 4/3 { c,8-. cs-. f!-. g!-. }
+        \tuplet 3/2 { gs16-> ( b gs } b4 ~ b8 gs8 ) r8
+        r8 e,16 ( fs ) c'-. gs'-. b4 fs32 ( gs fs gs
+        b8 ) c,4 d e8
+        c8-. f4-> bf,8-> ( bf' ) f-.
+        gf ( f ) d' ~ d4 r8
+        gf,-. c,4-> bf8-> ( bf' ) r8
+        r8 fs4\p\< cs8-.\f c4->
+        r8 r8 \tuplet 3/2 { e,,16 ( [ f g ] } a8 ) e4-> ~
+        e4. ~ e8 r8 r8
+        e4. ( f
+        g ) r4.
       }
     >>
     \new Staff \with {
@@ -360,8 +384,22 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         f!8\mp\< ( cs ) d ( cs b bf )
         a\mf ( b! a ) d ( a ) a
         b4 ( a8 ) r4.
-        a,8 ( a' ) a ( b a ) d
+        a,8 ( a' ) a ( b a ) d ~ (
+        d a ) b ( a ) e' ( d )
+        c ( b ) a ~ ( a4 gs8 )
+        r4. a4 ( gs8 )
+        a4 ( b8 ) a4 ( gs8 )
+        a-. bf4-> bf,,8-> ( bf' ) r8
+        r8 r8 bf'-. bf,-> ( bf' ) d-.
+        ef4 ( d8 ) r8 r8 bf-.
+        bf,,16 ( c ) e-. a-. cs-. fs-. c'-. r r ef,-. f-. b?-.
+        \clef tenor \tuplet 3/2 { e16 ( [ f g } a8 ) ] r8 r8 r8 \clef bass bf,,,8->
+        bf' ( d' ) r8 bf,16 ( bf' ) d ( bf d bf )
+        \clef tenor d ( bf d bf a bf ) d ( bf a bf d e )
+        a ( f e c bf a ) r4.
       }
     >>
   >>
+  \layout {}
+  \midi {}
 }
