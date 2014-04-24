@@ -324,9 +324,13 @@ clarCadenzaB = \relative c'' {
 }
 
 clarCadenzaC = \relative c'' {
-  \tuplet 5/4 { c16\< [ ( e c e c ] } e8 ) d,, f''4.. c,16 ( g''2.\>\fermata ) \bar ""
-  r2\! e4.\ppp\< \appoggiatura { bf,!16 [ ( d ] } f'4 )
-  cs,16\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\! )
+  \tuplet 5/4 { c16\< [ ( e c e c ] } e8 ) d,, f''4..
+  <<
+    { c,16 ( g''2.\fermata ) }
+    { s16 s2\> s8 s8\! }
+  >> \bar ""
+  r2 e4.\ppp\< \appoggiatura { bf,!16 [ ( d ] } f'4 )
+  cs,16\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\pppp )
   \cadenzaOff
 }
 
