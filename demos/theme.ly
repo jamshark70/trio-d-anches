@@ -261,9 +261,68 @@ sfmp = #(make-dynamic-script sfmpMarkup)
   }
 }
 
+\include "../common/cadenzaToMusic.ily"
+
+clarCadenza = \relative c {
+  \accidentalStyle Staff.modern
+  \cadenzaOn
+  r8 f\pp [ ( d' e ] ) e'' [ ( cs b ] ) \bar "" g, [ ( d' ef c' ] ) \bar ""
+  <<
+    \new Voice { \voiceOne s8 e [ ( cs s b ] ) }
+    \new Voice \relative c' { \voiceTwo bf8 ( s4 f'8 ) }
+  >> \oneVoice
+  r2\fermata \bar ""
+  d,,4 ( e!8 ) e''8-- \tuplet 5/4 { cs!16 [ ( f e d cs ] ) } \bar ""
+  g,,8 [ ( d'' ef ] ) \bar ""
+  bf,4 ( f'8 ) e'' [ ( cs! b ] ) \bar "" c,, [ ( a' ] )
+  r4 r8 \bar ""
+  <<
+    \new Voice \relative c''' {
+      \voiceOne
+      s4 e8 ( cs4 ) s4 d,8 [ ( ef ] ) s e' ( cs4 )
+    }
+    \new Voice \relative c {
+      \voiceTwo
+      f8 [ ( d' ] ) s4. \bar "" bf4-- s4 \bar "" f8-- s4.
+    }
+  >> \oneVoice
+  \tuplet 5/4 { d8 [ e bf,! e'' cs ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] } \bar ""
+  b''8 g,,4 b'' g,, b'' r2\fermata \bar ""
+  e,16 [ ( g e ) cs, ] e''8 [ ( cs! b ] ) \bar "" e,,-- g4 ( e8 )
+  \tuplet 5/4 { e''16 [ ( cs! e cs e ] ) } \bar ""
+  \tuplet 7/4 { d,,,8 [ ( e16 g b cs! g' ] ) }
+  fs32 [ ( e'16 ) fs,32 ( e'8 ) ] \bar "" f,,8
+  \tuplet 5/4 { f'16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
+  e''' [ ( cs b ] ) \bar ""
+  \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } \bar "" b,,8 [ ( cs ] )
+  \tuplet 5/4 { d'16 [ ( e b' fs e' ] ) } \bar ""
+  \tuplet 5/4 { f,16 [ ( g c af e' ] ) } \bar ""
+  \tuplet 5/4 { a,16 [ ( bf d cs e ] ) } \bar ""
+  d8..\trill [ ( cs32 ] ) d8..\trill [ ( cs32 ] ) \bar ""
+  \tuplet 3/2 { e16 [ ( cs e } d8 ~ ] d8. [ cs16 ] ) \bar ""
+  \tuplet 5/4 { a16 [ ( gs e d cs ] } \bar ""
+  \tuplet 7/4 { d16 [ cs a gs a gs e ] ) }
+  \cadenzaOff
+}
+
 nullMeter = {
   \once\override Staff.TimeSignature.stencil = #(lambda (grob)
           (grob-interpret-markup grob (markup #:fontsize 4 #:vcenter "0")))
+}
+
+clarCadenzaB = \relative c'' {
+  \cadenzaOn
+  r2 e4. bf,16 [ ( c' ] ) e'8 [ ( d, ] )
+  \tuplet 3/2 { g'16 [ ( c, a, } f'8 ] ) \bar ""
+  bf,,!8 \breathe
+  e'4 c8 [ e ] 
+}
+
+clarCadenzaC = \relative c'' {
+  \tuplet 5/4 { c16 [ ( e c e c ] } e8 ) d,, f''4.. c,16 ( g''2.\fermata ) \bar ""
+  r2\fermata e4. \appoggiatura { bf,!16 [ ( d ] } f'4 )
+  cs,16 [ ( g''8. ~ ] g4 ~ g8 e4 f8 )
+  \cadenzaOff
 }
 
 globalB = {
@@ -280,50 +339,15 @@ globalB = {
   \time 4/4 s1*8 \bar "||"
   \nullMeter \time 2/2
   \tempo "Meno mosso" 4 = 72
-  s1
+  \cadenzaToMusic \clarCadenza s1 \bar "|"
+  \time 4/4 s1
+  \time 3/4 s2.*2
+  \nullMeter \time 4/4
+  \cadenzaToMusic { \clarCadenzaB \clarCadenzaC } s1 \bar "|"
 }
 
 subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
 % subff = #(make-dynamic-script subffMarkup)
-
-clarCadenza = \relative c {
-  \accidentalStyle Staff.modern
-  r8 f\pp [ ( d' e ] ) e'' [ ( cs b ] ) g, [ ( d' ef c' ] )
-  <<
-    \new Voice { \voiceOne s8 e [ ( cs s b ] ) }
-    \new Voice \relative c' { \voiceTwo bf8 ( s4 f'8 ) }
-  >> \oneVoice
-  r2\fermata \bar ""
-  d,,4 ( e!8 ) e''8-- \tuplet 5/4 { cs!16 [ ( f e d cs ] ) }
-  g,,8 [ ( d'' ef ] ) bf,4 ( f'8 ) e'' [ ( cs! b ] ) c,, [ ( a' ] )
-  r4 r8 \bar ""
-  <<
-    \new Voice \relative c''' {
-      \voiceOne
-      s4 e8 ( cs4 ) s4 d,8 [ ( ef ] ) s e' ( cs4 )
-    }
-    \new Voice \relative c {
-      \voiceTwo
-      f8 [ ( d' ] ) s4. bf4-- s4 f8-- s4.
-    }
-  >> \oneVoice
-  \tuplet 5/4 { d8 [ e bf,! e'' cs ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] }
-  b''8 g,,4 b'' g,, b'' r2\fermata \bar ""
-  e,16 [ ( g e ) cs, ] e''8 [ ( cs! b ] ) e,,-- g4 ( e8 )
-  \tuplet 5/4 { e''16 [ ( cs! e cs e ] ) } \bar ""
-  \tuplet 7/4 { d,,,8 [ ( e16 g b cs! g' ] ) }
-  fs32 [ ( e'16 ) fs,32 ( e'8 ) ] f,,8
-  \tuplet 5/4 { f'16 [ ( fs e' fs, e' ] ) } g,,8-- \bar ""
-  e''' [ ( cs b ] )
-  \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } b,,8 [ ( cs ] ) \bar ""
-  \tuplet 5/4 { d'16 [ ( e b' fs e' ] ) }
-  \tuplet 5/4 { f,16 [ ( g c af e' ] ) }
-  \tuplet 5/4 { a,16 [ ( bf d cs e ] ) } \bar ""
-  d8..\trill [ ( cs32 ] ) d8..\trill [ ( cs32 ] )
-  \tuplet 3/2 { e16 [ ( cs e } d8 ~ ] d8. [ cs16 ] )
-  \tuplet 5/4 { a16 [ ( gs e d cs ] }
-  \tuplet 7/4 { d16 [ cs a gs a gs e ] ) }
-}
 
 \score {
   \new StaffGroup <<
@@ -381,7 +405,14 @@ clarCadenza = \relative c {
         cs4 cs2-> ~
         cs8 r8 r4 r4
         R1*7 R1\fermataMarkup
+        \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
+        r4 r8 e8\pp^\markup { \italic "non vib." } ~ e2 ~
+        e2 ~ e16 r8.
+        r4 r4 d4 ~
         \cadenzaOn
+        d1. ~ d2 s8
+        \cadenzaToMusic \clarCadenzaC r1\fermata
+        \cadenzaOff
       }
     >>
     \new Staff \with {
@@ -459,8 +490,11 @@ clarCadenza = \relative c {
         >>
         R1\fermataMarkup
         % CADENZA
-        \cadenzaOn \clarCadenza
-        \cadenzaOff \bar "||"
+        \clarCadenza
+        d16. ( e32 ) d16. ( cs32 ) d16. ( a32 ) r8 r8 d16. ( e32 ) d16. ( cs32 ) e16. ( cs32 )
+        d16. ( a32 ) e'16. ( f32 ) d16. ( cs32 ) r8 r8 d16. ( e32 )
+        R2.
+        \clarCadenzaB \clarCadenzaC
       }
     >>
     \new Staff \with {
@@ -519,7 +553,14 @@ clarCadenza = \relative c {
         d4 d2-> ~
         d8 r8 r4 r4
         R1*7 R1\fermataMarkup
+        \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
+        r4 r8 a8\pp^\markup { \italic "non vib." } ~ a2 ~
+        a2 ~ a16 r8.
+        r4 r4 a4 (
         \cadenzaOn
+        bf1. ~ bf2 ) s8
+        \cadenzaToMusic \clarCadenzaC r1\fermata
+        \cadenzaOff
       }
     >>
   >>
