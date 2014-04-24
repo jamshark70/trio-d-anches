@@ -275,15 +275,55 @@ globalB = {
   \time 9/8 s1*9/8
   \time 6/8 s2.*27 \bar "||"
   s2.*6
-  \mark \markup { \note #"8" #1 "=" \note #"8" #1 }
+  \mark \markup { \fontsize #-2 { \note #"8" #1 "=" \note #"8" #1 } }
   \time 3/4 s2.*2
   \time 4/4 s1*8 \bar "||"
   \nullMeter \time 2/2
+  \tempo "Meno mosso" 4 = 72
   s1
 }
 
 subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
 % subff = #(make-dynamic-script subffMarkup)
+
+clarCadenza = \relative c {
+  \accidentalStyle Staff.modern
+  r8 f\pp [ ( d' e ] ) e'' [ ( cs b ] ) g, [ ( d' ef c' ] )
+  <<
+    \new Voice { \voiceOne s8 e [ ( cs s b ] ) }
+    \new Voice \relative c' { \voiceTwo bf8 ( s4 f'8 ) }
+  >> \oneVoice
+  r2\fermata \bar ""
+  d,,4 ( e!8 ) e''8-- \tuplet 5/4 { cs!16 [ ( f e d cs ] ) }
+  g,,8 [ ( d'' ef ] ) bf,4 ( f'8 ) e'' [ ( cs! b ] ) c,, [ ( a' ] )
+  r4 r8 \bar ""
+  <<
+    \new Voice \relative c''' {
+      \voiceOne
+      s4 e8 ( cs4 ) s4 d,8 [ ( ef ] ) s e' ( cs4 )
+    }
+    \new Voice \relative c {
+      \voiceTwo
+      f8 [ ( d' ] ) s4. bf4-- s4 f8-- s4.
+    }
+  >> \oneVoice
+  \tuplet 5/4 { d8 [ e bf,! e'' cs ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] }
+  b''8 g,,4 b'' g,, b'' r2\fermata \bar ""
+  e,16 [ ( g e ) cs, ] e''8 [ ( cs! b ] ) e,,-- g4 ( e8 )
+  \tuplet 5/4 { e''16 [ ( cs! e cs e ] ) } \bar ""
+  \tuplet 7/4 { d,,,8 [ ( e16 g b cs! g' ] ) }
+  fs32 [ ( e'16 ) fs,32 ( e'8 ) ] f,,8
+  \tuplet 5/4 { f'16 [ ( fs e' fs, e' ] ) } g,,8-- \bar ""
+  e''' [ ( cs b ] )
+  \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } b,,8 [ ( cs ] ) \bar ""
+  \tuplet 5/4 { d'16 [ ( e b' fs e' ] ) }
+  \tuplet 5/4 { f,16 [ ( g c af e' ] ) }
+  \tuplet 5/4 { a,16 [ ( bf d cs e ] ) } \bar ""
+  d8..\trill [ ( cs32 ] ) d8..\trill [ ( cs32 ] )
+  \tuplet 3/2 { e16 [ ( cs e } d8 ~ ] d8. [ cs16 ] )
+  \tuplet 5/4 { a16 [ ( gs e d cs ] }
+  \tuplet 7/4 { d16 [ cs a gs a gs e ] ) }
+}
 
 \score {
   \new StaffGroup <<
@@ -332,6 +372,16 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         d4. ~ \tuplet 4/3 { d8 [ r8 e-.\f\< cs-. ] }
         e16-. cs-. e-. bf'-. c32 ( e fs a\! d8 ) d,,4->\sfp ~
         d4 r8 d4.->\ff
+        R2.
+        cs4.-> r4.
+        r4. cs4.-> ~
+        cs4 r8 r4.
+        r4. cs8-^ r8 r8
+        r4. cs4.-> ~
+        cs4 cs2-> ~
+        cs8 r8 r4 r4
+        R1*7 R1\fermataMarkup
+        \cadenzaOn
       }
     >>
     \new Staff \with {
@@ -398,10 +448,19 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         e'32 ( d gs, e d cs gs d
         \tupletSpan 2 \tuplet 3/2 { e,2 ) d4-> gs-> e'-> cs-> }
         \tupletSpan \default
-        \tuplet 3/2 { e''16-> ( cs, d, } cs4. ~ cs2 ~
-        cs1 )
-        R1
-        
+        <<
+          \new Voice \relative c''' {
+            \tuplet 3/2 { e16-> ( cs, d, } cs4. ~ cs2 ~
+            cs1 )
+          }
+          \new Voice {
+            s2 s2\> s2.. s8\p
+          }
+        >>
+        R1\fermataMarkup
+        % CADENZA
+        \cadenzaOn \clarCadenza
+        \cadenzaOff \bar "||"
       }
     >>
     \new Staff \with {
@@ -451,9 +510,19 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         cs4. ~ cs8 r8 r8
         r4. r8 cs4->\sfp ~
         cs4 r8 cs4.->\ff
+        R2.
+        d4.-> r4.
+        r4. d4.-> ~
+        d4 r8 r4.
+        r4. d8-^ r8 r8
+        r4. d4.-> ~
+        d4 d2-> ~
+        d8 r8 r4 r4
+        R1*7 R1\fermataMarkup
+        \cadenzaOn
       }
     >>
   >>
-  \layout {}
+  \layout { \context { \Staff \RemoveEmptyStaves } }
 %  \midi {}
 }
