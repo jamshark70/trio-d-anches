@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 \include "english.ly"
 
 #(set-global-staff-size 16)
@@ -83,7 +83,10 @@ global = {
         cs4--\p cs8-- cs4-- cs8-- cs4-- cs8 ~
         cs4. ~ cs4 cs8-- cs4-- cs8 ~
         \tupletSpan 1*6/8
-        \tuplet 4/3 { cs4 f,!^\markup { \italic "espr." } ( \< d' e cs' b'2\> g,4--\! ) }
+        \tuplet 4/3 { cs4 
+                      \shape #'((0 . 0) (0 . 0) (0 . 1.2) (0 . -0.5)) Slur
+                      f,!^\markup { \italic "espr." } 
+                      ( \< d' e cs' b'2\> g,4--\! ) }
         R2.
         cs,4--\p cs8-- cs4-- cs8-- ~ cs4. ~
         cs4. d4-- d8--\< d4-- d8 ~
@@ -258,13 +261,25 @@ sfmp = #(make-dynamic-script sfmpMarkup)
   }
 }
 
+nullMeter = {
+  \once\override Staff.TimeSignature.stencil = #(lambda (grob)
+          (grob-interpret-markup grob (markup #:fontsize 4 #:vcenter "0")))
+}
+
 globalB = {
+  \numericTimeSignature
   \tempo 4. = 72
   \time 6/8 s2.*6
   \time 9/8 s1*9/8
   \time 6/8 s2.*4
   \time 9/8 s1*9/8
-  \time 6/8 s2.*10
+  \time 6/8 s2.*27 \bar "||"
+  s2.*6
+  \mark \markup { \note #"8" #1 "=" \note #"8" #1 }
+  \time 3/4 s2.*2
+  \time 4/4 s1*8 \bar "||"
+  \nullMeter \time 2/2
+  s1
 }
 
 subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
@@ -365,6 +380,28 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         e4. ~ \tuplet 4/3 { e8 [ r8 b'-.\f\< e,-. ] }
         b'16-. e,-. b'-. c-. e32 ( fs a b\! ds8 ) e,,4->\sfp ~
         e4 r8 e4.->\ff
+        r4. e4.-> ~
+        e4. \breathe e4.->
+        R2.
+        e4.-> ~ e4 cs8->
+        \once \override Hairpin #'minimum-length = #6
+        e4.\fp\< e8-^\ff r8 r8
+        r4. r8 e4-> ~
+        e2 e4-> ~
+        e4 e8-> cs-> e4->
+        \tuplet 3/2 { cs16-> ( e cs } e8 ~ e4 ) \tuplet 3/2 { cs8-> e-> d->\> ~ } d4 ~
+        d4.\< d8-^\ff r2
+        r4 e8-> cs-> e4-> cs8-> e->
+        \tuplet 5/4 { e''16->_\markup { \italic "rubato" } e,-> e,,-> e'-> cs-> }
+        \tuplet 3/2 { cs''8-> cs,-> d,,16-> d' }
+        \tuplet 7/4 { e'8-> d16 e' d, cs, cs' }
+        e'32 ( d gs, e d cs gs d
+        \tupletSpan 2 \tuplet 3/2 { e,2 ) d4-> gs-> e'-> cs-> }
+        \tupletSpan \default
+        \tuplet 3/2 { e''16-> ( cs, d, } cs4. ~ cs2 ~
+        cs1 )
+        R1
+        
       }
     >>
     \new Staff \with {
