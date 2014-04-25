@@ -283,23 +283,25 @@ clarCadenza = \relative c {
   <<
     \new Voice \relative c''' {
       \voiceOne
-      s4 e8 ( cs4 ) s4 d,8 [ ( ef ] ) s e' ( cs4 )
+      s4 e8 ( cs4 ) s4 d,8 [ ( ef ] ) s e' ( cs!4 )
     }
     \new Voice \relative c {
       \voiceTwo
       f8 [ ( d' ] ) s4. \bar "" bf4-- s4 \bar "" f8-- s4.
     }
   >> \oneVoice
-  \tuplet 5/4 { d8\< [ e bf,! e'' cs ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] } \bar ""
+  \tuplet 5/4 { d8\< [ e bf,! e'' cs! ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] } \bar ""
   b''8\mf\> g,,4 b'' g,, b''\p r2\fermata \bar ""
   e,16\mp^\markup "with increasing urgency" [ ( g e ) cs, ] e''8 [ ( cs! b ] ) \bar ""
   e,,-- g4 ( e8 )
   \tuplet 5/4 { e''16\cresc [ ( cs! e cs e ] ) } \bar ""
   \tuplet 7/4 { d,,,8 [ ( e16 g b cs! g' ] ) }
-  fs32 [ ( e'16 ) fs,32 ( e'8 ) ] \bar "" f,,8
+  fs32 [ ( e'16 ) fs,32 ( e'8 ) ] \bar "" 
+  \once \override TextSpanner.bound-details.left.text = "Tenuto = stress this note"
+  f,,8--\startTextSpan
   \tuplet 5/4 { f'16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
   e''' [ ( cs b ] ) \bar ""
-  \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } \bar "" b,,8\mf [ ( cs ] )
+  \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } \bar "" b,,8--\mf [ ( cs\stopTextSpan ] )
   \tuplet 5/4 { d'16\< [ ( e b' fs e' ] ) } \bar ""
   \tuplet 5/4 { f,16 [ ( g c af e' ] ) } \bar ""
   \tuplet 5/4 { a,16 [ ( bf d cs e ] ) } \bar ""
@@ -319,18 +321,18 @@ clarCadenzaB = \relative c'' {
   \cadenzaOn
   r2 e4.\ppp bf,16 [ ( c' ] ) e'8 [ ( d, ] )
   \tuplet 3/2 { g'16 [ ( c, a, } f'8 ] ) \bar ""
-  bf,,!8 \breathe
+  bf,,!8--^"Tenuto = stress this note" \breathe
   e'4 c8 [ e ] 
 }
 
 clarCadenzaC = \relative c'' {
-  \tuplet 5/4 { c16\< [ ( e c e c ] } e8 ) d,, f''4..
+  \tuplet 5/4 { c16\< [ ( e c e c ] } e8 ) d,,-- f''4..
   <<
-    { c,16 ( g''2.\fermata ) }
+    { c,16-- ( g''2.\fermata ) }
     { s16 s2\> s8 s8\! }
   >> \bar ""
-  r2 e4.\ppp\< \appoggiatura { bf,!16 [ ( d ] } f'4 )
-  cs,16\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\pppp )
+  r2 e4.\ppp\< \appoggiatura { bf,!16 [ ^( d ] } f'4 )
+  cs,16--\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\pppp )
   \cadenzaOff
 }
 
@@ -342,10 +344,12 @@ globalB = {
   \time 6/8 s2.*4
   \time 9/8 s1*9/8
   \time 6/8 s2.*27 \bar "||"
+  \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \mark \markup \left-align \bold "Violently"
   s2.*6
   \mark \markup { \fontsize #-2 { \note #"8" #1 "=" \note #"8" #1 } }
   \time 3/4 s2.*2
-  \time 4/4 s1*8 \bar "||"
+  \time 4/4 s1*7 \bar "||"
   \nullMeter \time 2/2
   \tempo "Mysteriously" 4 = 72
   \cadenzaToMusic \clarCadenza s1 \bar "|"
@@ -413,7 +417,7 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         r4. cs4.-> ~
         cs4 cs2-> ~
         cs8 r8 r4 r4
-        R1*7 R1\fermataMarkup
+        R1*6 R1\fermataMarkup
         \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
         r4 r8 e8\pp^\markup { \italic "non vib." } ~ e2 ~
         e2 ~ e16 r8.
@@ -475,7 +479,7 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         R2.
         e4.-> ~ e4 cs8->
         \once \override Hairpin #'minimum-length = #6
-        e4.\fp\< e8-^\ff r8 r8
+        e4.->\fp\< e8-^\ff r8 r8
         r4. r8 e4-> ~
         e2 e4-> ~
         e4 e8-> cs-> e4->
@@ -491,13 +495,13 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         <<
           \new Voice \relative c''' {
             \tuplet 3/2 { e16-> ( cs, d, } cs4. ~ cs2 ~
-            cs1 )
+            cs4. )
           }
           \new Voice {
-            s2 s2\> s2.. s8\p
+            s2 s2\> s4 s8\p
           }
         >>
-        R1\fermataMarkup
+        r8 r2\fermata %R1\fermataMarkup
         % CADENZA
         \clarCadenza
         d16.\> ( e32 ) d16. ( cs32 ) d16. ( a32\mp ) r8
@@ -562,7 +566,7 @@ subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
         r4. d4.-> ~
         d4 d2-> ~
         d8 r8 r4 r4
-        R1*7 R1\fermataMarkup
+        R1*6 R1\fermataMarkup
         \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
         r4 r8 a8\pp^\markup { \italic "non vib." } ~ a2 ~
         a2 ~ a16 r8.
