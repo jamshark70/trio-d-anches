@@ -291,6 +291,7 @@ clarCadenza = \relative c {
     }
   >> \oneVoice
   \tuplet 5/4 { d8\< [ e bf,! e'' cs! ] } \tuplet 3/2 { f,,,8 [ d' ] e!4 d8 [ e ] } \bar ""
+  \once \override NoteColumn.X-offset = #1
   b''8\mf\> g,,4 b'' g,, b''\p r2\fermata \bar ""
   e,16\mp^\markup "with increasing urgency" [ ( g e ) cs, ] e''8 [ ( cs! b ] ) \bar ""
   e,,-- g4 ( e8 )
