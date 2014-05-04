@@ -44,6 +44,7 @@ p = Pbind(
 // ),
 	\dur, 0.5,
 	\sustain, 1,
+	\vel, 80
 );
 )
 
@@ -51,6 +52,8 @@ q = p.play(protoEvent: e);
 q.stop;
 
 ChuckableBrowser.newWindow;
+
+f = 0.5;
 
 (
 var w = (1 ! 3).normalizeSum;
@@ -65,6 +68,32 @@ n = Pwxrand(
 	[61, 63, 64][n]
 };
 )
+
+// too many repeats every-other-note with the above
+// try to reduce probability of the penultimate note as well
+// without locking into a 1-2-3 cycle
+
+f = 0.5;
+
+(
+var w = (1 ! 3).normalizeSum, buf = Array.newClear(2), i = 0;
+
+n = Pwxrand(
+	(0 .. 2),
+	Pfunc { w },
+	inf
+).collect { |n|
+	w[n] = w[n] * f;
+	if(buf[i].notNil) {
+		w[buf[i]] = w[buf[i]] * 0.5 * (f + 1);
+	};
+	w = w.normalizeSum;
+	buf[i] = n;
+	i = 1 - i;
+	[61, 63, 64][n]
+};
+)
+
 
 a = Array.fill(2, { List.new });
 
@@ -114,8 +143,11 @@ p = Ppar(a.collect { |row, i|
 	Pbind(
 		\midinote, Pseq(row),
 		\dur, Pseq([#[0.5, 1][i], Pn(1, inf)]),
-		\amp, 0.2
+		\amp, 0.2,
+		\pan, i - 0.5
 	)
 }).play;
 
 p.stop;
+
+Process.current.nowExecutingPath
