@@ -18,13 +18,16 @@
 }
 
 globalC = {
-  \key cs \minor \time 4/4 \numericTimeSignature
+  \time 4/4 \numericTimeSignature
   \tempo 4 = 92
   \partial 8 s8 |
+  \key cs \minor
   s1*7
   \time 2/4 s2
   \time 3/4 s2.
-  \time 4/4 s1*12
+  \time 4/4 s1*10
+  \time 2/4 s2
+  \time 4/4 s1
 }
 
 \score {
@@ -45,9 +48,9 @@ globalC = {
         gs4 as2. ~
         as4. ) r8
         R2.
-        r4 gs b cs
-        ds2 cs4 b
-        as16 ( b as4. ~ as8 ) gs4 ( fss16 gs
+        r4 gs ( b cs
+        ds2 cs4 b )
+        as32 ( b as4.. ~ as8 ) gs8 ~ ( gs8. fss32 gs
         as2 ~ as4. ) r8
         r8 cs,, ( ds e ds cs e ds )
         r2 r8 gs' ( b cs
@@ -55,9 +58,9 @@ globalC = {
         r2 r8 gs ( b cs 
         ds4 cs8 b )
         \tuplet 5/4 { gs16 [ ( a fs e ) cs ] ( }
-        \tuplet 6/4 { ds16 [ fs ) b, ( cs e ) \shape #'((0 . 0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur gs, ] ( }
-        | \tuplet 3/2 { b16 [ cs as16 ~ ] } as4. ~ as2 ~
-        as4 ) r4 r2
+        \tuplet 6/4 { ds16 [ fs ) b, ( cs e ) %{ \shape #'((0 . 0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur %} gs, ] ( }
+        | \tuplet 3/2 { b16 [ cs as16\startTrillSpan ~ ] } as4. ~ as2 ~
+        as4 ) r4\stopTrillSpan
         R1
       }
     >>
@@ -89,10 +92,10 @@ globalC = {
         gs2 e'4 cs4
         ds cs8 ( e ds cs e ds
         cs e ds cs e ) cs ( ds e
-        fs gs e ds ) fs8 e4 fs8
-        e8 fs4 e8 ~ e2 % ds4 ~ % fs4 e8 ~
-        ds2 e4 e
-        ds cs
+        fs gs e ds ) fs8 ( e4 ) fs8 (
+        e8 ) fs4 ( e8 ~ e2 % ds4 ~ % fs4 e8 ~
+        ds2 ) 
+        e4 e ds cs
       }
     >>
     \new Staff \with {
@@ -125,9 +128,9 @@ globalC = {
         e4 r8 \clef bass gs,,2
         a1 ~
         a2. a'4 ~
-        a2 b2 ~
-        b4. cs8 ~ cs8 ds4 cs
-        e e8
+        a2 b4 bs4 ~
+        bs4. cs8 ~
+        cs8 ds4 cs e e8
       }
     >>
   >>
