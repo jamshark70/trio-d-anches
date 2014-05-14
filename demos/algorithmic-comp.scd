@@ -151,3 +151,12 @@ p = Ppar(a.collect { |row, i|
 p.stop;
 
 Process.current.nowExecutingPath
+
+
+(
+p = Pbind(
+	\midinote, Pseq([79, 77, 72, 74, 76, 69, 71, 75, 65, 67, 71, 78, 88, 62, 64]),
+	\dur, Pseq([Pn(0.5, 2), Pn(2/5, 5), Pn(2/7, 7), 3]),
+	\legato, 1
+).play(protoEvent: e);
+)
