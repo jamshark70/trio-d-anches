@@ -206,7 +206,7 @@ espres = \markup \italic "espr."
   \layout {
     \context { \Staff \RemoveEmptyStaves }
   }
-%  \midi {}
+  \midi {}
 }
 
 
@@ -236,7 +236,7 @@ globalD = {
 }
 
 \score {
-  \unfoldRepeats \articulate
+%  \unfoldRepeats \articulate
   <<
     \new StaffGroup <<
       \new Staff \with {
@@ -264,8 +264,9 @@ globalD = {
           r4 d,2. ~
           d1 ~
           d2 ~ d8 r8 r4
-          d1
-          e2 ~ e4. r8
+          d1 ~
+          d2 e2 ~
+          e4. r8 r2
         }
       >>
       \new Staff \with {
@@ -295,8 +296,9 @@ globalD = {
           r2 r4 a,,4 ~
           a2 bf2 ~
           bf2 ~ bf8 r8 r4
-          bf4. c8 ~ c8 cs4. ~
-          cs4. d8 ~ d4. r8
+          bf2 c2
+          cs2. d4 ~ 
+          d4. r8 r2
         }
       >>
       \new Staff \with {
@@ -327,8 +329,13 @@ globalD = {
           \clef tenor g32 ( e8.. ) d32 ( e8.. ~ e16 ) cs32 ( d e8 ~ \tuplet 3/2 { e4 ) g8 }
           \tuplet 3/2 { cs,8 g' f,! } r4 \tuplet 3/2 { r8 r8 e' } \clef bass a,,16 bf \tuplet 3/2 { f'16 g c }
           \clef tenor e32 a, e' a, ~ a8 ~ a8. a,16 \tuplet 5/4 { e'16 f a d e } f32 ( e8. ) d32 (
-          e8 f ~ f8. ) cs,16 g''4 f,16 b'8. ~
-          b2. cs,8 r8
+          e8 f4. ~ f8. )
+          \shape #'((0 . -1) (-1 . 1) (0 . 0) (0 . 0)) Slur
+          cs,16 ( g''4 ~
+          g4 ) 
+          \shape #'((0 . 2) (-2 . -1) (0 . -1.5) (0 . 0)) Slur
+          f,16 ( b'8. ~ b2 ~
+          b4 cs,8 ) r8 r2
         }
       >>
     >>
@@ -336,5 +343,5 @@ globalD = {
   \layout {
     \context { \Staff \RemoveEmptyStaves }
   }
-  \midi {}
+%  \midi {}
 }
