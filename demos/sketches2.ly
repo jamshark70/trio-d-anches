@@ -236,7 +236,7 @@ globalD = {
 }
 
 \score {
-%  \unfoldRepeats \articulate
+  \unfoldRepeats \articulate
   <<
     \new StaffGroup <<
       \new Staff \with {
@@ -320,11 +320,11 @@ globalD = {
           \clef tenor cs'4 ~ \tuplet 3/2 { cs8 c d }
           \override TrillPitchAccidental.avoid-slur = #'inside
           cs16 ( as gs g ) \tuplet 5/4 { a16 ( fs e ds b } \pitchedTrill c!2\startTrillSpan ~ d
-          c2 ) \clef bass b,4\stopTrillSpan d, ~
-          d4. \breathe cs8 e f! \tuplet 5/4 { a16 d gs as cs }
+          c2 ) \clef bass bf,4\stopTrillSpan c, ~
+          c4. \breathe cs8 f g \tuplet 5/4 { bf16 c ef f a }
           \clef tenor g'32 ( e8.. ) g32 ( e8.. ~ e8 ) d32 ( e16. ~ e4 ~
-          e8 ) r8 r16 \clef bass cs,,16 e f! \tuplet 7/4 { a16 bf d e gs as cs }
-          \clef tenor g'32 ( e8.. ) d32 ( e8.. ~ e16 ) cs32 ( d e8 ~ \tuplet 3/2 { e4 ) g8 }
+          e8 ) r8 r16 \clef bass cs,,16 f g \tuplet 7/4 { bf16 c ef f a b d }
+          \clef tenor g32 ( e8.. ) d32 ( e8.. ~ e16 ) cs32 ( d e8 ~ \tuplet 3/2 { e4 ) g8 }
           \tuplet 3/2 { cs,8 g' f,! } r4 \tuplet 3/2 { r8 r8 e' } \clef bass a,,16 bf \tuplet 3/2 { f'16 g c }
           \clef tenor e32 a, e' a, ~ a8 ~ a8. a,16 \tuplet 5/4 { e'16 f a d e } f32 ( e8. ) d32 (
           e8 f ~ f8. ) cs,16 g''4 f,16 b'8. ~
@@ -336,5 +336,5 @@ globalD = {
   \layout {
     \context { \Staff \RemoveEmptyStaves }
   }
-%  \midi {}
+  \midi {}
 }
