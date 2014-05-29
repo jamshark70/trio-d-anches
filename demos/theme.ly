@@ -332,7 +332,7 @@ clarCadenzaC = \relative c'' {
     { c,16-- ( g''2.\fermata ) }
     { s16 s2\> s8 s8\! }
   >> \bar ""
-  r2 e4.\ppp\< \appoggiatura { bf,!16 [ ^( d ] } f'4 )
+  r2 e4.\ppp\< \appoggiatura { \slurUp bf,!16 [ d ] } f'4
   cs,16--\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\pppp )
   \cadenzaOff
 }
