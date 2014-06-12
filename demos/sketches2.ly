@@ -386,3 +386,245 @@ globalD = {
   }
 %  \midi {}
 }
+
+
+\markup \column {
+  \vspace #1.5
+  \bold "Connecting variation"
+  \vspace #0.5
+}
+
+globalOB = {
+  \numericTimeSignature
+  %\bar "||"
+  %\mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  %\tempo \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } \fontsize #0 "(Doppio movimento)" }
+  \tempo 2 = 96
+  \time 2/2
+  s1*6
+  \time 3/2 s1.
+  \time 2/2 s1*20
+  \time 1/2 s2
+  \time 2/2 s1*24
+  \tempo "Frantic" 2 = 116
+  s1*6
+  \time 1/2 s2
+  \time 2/2 s1*2
+  \time 1/2 s2
+  \time 3/4 s2.*2
+  \time 2/2 s1
+  \time 3/4 s2.
+}
+
+dashPlus = "staccatissimo"
+
+\score {
+  \new StaffGroup <<
+    \new Staff \with {
+      instrumentName = "Oboe"
+      shortInstrumentName = "Ob."
+    } <<
+      \globalOB
+      \relative c' {
+        d4-> b''-> d,,-> b''-> ~
+        b4. d,8-. b'-. d,-. b'4-> ~
+        b4. a8-+ af-+ gf-+ f-+ d-+
+        b-+ af-+ gf-+ f-+ d ( e ) d\mp\< ( e )
+        d ( e ) d ( e ) d\ff ( e ) r4
+        R1\fermataMarkup
+        d4->\ff r4 b''1->
+        \tuplet 3/2 { d,,2-> b''-> e,,-> }
+        cs'2-> ~ cs8 r e,4-.
+        b''1->\sfz\> ~ b ~ b4 r4\p r2\fermata
+        d,,8\p ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+        d8 ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+        e16\f\< ( cs' d e\! b'8-> ) r8 d,,8\p ( cs ) d8 ( cs )
+        ds\< ( cs ) ds ( cs ) d8 ( cs d8 ) e->\sfp (
+        d e ) d\< ( e ) d ( e ) d ( e ) 
+        d ( e ) d ( e ) d\f ( e ) r4
+        
+        d8\p ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+        d8 ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+        d8-. b''4.->\sfz ~ b8 r d,,\mp ( cs )
+        d ( cs d ) ds->\sf ( cs\p ds cs ds )
+        cs\< ( ds cs ds ) cs ( ds e fs
+        g->\f ) r cs,\mp ( ds ) cs ( ds cs ) d-.
+        d-+\< d-+ d-+ d-+\f r4 r8 d-^
+        cs\mp ( d ) cs ( d ) cs ( ds cs ) e->\sf (
+        d e d\< e ) d-. d-+ d-+ d-+\f
+        R2
+        d8-^\sf d-. d-. d-. e-^\sf e-. e-. d-^\sf
+        \tuplet 5/4 { d4-. d-. d-. d-. e-^\sf }
+        \tuplet 9/8 { e8-. [ e-. d-^\sf ] d-. r r r4. }
+        \tuplet 3/2 { e4-^\sf e-. e-. } r2
+        r8 f-+\f f-+ f-+ r2
+        R1
+        cs'8\fff ( ds ) cs8 ( ds ) cs ( d ) cs ( d )
+        cs8 ( ds ) cs8 ( ds ) cs ( ds ) cs ( d )
+        cs ( d ) cs ( d ) r2
+        R1
+        bf,1->\sff (
+        bf'8 ) r8 e,-^ r8 r2
+        r2 cs'2->\sff\< ~ (
+        cs4. ds8 ) cs\fff ( ds cs ) d-> (
+        cs d cs d cs d ) r8 e,->\sfp ~
+        e1
+        r2 r4 e4\mp ~
+        e4. r8 e''2->\ff\> ~
+        e2. r4\p
+        f,,8^"upper notes to the fore" ( e ) f ( e ) fs\cresc ( e ) fs ( e )
+        f ( e ) g ( f ) g ( f ) g ( fs )
+        g ( fs ) g-. g-. g-. g-+\f\< g-+ g-+
+        g-+ g-+ g-+\ff r8 r2
+        R1\fermataMarkup
+        cs,8\f ( ds ) cs8 ( ds ) cs8 ( d ) cs8 ( d )
+        cs8 ( ds ) cs8 ( ds ) cs8 ( d ) cs8 ( d )
+        \tupletSpan 2 \tuplet 3/2 { ds4->\ff cs-> ds-> r ds'-> cs-> } \tupletSpan \default
+        ds4-> r8 cs,8-.\f d ( cs ) d ( cs )
+        ds\< ( cs ) ds ( cs ) d ( cs ) ds-. cs-.
+        ds->\ff r r d ( ds-> ) r d ( ds-> )
+        r ds-> r4
+        r4 cs8\f ( ds ) cs ( ds ) cs ( ds )
+        \tuplet 5/4 { cs4->\ff d!-> cs-> d-> cs }
+        r4 r8 d (
+        ds4-> ) r d (
+        ds-> ) r r
+        d! ( ds-> ) r ds->
+        r r d!
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Clarinet"
+      shortInstrumentName = "Cl."
+    } <<
+      \globalOB
+      \relative c' {
+        e4-> b'-> e,-> b'-> ~
+        b4. e,8-. b'-. e,-. b'4 ~
+        b4. f'8-+ gf-+ bf,-+ cf-+ df-+
+        d,!-+  e!-+  cs-+ d-+ e ( ds ) e\mp\< ( ds )
+        e ( ds ) e ( ds ) e\ff ( ds ) r4
+        R1\fermataMarkup
+        e4->\ff r4 b'1->
+        \tuplet 3/2 { e,2-> b'-> d,-> }
+        b''2-> ~ b8 r8 d,,4-.
+        cs''1->\sfz\> ~ cs ~ cs4 r4\p r2\fermata
+        R1*15
+        f,,,16\mp ( d' e cs' b'8 ) r8
+        R1*2
+        r2\pitchedTrill d,,2:32->\fff\startTrillSpan ^\markup { \italic "flzg." "(optional)" } e
+        r2\stopTrillSpan r8 \pitchedTrill e4.:32->\startTrillSpan f
+        r2\stopTrillSpan r4 \tuplet 3/2 { e8\mp ( cs' e, }
+        cs'8 ) r8 \tuplet 3/2 { d8 ( b' d, } b'8 ) r8 r4
+        cs8\fff ( ds ) cs ( ds ) cs ( d ) cs ( d )
+        cs8 ( ds ) cs ( ds ) c ( d ) bf ( cf )
+        af\> ( g ) e ( df c a fs e
+        ef\< ) f, ( g b \tuplet 6/4 { cs8 e fs a b ef }
+        bf'8\ff ) r8 r4 r2
+        bf4->\sff ( bf,,8 ) r8 r4 r8 e\pp\< (
+        \pitchedTrill d2\startTrillSpan ( e e8\stopTrillSpan\ff ) r8 r4
+        r4 cs''8\fff ( ds ) cs ( ds cs ) d-> (
+        cs d cs d cs d ) r8 d,,->\sfp ~
+        d1
+        d,8-.\pp d-. r d-. r4 d'4\mp ~
+        d4. r8 d''2->\ff\> ~
+        d4 e,,8\p ( f e f e f )
+        e ( fs ) e ( fs ) e\cresc ( f ) e ( f )
+        e ( f ) d ( e ) d ( e ) d ( e )
+        \tupletSpan 2 \tuplet 6/4 { d8 ( e d bf d e a b! af' e! d bf }
+        \tupletSpan \default \tuplet 3/2 { d,8 [ e d ] } bf8\ff ) r8 r2
+        R1\fermataMarkup
+        R1*2
+        \tupletSpan 2 \tuplet 3/2 { ds'4->\ff cs-> ds-> r ds'-> cs-> } \tupletSpan \default
+        ds4-> r4 r2
+        R1
+        r4 r8 e,,8 ~ e-> r e ~ e->
+        r8 e-> r4
+        R1*2
+        r4 r8 e ~
+        e4-> r e ~
+        e-> r r
+        e ~ e-> r e->
+        r r e ~
+      }
+    >>
+    \new Staff \with {
+      instrumentName = "Bassoon"
+      shortInstrumentName = "Bsn."
+    } <<
+      \globalOB
+      \relative c' {
+        \clef bass
+        cs4-> r cs-> r
+        R1
+        cs,16 ( e gs as ds8 ) b-+ g-+ f-+ ef-+ b-+
+        a-+ g-+ f-+ ef-+ cs''4 cs\mp\<
+        cs cs cs\ff r4
+        R1\fermataMarkup
+        cs4->\ff r4 r1
+        \tuplet 3/2 { cs2-> r cs-> }
+        r2 r4 cs-.
+        e,,1->\sfz\> ~ e ~ e4 r4\p r2\fermata
+        \clef tenor cs''8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
+        cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
+        cs16\f\< ( d e a\! b8-> ) r8 cs,\p ( ds ) cs ( ds )
+        cs\< ( d ) cs ( d ) cs ( ds cs ) f,!->\sfp ~ (
+        f cs' f,\< cs' ) f,4-- f->
+        f-> f-> f->\f r4
+        cs'8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
+        cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
+        cs b'4.->\sfz ~ b8 r cs,8\mp ( ds )
+        cs ( ds cs ) cs->\sf ( d\p cs d cs )
+        d\< ( cs c a ) \clef bass g ( e cs16 c a gf
+        f8\f ) r \clef tenor d''8\mp ( cs ) d ( cs d ) f,-.
+        \shape #'((0 . -0.3) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
+        cs'\< ( e cs f,\mf ) r4 r8 cs'-^\f
+        ds\mp ( cs ) ds\< ( cs c bf af gf
+        g ) f-. f-. f-. f-. e'-+ e-+ e-+\f
+        R2
+        \clef bass cs8-^\sf cs-. cs-. cs-. f,-^\sf f-. f-. cs'-^\sf
+        \tuplet 5/4 { cs4-. e-^\sf e-. f,,-. f-^\sf }
+        \tuplet 9/8 { f'8-. [ f-. cs'-^\sf ] cs-. r8 r8 r4. }
+        \tuplet 3/2 { f,,4-^\sf g-. d'-> } r2
+        r8 e'-+\f e-+ e-+ r2
+        R1
+        %{\clef bass%} cs,,8\fff ( ds ) cs ( ds ) cs8 ( d ) cs ( d )
+        cs8 ( ds ) cs ( ds ) cs8 ( ds ) cs ( d )
+        cs8\> ( d ) cs ( d ) cs ( d\! ) r4
+        R1
+        bf8-^\ff r8 r4 r2
+        bf''8-^ r8 d2.->\sff ~ (
+        d2 f,,8 ) r8 r4
+        r4 d!8\fff ( cs ) d ( cs d ) cs-> (
+        ds cs ds cs ds cs ) r bf''8->\sfp ~
+        bf1
+        cs,,8-.\pp cs-. r cs-. r4 bf''4\mp ~
+        bf4. r8 bf,,2->\ff\> ~
+        bf2. r4\p
+        bf''2\< ( a ~
+        a4 af2. )
+        gf8-^\sfz r8 r4 r2
+        r4 \clef tenor d'16->\sfz\> ( e8. ~ e2 ~
+        e2.\fermata ) r4\p
+        d8\f ( cs ) d ( cs ) ds ( cs ) ds ( cs )
+        d8 ( cs ) d ( cs ) ds ( cs ) ds ( cs )
+        \tupletSpan 2 \tuplet 3/2 { cs4->\ff d-> cs-> r cs-> d-> } \tupletSpan \default
+        cs4-> r8 ds-.\f cs ( ds ) cs ( ds )
+        cs\< ( d ) cs ( d ) cs r8 cs,-. d-.
+        cs->\ff r r cs' ~ cs-> r cs ~ cs->
+        r cs-> r4
+        r4 d8\f ( cs ) d ( cs ) d ( cs )
+        \tuplet 5/4 { ds4->\ff cs-> ds-> cs-> ds-> }
+        r4 r8 cs8 ~
+        cs4-> r cs ~
+        cs-> r r
+        cs ~ cs-> r cs->
+        r r cs ~
+      }
+    >>
+  >>
+  \layout {
+    \context { \Staff \RemoveEmptyStaves }
+  }
+  % \midi {}
+}
