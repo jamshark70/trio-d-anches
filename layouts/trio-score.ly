@@ -31,57 +31,22 @@
       instrumentName = "Oboe"
       shortInstrumentName = "Ob."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB }
-      { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight }
+      { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb R1 \oboeSixEight }
     >>
     \new Staff \with {
       instrumentName = "Clarinet"
       shortInstrumentName = "Cl."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB }
-      { \clarTheme \clarBsn \clarTwelveEight \clarOB }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight }
+      { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1 \clarSixEight }
     >>
     \new Staff \with {
       instrumentName = "Bassoon"
       shortInstrumentName = "Bsn."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB }
-      { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB }
-    >>
-  >>
-  \layout {
-    \context { \Staff \RemoveEmptyStaves }
-  }
-}
-
-\markup \column {
-  \vspace #1
-  \bold "Connecting variation here"
-  \vspace #1
-}
-
-\score {
-  \new StaffGroup <<
-    \new Staff \with {
-      instrumentName = "Oboe"
-      shortInstrumentName = "Ob."
-    } <<
-      { \globalOb s1 \globalSixEight }
-      { \oboeOb R1 \oboeSixEight }
-    >>
-    \new Staff \with {
-      instrumentName = "Clarinet"
-      shortInstrumentName = "Cl."
-    } <<
-      { \globalOb s1 \globalSixEight }
-      { \clarOb R1 \clarSixEight }
-    >>
-    \new Staff \with {
-      instrumentName = "Bassoon"
-      shortInstrumentName = "Bsn."
-    } <<
-      { \globalOb s1 \globalSixEight }
-      { \bsnOb R1 \bsnSixEight }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight }
+      { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb R1 \bsnSixEight }
     >>
   >>
   \layout {

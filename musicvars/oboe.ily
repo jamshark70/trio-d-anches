@@ -119,7 +119,7 @@ oboeSixEight = \relative c' {
 
 oboeOb = \relative c' {
   \override Hairpin #'to-barline = ##f
-  d8\mf\< (
+  %d8\mf\< (
   ds?2\f\> ~ ds4. ) ds8-- ~
   ds4 ds-- ds--\p r
   <<

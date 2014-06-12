@@ -122,7 +122,7 @@ bsnOb = \new Voice \with {
 \relative c' {
   \override Hairpin #'to-barline = ##f
   \clef tenor
-  cs8\mf\< ~
+  %cs8\mf\< ~
   cs4\f\> cs-- cs-- cs--
   cs4.-- cs8-- ~ cs cs--\p r4
   r2 r8 cs4.^\sempreTenuto \mp\> ~

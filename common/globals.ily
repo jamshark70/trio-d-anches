@@ -49,7 +49,7 @@ globalSixEight = {
 globalOb = {
   \time 4/4 \numericTimeSignature
   \tempo 4 = 92
-  \partial 8 s8 \bar "||"
+  %\partial 8 s8 \bar "||"
   \key cs \minor
   s1*7
   \time 2/4 s2

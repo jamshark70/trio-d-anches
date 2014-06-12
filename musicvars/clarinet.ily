@@ -138,7 +138,7 @@ clarOb = \new Voice \with {
   \consists "Completion_rest_engraver"
 } \relative c' {
   \override Hairpin #'to-barline = ##f
-  e8\mf\< ~
+  %e8\mf\< ~
   e4.\f\> e8-- ~ e8 e4.-- ~
   e8 e4.-- ~ e4\p r4
   r4 r8 ds\mp\> ^\sempreTenuto ~ ds4 ds
