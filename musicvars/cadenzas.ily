@@ -37,13 +37,13 @@ clarCadenza = \relative c {
   fs32 [ ( e'16 ) fs,32 ( e'8 ) ] \bar "" 
   \once \override TextSpanner.bound-details.left.text = "Tenuto = stress this note"
   f,,8--\startTextSpan
-  \tuplet 5/4 { f'16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
-  e''' [ ( cs b ] ) \bar ""
+  \tuplet 5/4 { \shape #'((0 . 0) (0 . 0) (0.8 . -1) (0 . 1.5)) Slur f'16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
+  e''' [ ( cs! b ] ) \bar ""
   \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } \bar "" b,,8--\mf [ ( cs\stopTextSpan ] )
   \tuplet 5/4 { d'16\< [ ( e b' fs e' ] ) } \bar ""
   \tuplet 5/4 { f,16 [ ( g c af e' ] ) } \bar ""
   \tuplet 5/4 { a,16 [ ( bf d cs e ] ) } \bar ""
-  d8..->\trill [ ( cs32 ] ) d8..->\trill [ ( cs32 ] ) \bar ""
+  d8..->\trill [ ( cs!32 ] ) d8..->\trill [ ( cs32 ] ) \bar ""
   \tuplet 3/2 { e16->\ff [ ( cs e } d8\> ~ ] d8. [ cs16 ] ) \bar ""
   \tuplet 5/4 { a16\< [ ( gs e d cs ] } \bar ""
   \tuplet 7/4 { d16 [ cs a gs a gs e\! ] ) }

@@ -72,7 +72,8 @@ oboeSixEight = \relative c' {
   e4. cs8->\f ( cs' ) cs,-.\mp
   e4 ( cs8_\markup { \italic "cresc." } ) b'4.-> a8 ( d,4 )
   b'4.-> a8 ( cs,4 )
-  \tuplet 3/2 { b'16-> ( d, b' } d,4 ) \tuplet 3/2 { cs'16-> ( fs, cs' } fs,4 )
+  \tuplet 3/2 { \shape #'((0 . 0) (0 . -0.5) (0 . -0.1) (0 . 0)) Slur b'16-> ( d, b' } d,4 )
+  \tuplet 3/2 { \shape #'((0 . 0) (0 . -0.8) (0 . -0.25) (0 . 0)) Slur cs'16-> ( fs, cs' } fs,4 )
   fs32->\< ( e fs e fs4 ) f!32-> ( c'! d gs ds'8 ) r8
   cs,8->\ff ( cs' ) r8 d,,8\p ( cs ) r8
   cs8->\mf ( cs' ) cs,-.\p d4 ( cs8 )
@@ -138,14 +139,14 @@ oboeOb = \relative c' {
   gs4 as2.\mf\> ~
   as4. ) r8\!
   R2.
-  r4 gs\mp\< ( b cs
+  r4 \shape #'((0 . 0) (0 . 0.6) (0 . 0.6) (0 . 0)) Slur gs\mp\< ( b cs
   ds2\> cs4 b )
   as32\! ( b as4.. ~ as8 ) \< gs8 ~ ( gs8. fss32 gs
   as2\mf\> ~ as4. ) r8\p
   r8 cs,,\mf\< ( ds e ds\> cs e ds\! )
   r2 r8 gs'\mp ^\espres ( b cs
   as4 \grace gs16 as2. )
-  r2 r8 gs\mp\< ( b cs 
+  r2 r8 \shape #'((0 . 0) (0 . 0.6) (0 . 0.6) (0 . 0)) Slur gs\mp\< ( b cs 
   ds4\mf cs8 b )
   \tuplet 5/4 { gs16\< [ ( a fs e ) cs ] ( }
   \tuplet 6/4 { ds16 [ fs ) b, ( cs e ) %{ \shape #'((0 . 0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur %} gs, ] ( }

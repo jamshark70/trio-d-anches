@@ -85,7 +85,11 @@ bsnSixEight = \relative c {
   ef4 ( d8\mp ) r8 r8 bf-.
   bf,,16\f\> ( c ) e-. a-. cs-.\< fs-. c'-. r r ef,-. f-. b?-.
   \clef tenor \tuplet 3/2 { e16->\ff ( [ f g } a8 ) ] r8 r8 r8 \clef bass bf,,,8->
-  bf'\> ( d' ) r8 bf,16\mp ( bf' ) d ( bf d bf )
+  bf'\> ( d' ) r8 
+  \shape #'((0 . -0.5) (0 . 1) (0 . 1) (0 . 0.4)) Slur
+  %\once \override Accidental #'X-offset = #0.2
+  %\once \override Accidental.avoid-slur = #'inside  % THIS DOES NOTHING, WHY???
+  bf,16\mp ( bf' ) d ( bf d bf )
   \clef tenor d ( bf d bf a bf ) d\< ( bf a bf d e )
   a ( f e c bf a ) \clef bass f ( ef ) b-. g-. cs,8
   cs''4.\sfp ~ cs4 r8
@@ -184,7 +188,9 @@ bsnBsn = \relative c {
     { s8 s4 s2.\< s4.\! }
   >>
   cs8\mf\< ( d e ) a ( b )
-  \clef tenor gs'16 ( a b gs ) \tuplet 3/2 { a16->\sfz\> ( gs d } e8 ~ e2 ~
+  \clef tenor
+  \shape #'((0 . 0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
+  gs'16 ( a b gs ) \tuplet 3/2 { a16->\sfz\> ( gs d } e8 ~ e2 ~
   e8\p ) r8 r4
   \clef bass \tuplet 3/2 { f,,8->\mf\> d' ( e ) } \tuplet 5/4 { b'16 ( \< cs ) f,! d' e }
   \clef tenor cs'4->\f ~ \tuplet 3/2 { cs8 c ( d ) }
@@ -255,7 +261,9 @@ bsnOB = \relative c' {
   cs8\> ( d ) cs ( d ) cs ( d\! ) r4
   R1
   bf8-^\ff r8 r4 r2
-  bf''8-^ r8 d2.->\sff ~ (
+  bf''8-^ r8 
+  \shape #'((0 . 0) (0 . 0) (0 . 0) (-0.5 . -1)) Slur
+  d2.->\sff ~ (
   d2 f,,8 ) r8 r4
   r4 d!8\fff ( cs ) d ( cs d ) cs-> (
   ds cs ds cs ds cs ) r bf''8->\sfp ~

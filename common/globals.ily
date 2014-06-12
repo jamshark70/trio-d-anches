@@ -17,7 +17,7 @@ global = {
 globalTwelveEight = {
   \bar "||"
   \mark \default
-  \tempo "Poco più mosso" 4. = 96
+  \tempo "Più mosso" 4. = 96
   \time 12/8
   s1.*10
   \mark \default

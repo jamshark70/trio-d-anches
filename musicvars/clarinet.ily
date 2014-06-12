@@ -109,12 +109,13 @@ clarSixEight = \relative c' {
   \tuplet 5/4 { e''16->_\markup { \italic "rubato" } e,-> e,,-> e'-> cs-> }
   \tuplet 3/2 { cs''8-> cs,-> d,,16-> d' }
   \tuplet 7/4 { e'8-> d16 e' d, cs, cs' }
+  \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 0)) Slur
   e'32 ( d gs, e d cs gs d
   \tupletSpan 2 \tuplet 3/2 { e,2 ) d4-> gs-> e'-> cs-> }
   \tupletSpan \default
   <<
     \new Voice \relative c''' {
-      \tuplet 3/2 { e16-> ( cs, d, } cs4. ~ cs2 ~
+      \tuplet 3/2 { \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 0)) Slur e16-> ( cs, d, } cs4. ~ cs2 ~
       cs4. )
     }
     \new Voice {
@@ -124,7 +125,7 @@ clarSixEight = \relative c' {
   r8 r2\fermata %R1\fermataMarkup
   % CADENZA
   \clarCadenza
-  d16.\> ( e32 ) d16. ( cs32 ) d16. ( a32\mp ) r8
+  d16.\> ( e32 ) d16. ( cs!32 ) d16. ( a32\mp ) r8
   r8 d16.\p ( e32 ) d16. ( cs32\< ) e16. ( cs32 )
   d16. ( a32 ) e'16. ( f32 ) d16.\> ( cs32\! ) r8 r8 d16.\pp ( e32 )
   R2.
@@ -222,6 +223,7 @@ clarOB = \relative c' {
   b''2-> ~ b8 r8 d,,4-.
   cs''1->\sfz\> ~ cs ~ cs4 r4\p r2\fermata
   R1*15
+  \shape #'((0 . 0) (0 . 0) (0 . -0.5) (0 . 0)) Slur
   f,,,16\mp ( d' e cs' b'8 ) r8
   R1*2
   r2\pitchedTrill d,,2:32->\fff\startTrillSpan ^\markup { \italic "flzg." "(optional)" } e
