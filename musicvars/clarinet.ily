@@ -207,7 +207,54 @@ clarBsn = \relative c' {
   d4. r8\pp r2
 }
 
+dashPlus = "staccatissimo"
+
 clarOB = \relative c' {
-  e4 b' e, b' ~
-  b4. e,8 b' e, b'4
+  e4-> b'-> e,-> b'-> ~
+  b4. e,8-. b'-. e,-. b'4 ~
+  b4. f'8-+ gf-+ bf,-+ cf-+ df-+
+  d,!-+  e!-+  cs-+ d-+ e ( ds ) e\mp\< ( ds )
+  e ( ds ) e ( ds ) e\ff ( ds ) r4
+  R1\fermataMarkup
+  e4->\ff r4 b'1->
+  \tuplet 3/2 { e,2-> b'-> d,-> }
+  b''2-> ~ b8 r8 d,,4-.
+  cs''1->\sfz\> ~ cs ~ cs4 r4\p r2\fermata
+  R1*15
+  f,,,16\mp ( d' e cs' b'8 ) r8
+  R1*2
+  r2\pitchedTrill d,,2:32->\fff\startTrillSpan ^\markup { \italic "flzg." "(optional)" } e
+  r2\stopTrillSpan r8 \pitchedTrill e4.:32->\startTrillSpan f
+  r2\stopTrillSpan r4 \tuplet 3/2 { e8\mp ( cs' e, }
+  cs'8 ) r8 \tuplet 3/2 { d8 ( b' d, } b'8 ) r8 r4
+  cs8\fff ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  cs8 ( ds ) cs ( ds ) c ( d ) bf ( cf )
+  af\> ( g ) e ( df c a fs e
+  ef\< ) f, ( g b \tuplet 6/4 { cs8 e fs a b ef }
+  bf'8\ff ) r8 r4 r2
+  bf4->\sff ( bf,,8 ) r8 r4 r8 e\pp\< (
+  \pitchedTrill d2\startTrillSpan ( e e8\stopTrillSpan\ff ) r8 r4
+  r4 cs''8\fff ( ds ) cs ( ds cs ) d-> (
+  cs d cs d cs d ) r8 d,,->\sfp ~
+  d1
+  d,8-.\pp d-. r d-. r4 d'4\mp ~
+  d4. r8 d''2->\ff\> ~
+  d4 e,,8\p ( f e f e f )
+  e ( fs ) e ( fs ) e\cresc ( f ) e ( f )
+  e ( f ) d ( e ) d ( e ) d ( e )
+  \tupletSpan 2 \tuplet 6/4 { d8 ( e d bf d e a b! af' e! d bf }
+  \tupletSpan \default \tuplet 3/2 { d,8 [ e d ] } bf8\ff ) r8 r2
+  R1\fermataMarkup
+  R1*2
+  \tupletSpan 2 \tuplet 3/2 { ds'4->\ff cs-> ds-> r ds'-> cs-> } \tupletSpan \default
+  ds4-> r4 r2
+  R1
+  r4 r8 e,,8 ~ e-> r e ~ e->
+  r8 e-> r4
+  R1*2
+  r4 r8 e ~
+  e4-> r e ~
+  e-> r r
+  e ~ e-> r e->
+  r r e ~
 }

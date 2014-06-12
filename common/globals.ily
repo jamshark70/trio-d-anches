@@ -82,9 +82,23 @@ globalBsn = {
 }
 
 globalOB = {
-  \bar "||"
+  \numericTimeSignature
+  %\bar "||"
   %\mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
   \tempo \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } \fontsize #0 "(Doppio movimento)" }
+  %\tempo 2 = 96
   \time 2/2
-  s1*2
+  s1*6
+  \time 3/2 s1.
+  \time 2/2 s1*20
+  \time 1/2 s2
+  \time 2/2 s1*24
+  \tempo "Frantic" 2 = 116
+  s1*6
+  \time 1/2 s2
+  \time 2/2 s1*2
+  \time 1/2 s2
+  \time 3/4 s2.*2
+  \time 2/2 s1
+  \time 3/4 s2.
 }

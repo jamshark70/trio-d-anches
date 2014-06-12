@@ -215,7 +215,72 @@ oboeBsn = \relative c' {
   >>
 }
 
+dashPlus = "staccatissimo"
+
 oboeOB = \relative c' {
-  d4 b'' d,, b'' ~
-  b4. d,8 b' d, b'4
+  d4-> b''-> d,,-> b''-> ~
+  b4. d,8-. b'-. d,-. b'4-> ~
+  b4. a8-+ af-+ gf-+ f-+ d-+
+  b-+ af-+ gf-+ f-+ d ( e ) d\mp\< ( e )
+  d ( e ) d ( e ) d\ff ( e ) r4
+  R1\fermataMarkup
+  d4->\ff r4 b''1->
+  \tuplet 3/2 { d,,2-> b''-> e,,-> }
+  cs'2-> ~ cs8 r e,4-.
+  b''1->\sfz\> ~ b ~ b4 r4\p r2\fermata
+  d,,8\p ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+  d8 ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+  e16\f\< ( cs' d e\! b'8-> ) r8 d,,8\p ( cs ) d8 ( cs )
+  ds\< ( cs ) ds ( cs ) d8 ( cs d8 ) e->\sfp (
+  d e ) d\< ( e ) d ( e ) d ( e ) 
+  d ( e ) d ( e ) d\f ( e ) r4
+  
+  d8\p ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+  d8 ( cs ) d8 ( cs ) ds ( cs ) ds ( cs )
+  d8-. b''4.->\sfz ~ b8 r d,,\mp ( cs )
+  d ( cs d ) ds->\sf ( cs\p ds cs ds )
+  cs\< ( ds cs ds ) cs ( ds e fs
+  g->\f ) r cs,\mp ( ds ) cs ( ds cs ) d-.
+  d-+\< d-+ d-+ d-+\f r4 r8 d-^
+  cs\mp ( d ) cs ( d ) cs ( ds cs ) e->\sf (
+  d e d\< e ) d-. d-+ d-+ d-+\f
+  R2
+  d8-^\sf d-. d-. d-. e-^\sf e-. e-. d-^\sf
+  \tuplet 5/4 { d4-. d-. d-. d-. e-^\sf }
+  \tuplet 9/8 { e8-. [ e-. d-^\sf ] d-. r r r4. }
+  \tuplet 3/2 { e4-^\sf e-. e-. } r2
+  r8 f-+\f f-+ f-+ r2
+  R1
+  cs'8\fff ( ds ) cs8 ( ds ) cs ( d ) cs ( d )
+  cs8 ( ds ) cs8 ( ds ) cs ( ds ) cs ( d )
+  cs ( d ) cs ( d ) r2
+  R1
+  bf,1->\sff (
+  bf'8 ) r8 e,-^ r8 r2
+  r2 cs'2->\sff\< ~ (
+  cs4. ds8 ) cs\fff ( ds cs ) d-> (
+  cs d cs d cs d ) r8 e,->\sfp ~
+  e1
+  r2 r4 e4\mp ~
+  e4. r8 e''2->\ff\> ~
+  e2. r4\p
+  f,,8^"upper notes to the fore" ( e ) f ( e ) fs\cresc ( e ) fs ( e )
+  f ( e ) g ( f ) g ( f ) g ( fs )
+  g ( fs ) g-. g-. g-. g-+\f\< g-+ g-+
+  g-+ g-+ g-+\ff r8 r2
+  R1\fermataMarkup
+  cs,8\f ( ds ) cs8 ( ds ) cs8 ( d ) cs8 ( d )
+  cs8 ( ds ) cs8 ( ds ) cs8 ( d ) cs8 ( d )
+  \tupletSpan 2 \tuplet 3/2 { ds4->\ff cs-> ds-> r ds'-> cs-> } \tupletSpan \default
+  ds4-> r8 cs,8-.\f d ( cs ) d ( cs )
+  ds\< ( cs ) ds ( cs ) d ( cs ) ds-. cs-.
+  ds->\ff r r d ( ds-> ) r d ( ds-> )
+  r ds-> r4
+  r4 cs8\f ( ds ) cs ( ds ) cs ( ds )
+  \tuplet 5/4 { cs4->\ff d!-> cs-> d-> cs }
+  r4 r8 d (
+  ds4-> ) r d (
+  ds-> ) r r
+  d! ( ds-> ) r ds->
+  r r d!
 }

@@ -212,7 +212,73 @@ bsnBsn = \relative c {
   b4 cs,8\! ) r8 r2
 }
 
+dashPlus = "staccatissimo"
+
 bsnOB = \relative c' {
-  cs4-- r cs-- r
+  \clef bass
+  cs4-> r cs-> r
   R1
+  cs,16 ( e gs as ds8 ) b-+ g-+ f-+ ef-+ b-+
+  a-+ g-+ f-+ ef-+ cs''4 cs\mp\<
+  cs cs cs\ff r4
+  R1\fermataMarkup
+  cs4->\ff r4 r1
+  \tuplet 3/2 { cs2-> r cs-> }
+  r2 r4 cs-.
+  e,,1->\sfz\> ~ e ~ e4 r4\p r2\fermata
+  \clef tenor cs''8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  cs16\f\< ( d e a\! b8-> ) r8 cs,\p ( ds ) cs ( ds )
+  cs\< ( d ) cs ( d ) cs ( ds cs ) f,!->\sfp ~ (
+  f cs' f,\< cs' ) f,4-- f->
+  f-> f-> f->\f r4
+  cs'8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  cs b'4.->\sfz ~ b8 r cs,8\mp ( ds )
+  cs ( ds cs ) cs->\sf ( d\p cs d cs )
+  d\< ( cs c a ) \clef bass g ( e cs16 c a gf
+  f8\f ) r \clef tenor d''8\mp ( cs ) d ( cs d ) f,-.
+  \shape #'((0 . -0.3) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
+  cs'\< ( e cs f,\mf ) r4 r8 cs'-^\f
+  ds\mp ( cs ) ds\< ( cs c bf af gf
+  g ) f-. f-. f-. f-. e'-+ e-+ e-+\f
+  R2
+  \clef bass cs8-^\sf cs-. cs-. cs-. f,-^\sf f-. f-. cs'-^\sf
+  \tuplet 5/4 { cs4-. e-^\sf e-. f,,-. f-^\sf }
+  \tuplet 9/8 { f'8-. [ f-. cs'-^\sf ] cs-. r8 r8 r4. }
+  \tuplet 3/2 { f,,4-^\sf g-. d'-> } r2
+  r8 e'-+\f e-+ e-+ r2
+  R1
+  %{\clef bass%} cs,,8\fff ( ds ) cs ( ds ) cs8 ( d ) cs ( d )
+  cs8 ( ds ) cs ( ds ) cs8 ( ds ) cs ( d )
+  cs8\> ( d ) cs ( d ) cs ( d\! ) r4
+  R1
+  bf8-^\ff r8 r4 r2
+  bf''8-^ r8 d2.->\sff ~ (
+  d2 f,,8 ) r8 r4
+  r4 d!8\fff ( cs ) d ( cs d ) cs-> (
+  ds cs ds cs ds cs ) r bf''8->\sfp ~
+  bf1
+  cs,,8-.\pp cs-. r cs-. r4 bf''4\mp ~
+  bf4. r8 bf,,2->\ff\> ~
+  bf2. r4\p
+  bf''2\< ( a ~
+  a4 af2. )
+  gf8-^\sfz r8 r4 r2
+  r4 \clef tenor d'16->\sfz\> ( e8. ~ e2 ~
+  e2.\fermata ) r4\p
+  d8\f ( cs ) d ( cs ) ds ( cs ) ds ( cs )
+  d8 ( cs ) d ( cs ) ds ( cs ) ds ( cs )
+  \tupletSpan 2 \tuplet 3/2 { cs4->\ff d-> cs-> r cs-> d-> } \tupletSpan \default
+  cs4-> r8 ds-.\f cs ( ds ) cs ( ds )
+  cs\< ( d ) cs ( d ) cs r8 cs,-. d-.
+  cs->\ff r r cs' ~ cs-> r cs ~ cs->
+  r cs-> r4
+  r4 d8\f ( cs ) d ( cs ) d ( cs )
+  \tuplet 5/4 { ds4->\ff cs-> ds-> cs-> ds-> }
+  r4 r8 cs8 ~
+  cs4-> r cs ~
+  cs-> r r
+  cs ~ cs-> r cs->
+  r r cs ~
 }
