@@ -139,7 +139,8 @@ clarOb = \new Voice \with {
 } \relative c' {
   \override Hairpin #'to-barline = ##f
   %e8\mf\< ~
-  e4.\f\> e8-- ~ e8 e4.-- ~
+  r4 r e ~ \<
+  e4.\fff\> e8-- ~ e8 e4.-- ~
   e8 e4.-- ~ e4\p r4
   r4 r8 ds\mp\> ^\sempreTenuto ~ ds4 ds
   ds4. ds8 ~ ds4 ds\p
@@ -233,7 +234,7 @@ clarOB = \relative c' {
   ef\< ) f, ( g b \tuplet 6/4 { cs8 e fs a b ef }
   bf'8\ff ) r8 r4 r2
   bf4->\sff ( bf,,8 ) r8 r4 r8 e\pp\< (
-  \pitchedTrill d2\startTrillSpan ( e e8\stopTrillSpan\ff ) r8 r4
+  \pitchedTrill d2\startTrillSpan e e8\stopTrillSpan\ff ) r8 r4
   r4 cs''8\fff ( ds ) cs ( ds cs ) d-> (
   cs d cs d cs d ) r8 d,,->\sfp ~
   d1
@@ -256,5 +257,5 @@ clarOB = \relative c' {
   e4-> r e ~
   e-> r r
   e ~ e-> r e->
-  r r e ~
+  %r r e ~
 }
