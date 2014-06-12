@@ -207,3 +207,7 @@ clarBsn = \relative c' {
   d4. r8\pp r2
 }
 
+clarOB = \relative c' {
+  e4 b' e, b' ~
+  b4. e,8 b' e, b'4
+}

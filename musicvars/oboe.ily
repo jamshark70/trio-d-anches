@@ -215,3 +215,7 @@ oboeBsn = \relative c' {
   >>
 }
 
+oboeOB = \relative c' {
+  d4 b'' d,, b'' ~
+  b4. d,8 b' d, b'4
+}

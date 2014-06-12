@@ -49,6 +49,7 @@ bsnTwelveEight = \relative c' {
   d1.\f\> ~
   d4. ~ d4\! r8 r4. e4\pp e8
   e4 e8 b'4.->\fp\> ~ b4. d,4\pp r8
+  R2.
 }
 
 bsnSixEight = \relative c {
@@ -211,3 +212,7 @@ bsnBsn = \relative c {
   b4 cs,8\! ) r8 r2
 }
 
+bsnOB = \relative c' {
+  cs4-- r cs-- r
+  R1
+}

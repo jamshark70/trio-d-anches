@@ -31,22 +31,22 @@
       instrumentName = "Oboe"
       shortInstrumentName = "Ob."
     } <<
-      { \global \globalBsn \globalTwelveEight }
-      { \oboeTheme \oboeBsn \oboeTwelveEight }
+      { \global \globalBsn \globalTwelveEight \globalOB }
+      { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB }
     >>
     \new Staff \with {
       instrumentName = "Clarinet"
       shortInstrumentName = "Cl."
     } <<
-      { \global \globalBsn \globalTwelveEight }
-      { \clarTheme \clarBsn \clarTwelveEight }
+      { \global \globalBsn \globalTwelveEight \globalOB }
+      { \clarTheme \clarBsn \clarTwelveEight \clarOB }
     >>
     \new Staff \with {
       instrumentName = "Bassoon"
       shortInstrumentName = "Bsn."
     } <<
-      { \global \globalBsn \globalTwelveEight }
-      { \bsnTheme \bsnBsn \bsnTwelveEight }
+      { \global \globalBsn \globalTwelveEight \globalOB }
+      { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB }
     >>
   >>
   \layout {

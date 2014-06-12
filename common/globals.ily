@@ -14,9 +14,11 @@ global = {
 
 globalTwelveEight = {
   \bar "||"
-  \tempo "Poco più mosso" 4. = 72
+  \tempo "Poco più mosso" 4. = 96
   \time 12/8
-  s1.*24
+  s1.*23
+  \time 6/8
+  s2.
 }
 
 globalSixEight = {
@@ -77,4 +79,12 @@ globalBsn = {
   \time 4/4 s1*5
   \time 3/4 s2.
   \time 4/4 s1*6
+}
+
+globalOB = {
+  \bar "||"
+  %\mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  \tempo \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } \fontsize #0 "(Doppio movimento)" }
+  \time 2/2
+  s1*2
 }
