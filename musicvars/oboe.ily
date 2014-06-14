@@ -220,7 +220,7 @@ oboeBsn = \relative c' {
 dashPlus = "staccatissimo"
 
 oboeOB = \relative c' {
-  d4-> b''-> d,,-> b''-> ~
+  d4->\f b''-> d,,-> b''-> ~
   b4. d,8-. b'-. d,-. b'4-> ~
   b4. a8-+ af-+ gf-+ f-+ d-+
   b-+ af-+ gf-+ f-+ d ( e ) d\mp\< ( e )

@@ -212,7 +212,7 @@ clarBsn = \relative c' {
 dashPlus = "staccatissimo"
 
 clarOB = \relative c' {
-  e4-> b'-> e,-> b'-> ~
+  e4->\f b'-> e,-> b'-> ~
   b4. e,8-. b'-. e,-. b'4 ~
   b4. f'8-+ gf-+ bf,-+ cf-+ df-+
   d,!-+  e!-+  cs-+ d-+ e ( ds ) e\mp\< ( ds )

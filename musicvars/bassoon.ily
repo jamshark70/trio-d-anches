@@ -89,7 +89,7 @@ bsnSixEight = \relative c {
   \shape #'((0 . -0.5) (0 . 1) (0 . 1) (0 . 0.4)) Slur
   %\once \override Accidental #'X-offset = #0.2
   %\once \override Accidental.avoid-slur = #'inside  % THIS DOES NOTHING, WHY???
-  bf,16\mp ( bf' ) d ( bf d bf )
+  bf,16\mp ( \once \override Accidental #'extra-offset = #'(0.25 . 0) bf' ) d ( bf d bf )
   \clef tenor d ( bf d bf a bf ) d\< ( bf a bf d e )
   a ( f e c bf a ) \clef bass f ( ef ) b-. g-. cs,8
   cs''4.\sfp ~ cs4 r8
@@ -223,7 +223,7 @@ dashPlus = "staccatissimo"
 
 bsnOB = \relative c' {
   \clef bass
-  cs4-> r cs-> r
+  cs4->\f r cs-> r
   R1
   cs,16 ( e gs as ds8 ) b-+ g-+ f-+ ef-+ b-+
   a-+ g-+ f-+ ef-+ cs''4 cs\mp\<
@@ -233,12 +233,13 @@ bsnOB = \relative c' {
   \tuplet 3/2 { cs2-> r cs-> }
   r2 r4 cs-.
   e,,1->\sfz\> ~ e ~ e4 r4\p r2\fermata
-  \clef tenor cs''8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
+  %{\clef tenor%} cs''8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
   cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
-  cs16\f\< ( d e a\! b8-> ) r8 cs,\p ( ds ) cs ( ds )
+  \clef tenor cs16\f\< ( d e a\! b8-> ) r8 \clef bass cs,\p ( ds ) cs ( ds )
   cs\< ( d ) cs ( d ) cs ( ds cs ) f,!->\sfp ~ (
   f cs' f,\< cs' ) f,4-- f->
-  f-> f-> f->\f r4
+  f,-> f-> f'->\f r4
+  \clef tenor
   cs'8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
   cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
   cs b'4.->\sfz ~ b8 r cs,8\mp ( ds )
