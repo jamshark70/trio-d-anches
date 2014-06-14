@@ -125,7 +125,10 @@ clarSixEight = \relative c' {
   r8 r2\fermata %R1\fermataMarkup
   % CADENZA
   \clarCadenza
-  d16.\> ( e32 ) d16. ( cs!32 ) d16. ( a32\mp ) r8
+  d16.\> ( e32 ) 
+  \tag #'a-part { d16. ( cs32 ) }
+  \tag #'c-score { d16. ( cs!32 ) }
+  d16. ( a32\mp ) r8
   r8 d16.\p ( e32 ) d16. ( cs32\< ) e16. ( cs32 )
   d16. ( a32 ) e'16. ( f32 ) d16.\> ( cs32\! ) r8 r8 d16.\pp ( e32 )
   R2.

@@ -31,9 +31,12 @@
     { \compressFullBarRests
       \override MultiMeasureRest.expand-limit = #1
       \global \globalBsn \globalTwelveEight \globalOB
-      \transpose bf c' \globalOb
+      %{\transpose bf c'%} \globalOb
       s1 \globalSixEight
     }
-    \transpose bf c' { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1 \clarSixEight }
+    \transpose bf c'
+    { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1
+      \keepWithTag #'c-score \clarSixEight
+    }
   >>
 }

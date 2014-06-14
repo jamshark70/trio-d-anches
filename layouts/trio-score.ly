@@ -39,7 +39,9 @@
       shortInstrumentName = "Cl."
     } <<
       { \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight }
-      { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1 \clarSixEight }
+      { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1 
+        \keepWithTag #'c-score \clarSixEight
+      }
     >>
     \new Staff \with {
       instrumentName = "Bassoon"

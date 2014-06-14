@@ -34,6 +34,8 @@
       \transpose a c' \globalOb
       s1 \globalSixEight
     }
-    \transpose a c' { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1 \clarSixEight }
+    \transpose a c' { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1
+                      \keepWithTag #'a-part \clarSixEight
+    }
   >>
 }
