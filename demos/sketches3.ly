@@ -27,6 +27,8 @@ globalA = {
   \time 9/8 s1*9/8
   \time 6/8 s2.*9
   \time 9/8 s1*9/8  % 2*9/8
+  \time 6/8 s2.*22
+  \time 9/8 s1*9/8
   \time 6/8
 }
 
@@ -63,7 +65,7 @@ dashPlus = "staccatissimo"
         R2.
         r8 cs16 ( d g a d8 ) d,16 ( e a b
         e4 ) e8 r r cs-+
-        e-+ b?-+ d,-+ cs4 cs8
+        e-+ b-+ d,-+ cs4 cs8
         cs16 ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
         e4 e8 r4.
         r4. c'!4 ( b8 )
@@ -74,6 +76,14 @@ dashPlus = "staccatissimo"
         e,16 ( cs d e ) d8 ~ ( d4 e8 )
         d16 ( e cs d ) e8 ~ ( e4 cs8 )
         d8-+ e-+ cs-+ d-+ e-+ e,-+
+        d'-+ e'-+ d,-. cs-> ( d e )
+        cs ( d e ) cs,-> ( d e )
+        e'4 e8 r d4
+        %b'8-+ e-+ d,-+ b'-+ d,-+ d,-+ r d'4->
+        %a8-+ cs-+ d-+ b'-+ d,-+ d,-+ r d'4->
+        f8 ( e-. ) d-+ f ( g-. ) f-+ r g4->  % b-+ b'-+ b,-+ r d4->
+        e'4-> e,-> cs->
+        e,4 e8 e4 e8
       }
     >>
     \new Staff \with {
@@ -104,8 +114,10 @@ dashPlus = "staccatissimo"
         r4. g'4 g8
         r4. \tuplet 2/3 { r8 f,-> ~ }
         f2. ~
-        f4 f8 r8 r bf'-+
-        f-+ ef-+ c!-+ e,4 e8
+        %f4 f8 r8 r bf'-+
+        %f-+ ef-+ c!-+ e,4 e8
+        f4 f8 r8 r d'-+
+        fs-+ e-+ bf-+ e,4 e8
         R2.
         cs''4 cs8 r4.
         r8 d,,16 ( e a b d4.
@@ -116,6 +128,12 @@ dashPlus = "staccatissimo"
         cs' g16 ( cs ) b'8-> ~ b4.
         b,4. d,16 ( e cs d e8 ~
         e ) d'-+ d,-+ e'-+ cs-+ d-+
+        e-- d-. e ~ e e'-+ d-+
+        e4 d8 cs-> ( d e )
+        d,4 d8 r cs'4
+        e8-+ d,-+ cs,-> ~ cs cs'-+ e,-+ a,4.->
+        d'4-> d,-> d'->
+        bf,4 bf8 bf4 bf8
       }
     >>
     \new Staff \with {
@@ -150,15 +168,21 @@ dashPlus = "staccatissimo"
         cs4 cs8 r r \clef bass b-+
         g-+ d-+ af-+ f4 f8
         cs'16 ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
-        f,4 f8 r8 e16 ( a b d
-        f2.
-        fs8 ) f,16 ( g c d f4. ~
+        f,4 f8 r8 e16 _( a b d
+        f2. ~
+        f8 ) f,?16 ( g c d f4. ~
         f8 ) e16 ( g a d e4. )
         \tuplet 2/3 4. { f,,8-> d'-> e-> cs'-> }
         e8 cs16 ( d e cs d4. )
         r4. e16 ( cs d e d8 ~
         d4. ) b,4.
-        r4. a'4.
+        r4. a'4. ~
+        a8 r r a,4.
+        a' cs,,8-> ( d e )
+        r4. \clef tenor a''4.->
+        \clef bass a,-> a,-> r8 r a (
+        bf2. )
+        d'4 d8 d4 d8
       }
     >>
   >>
