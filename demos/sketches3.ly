@@ -38,7 +38,11 @@ globalA = {
   \tempo 4. = 88
   \time 6/8 s2.
   \tempo 2 = 88
-  \time 2/2 s1*5
+  \time 2/2 s1*6
+  \tempo 4. = 88
+  \time 6/8 s2.*2
+  \time 9/8 s1*9/8
+  \time 6/8
 }
 
 dashPlus = "staccatissimo"
@@ -115,7 +119,13 @@ dashPlus = "staccatissimo"
         e,2 ( f
         g8-. ) r8 r4 e'2 ~ (
         e f
-        )
+        g2 ) \tuplet 3/2 { r4 d8 ( e cs d }
+        e4. ~ e8 ) e16 ( f d e
+        f4. ~ f8 ) g16 ( a f g
+        af8. ) bf,16-> ( af'8 ) g8. a,16-> ( g'8 ) r4.
+        e,4 ( f g )
+        r4. e'4. (
+        f g )
       }
     >>
     \new Staff \with {
@@ -185,10 +195,17 @@ dashPlus = "staccatissimo"
         d8 ( e f4 ) g2
         r2.
         e4 d8 ( e f4 ) g ~
-        g f c'8 ( bf a4 )
+        g f d'4. ( c8 ) %c'8 ( bf a4 )
         bf8 ( a ) g4 ~ ( g8 a ) bf4 ~ (
         bf8 c cs4 ) d8 ( e f4 )
         d4 d'2 ( cs4 )
+        d8 ( e cs d ) e2 (
+        d8 ) e16 ( cs d e ) d4. (
+        e8 ) f16 ( g e f ) g4.
+        r4. r4. \pitchedTrill d,4. ~ \startTrillSpan e
+        d2.
+        r4.\stopTrillSpan e4. (
+        f g )
       }
     >>
     \new Staff \with {
@@ -262,7 +279,14 @@ dashPlus = "staccatissimo"
         bf g a8 ( bf c4 )
         d f e2 ~
         e4 d bf' a
-        bf8 ( a g4 ) \tuplet 3/2 { bf,,4 bf' r }
+        bf8 ( a g4 ) \tuplet 3/2 2 { bf,,4 bf' r
+                                     e, e' r bf bf' r }
+        %R2.*2
+        r4. \clef tenor \tuplet 2/3 4. { bf'8 af
+                                         g gf f ef }
+        \pitchedTrill d4.\startTrillSpan e \clef bass cs,,8\stopTrillSpan cs'' r r4.
+        \tuplet 2/3 4. { bf8 a af gf }
+        R2.*2
       }
     >>
   >>
