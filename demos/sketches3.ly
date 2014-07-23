@@ -29,7 +29,16 @@ globalA = {
   \time 9/8 s1*9/8  % 2*9/8
   \time 6/8 s2.*22
   \time 9/8 s1*9/8
-  \time 6/8
+  \time 6/8 s2.*8
+  \bar "||"
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*9
+  \tempo 2 = 88  %% change this!
+  \time 2/2 s1*3
+  \tempo 4. = 88
+  \time 6/8 s2.
+  \tempo 2 = 88
+  \time 2/2 s1*5
 }
 
 dashPlus = "staccatissimo"
@@ -84,6 +93,29 @@ dashPlus = "staccatissimo"
         f8 ( e-. ) d-+ f ( g-. ) f-+ r g4->  % b-+ b'-+ b,-+ r d4->
         e'4-> e,-> cs->
         e,4 e8 e4 e8
+        e4 e8 r4.
+        r4. e''4 e8
+        R2.
+        bf,,4 bf8 d4 d8
+        r4. bf'4 bf8
+        R2.
+        r8 d, d' r e, e' bf'8. af16-> ( g8 )
+        r8 fs, fs' gs16 ( as b a f c )
+        r8 d, d' r e, fs'32 ( es fs es
+        fs8. ) gs,16-> ( fs'8 ) f8. g,16-> ( f'8 )
+        r8 cs, d' e'8. e16-> e8
+        R2.
+        r4. e,8. e16-> e8
+        R2.
+        r8 r g g, r f'
+        f, r r e''8. f,16-> ( e'8 )
+        R1*3
+        e,8. ( d16 ) f8 ~ ( f16 e ) g8. ( f16 )
+        R1*2
+        e,2 ( f
+        g8-. ) r8 r4 e'2 ~ (
+        e f
+        )
       }
     >>
     \new Staff \with {
@@ -134,6 +166,29 @@ dashPlus = "staccatissimo"
         e8-+ d,-+ cs,-> ~ cs cs'-+ e,-+ a,4.->
         d'4-> d,-> d'->
         bf,4 bf8 bf4 bf8
+        bf4 bf8 r4.
+        r4. d'4 d8
+        %r8 r bf16 ( c cs a as b cs d
+        r8 r bf16 ( c \tuplet 9/6 { cs16 e, f g a as b cs d }
+        e4 ) e8 bf'4 bf8
+        r4. d,,4 d8
+        R2.
+        R1*9/8
+        R2.*4
+        \tuplet 8/6 { bf'16 ( cs, d e f g gs as } \tuplet 4/3 { b8 ) cs-> cs-> d-> }
+        R2.
+        \tuplet 4/3 4. { b,8-> cs-> cs-> d-> d-> e-> e-> f-> }
+        R2.
+        \tuplet 4/3 { e,8-> d-> d-> cs-> } r4.
+        e4 d8 ( e f4 ) e8 ( d
+        e4 ) cs2 e4
+        d8 ( e f4 ) g2
+        r2.
+        e4 d8 ( e f4 ) g ~
+        g f c'8 ( bf a4 )
+        bf8 ( a ) g4 ~ ( g8 a ) bf4 ~ (
+        bf8 c cs4 ) d8 ( e f4 )
+        d4 d'2 ( cs4 )
       }
     >>
     \new Staff \with {
@@ -183,6 +238,31 @@ dashPlus = "staccatissimo"
         \clef bass a,-> a,-> r8 r a (
         bf2. )
         d'4 d8 d4 d8
+        d4 d8 r4.
+        r4. bf,,4 bf8
+        R2.
+        d''4 d8 e,4 e8
+        r4. e'4 e8
+        R2.
+        bf,,8-> bf' r d, d' r e, e' r
+        bf,8-> bf' r fs'16 ( gs a f ef b )
+        bf,8-> bf' r d, d' r
+        bf,8-> bf' r d, d' r
+        e, r bf-> d8. d16-> d8
+        R2.
+        r8 r bf-> d' e' r
+        \tuplet 4/3 4. { r4 d8-> c-> b-> a-> gs-> fs-> }
+        r8 bf,,8 bf' r d, d'
+        \tuplet 4/3 { r8 d,-> d-> cs-> } r4.
+        r4 bf' af g
+        fs e g f
+        af g bf a
+        \clef tenor g''8 f e d cs4
+        \clef bass r2 bf,4 a
+        bf g a8 ( bf c4 )
+        d f e2 ~
+        e4 d bf' a
+        bf8 ( a g4 ) \tuplet 3/2 { bf,,4 bf' r }
       }
     >>
   >>
