@@ -42,7 +42,8 @@ globalA = {
   \tempo 4. = 88
   \time 6/8 s2.*2
   \time 9/8 s1*9/8
-  \time 6/8
+  \time 6/8 s2.*31
+  \bar "|."
 }
 
 dashPlus = "staccatissimo"
@@ -146,6 +147,11 @@ dashPlus = "staccatissimo"
         r4. e4 e8 
         e4 e8 e4 e8
         r4. r8 r e
+        d4 d8 d4 d8 d4 d8 r4.
+        r8 r8 e'8 e4 e8 r4. d,,4 d8
+        r4. e'4. ef4 d8 c b bf
+        a g4 fs16 ( gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
+        d8 r r r4. %r2.
       }
     >>
     \new Staff \with {
@@ -246,6 +252,11 @@ dashPlus = "staccatissimo"
         r4. d4 d8
         d4 d8 ds4 ds8
         r4. r8 r ds8
+        e4 e8 e4 e8 e4 e8 r4.
+        r8 r d, d4 d8 r4. e,4 e8
+        r4. d''4. ~ \tuplet 2/3 { d8 cs8 ~ } cs4 a8
+        gs8 d,16 ( e a b e4 ) cs8 d a16 ( b e fs b8 ) cs,16 ( d a' b
+        e8 ) r r r4. %r2.
       }
     >>
     \new Staff \with {
@@ -347,6 +358,13 @@ dashPlus = "staccatissimo"
         r4. bf4 bf8
         fs4 fs8 d4 d8
         \clef bass \tuplet 9/6 { d,,16 _( e f fs g a bf c cs } d4 ) d8
+        cs,4 cs8 cs4 cs8 cs4 cs8 r4.
+        r4 cs'8 cs4 cs8 r4. cs'4 cs8
+        r4. cs4 c8 ~ c8 b4 ~ b8 d,16 ( e gs a
+        \tuplet 2/3 { d8 ) cs } c8. a,16 ( bf c cs ds e8 ) f-> ~ f e, d
+        %\tuplet 2/3 { d8 ) cs } \tuplet 4/3 { c8 bf a g } fs8 [ r f8-> ] ~ f e, d
+        cs8 r r r4. %r2.
+
       }
     >>
   >>
@@ -356,6 +374,8 @@ dashPlus = "staccatissimo"
   \midi {}
 }
 
+
+%{
 \markup \column {
   \vspace #2
   \bold "Final rush"
@@ -412,4 +432,4 @@ globalX = { \time 12/8 s1.*5 \bar "|." }
   }
   %\midi {}
 }
-
+%}
