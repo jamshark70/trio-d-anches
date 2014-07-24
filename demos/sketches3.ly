@@ -126,6 +126,26 @@ dashPlus = "staccatissimo"
         e,4 ( f g )
         r4. e'4. (
         f g )
+        cs8 ( d e ) cs4 cs8
+        cs4 cs8 r4.
+        r4. cs,,8 ( d e )
+        cs4. d
+        r8 cs16 ( d e8 ) d16 ( e f8 ) d16 ( e )
+        b'4.-> \tuplet 2/3 { r8 cs,8 }
+        %d4. ~ d8 r r
+        d4 cs''16 ( d e8 ) r r
+        r4. cs,16 ( d e8 ) d16 ( e
+        f8 ) r r r4.
+        f4. \tuplet 2/3 4. { e8 ef
+                             d c r g' ~ }
+        \tuplet 5/6 { g8 gf f e ef }
+        df8 r r e af4 ~
+        af e8 af4 af8
+        af4 af8 r4.
+        g4 g8 f4 f8
+        r4. e4 e8 
+        e4 e8 e4 e8
+        r4. r8 r e
       }
     >>
     \new Staff \with {
@@ -206,6 +226,26 @@ dashPlus = "staccatissimo"
         d2.
         r4.\stopTrillSpan e4. (
         f g )
+        cs,,8 ( d e ) cs'4 cs8
+        cs4 cs8 cs ( d e )
+        cs4. ~ cs8 r cs (
+        d e ) b' ~ b4. ~
+        b8 r r r4.
+        \tuplet 2/3 4. { r8 cs, d e }
+        %b'4. ~ b8 r r
+        b'4 cs,16 ( d e8 ) r r
+        R2.
+        r4. e'4. ~
+        e4 ef d
+        df8 cf bf gf'4 f8 ~
+        \tuplet 2/3 4. { f8 e ef df }
+        c8 r r d bf'4 ~
+        bf4 d,8 bf'4 bf8
+        bf4 bf8 r4.
+        b!4 b8 cs4 cs8
+        r4. d4 d8
+        d4 d8 ds4 ds8
+        r4. r8 r ds8
       }
     >>
     \new Staff \with {
@@ -286,7 +326,27 @@ dashPlus = "staccatissimo"
                                          g gf f ef }
         \pitchedTrill d4.\startTrillSpan e \clef bass cs,,8\stopTrillSpan cs'' r r4.
         \tuplet 2/3 4. { bf8 a af gf }
-        R2.*2
+        r8. bf,,16 ( c cs d f g a bf c
+        d ) g, ( a bf c d e f g a bf c )
+        cs8 ( d e ) cs,,4 cs8
+        cs4 cs8 r4.
+        \clef tenor cs''8 ( d e ) cs4. ~
+        cs8 r r cs ( d e )
+        b'4.-> ~ b8 r r
+        r4. \tuplet 2/3 { cs,8 d }
+        e4. r8 \clef bass cs,16 ( d e8 )
+        d16 ( e f8 ) e16 ( f g8 ) r r
+        r cs,16 ( d e8 ) d16 ( e f8 ) e16 ( f
+        g8 ) cs,16 ( d e8 ) d16 ( e f8 ) g16 ( af
+        bf8 ) f16 ( g af8 ) g16 ( af bf8 ) af16 ( bf
+        b!8 ) f16 ( g af8 ) g16 ( af bf8 ) b16 ( cs
+        d8 ) \clef tenor d8 d' ~ d4 d,8
+        d'4. d4 d8
+        d4 d8 r r cs ~
+        cs4 cs8 c4 c8
+        r4. bf4 bf8
+        fs4 fs8 d4 d8
+        \clef bass \tuplet 9/6 { d,,16 _( e f fs g a bf c cs } d4 ) d8
       }
     >>
   >>
