@@ -33,13 +33,17 @@ globalA = {
   \bar "||"
   \time 9/8 s1*9/8
   \time 6/8 s2.*9
-  \tempo 2 = 88  %% change this!
+  %\tempo 2 = 88  %% change this!
+  \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
   \time 2/2 s1*3
-  \tempo 4. = 88
+  %\tempo 4. = 88
+  \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
   \time 6/8 s2.
-  \tempo 2 = 88
+  %\tempo 2 = 88
+  \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
   \time 2/2 s1*6
-  \tempo 4. = 88
+  %\tempo 4. = 88
+  \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
   \time 6/8 s2.*2
   \time 9/8 s1*9/8
   \time 6/8 s2.*31
@@ -47,6 +51,10 @@ globalA = {
 }
 
 dashPlus = "staccatissimo"
+
+shapeECsDE = {
+  \shape #'((0 . -0.3) (-0.4 . -0.5) (-0.25 . -0.3) (0 . 0)) Slur
+}
 
 \score {
   \new StaffGroup <<
@@ -56,35 +64,35 @@ dashPlus = "staccatissimo"
     } <<
       \globalA
       \relative c' {
-        cs8 ( d e ) cs4. ~
+        cs8\mp ( d e ) cs4. ~
         cs4. cs8 ( d e )
-        cs4 cs8 ( d8 ) e16 ( cs d e )
+        cs4 cs8 ( d8 ) \shapeECsDE e16 ( cs d e )
         d2.
         cs8 ( d e ) cs2.
-        cs8 ( d e ~ e ) f4 ~ (
+        cs8 ( d e ~ e ) f4\< ~ (
         f4 e8 ) g4. ~
-        g8 af4 ~ af4. ~
-        af8 r r f ( e d )
-        cs8 r r r4.
-        r8 r cs ( d ) e16 ( cs d e )
+        g8 af4\> ~ af4. ~
+        af8\! r r f\mf\> ( e d )
+        cs8\mp r r r4.
+        r8 r cs ( d ) \shapeECsDE e16 ( cs d e )
         d2.
-        d4 e8 d4 e8
+        d4\cresc ( e8 ) d4 ( e8 )
         d16 ( e cs d ) e8 ~ e4. ~
-        e4 e8 d4 e8 d4 e8
-        cs8 r8 r cs4 cs8
-        cs4 cs8 r4.
+        e4 e8 d4 ( e8 ) d4 ( e8 )
+        cs8 \f r8 r cs4\> cs8
+        cs4 cs8\p r4.
         R2.
-        g'4 g8 r4.
-        cs,4 cs8 e4 e8
+        g'4\mf g8 r4.
+        cs,4\sf-> cs8\p e4 e8
         R2.
-        r8 cs16 ( d g a d8 ) d,16 ( e a b
-        e4 ) e8 r r cs-+
+        r8 cs16\mf\< ( d g a d8 ) d,16 _( e a b
+        e4\f ) e8 r r cs-+
         e-+ b-+ d,-+ cs4 cs8
         cs16 ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
         e4 e8 r4.
         r4. c'!4 ( b8 )
         R2.
-        r4. r8 cs,16 ( f g b
+        r4. r8 cs,16 _( f g b
         cs4. ~ \tuplet 2/3 4. { cs8 ) f,->
                                 d'-> e-> } cs'4.->
         e,16 ( cs d e ) d8 ~ ( d4 e8 )
@@ -160,36 +168,36 @@ dashPlus = "staccatissimo"
     } <<
       \globalA
       \relative c' {
-        cs2.
-        cs8 ( d e ) cs4. ~
+        R2. %cs2.
+        cs8\mp ( d e ) cs4. ~
         cs4 r8 r4.
-        r8 cs16 ( d e8 ) d16 ( e f8 ) e16 ( d
-        cs8 ) r r r4. cs8 ( d e )
-        cs8 r cs d4 e8 ~
-        e8 d4 ~ d8 cs16 ( d e8 )
+        r8 cs16\< ( d e8 ) d16 ( e f8\> ) e16 ( d
+        cs8\! ) r r r4. cs8\mp ( d e )
+        cs8 r cs ( d4 ) e8 ~ (
+        e8 d4 ~ d8 ) cs16\< ( d e8 )
         d16 ( e f8 ) e16 ( f ) g8 ( f e )
-        f ( e d ) f4. (
-        cs8 ) r r cs ( d e )
+        f ( e d ) f4.\mf\> (
+        cs8\mp ) r r cs ( d e )
         cs4. ~ cs8 r r
         r d16 ( e cs d ) e4.
-        e4 d8 e4 d8
-        e8-. d4 e16 ( cs d e ) d8 ~
-        d4 g,8 e'4 d8 e4 g,8
-        cs8 r r cs4 cs8
-        cs4 cs8 r4.
-        \tuplet 2/3 4. { cs8-> d-> e-> f-> }
-        d4 d8 f,4 f8
-        r4. g'4 g8
-        r4. \tuplet 2/3 { r8 f,-> ~ }
+        e4\cresc ( d8 ) e4 ( d8 )
+        e8-. d4 \shapeECsDE e16 ( cs d e ) d8 ~ (
+        d4 g,8 ) e'4 ( d8 ) e4 ( g,8 )
+        cs8\f r r cs4\> cs8
+        cs4 cs8\p r4.
+        \tuplet 2/3 4. { cs8->\mf d-> e-> f-> }
+        d4 d8 f,4\p f8
+        r4. g'4\mf g8
+        r4. \tuplet 2/3 { r8 f,->\sfp\< ~ }
         f2. ~
         %f4 f8 r8 r bf'-+
         %f-+ ef-+ c!-+ e,4 e8
-        f4 f8 r8 r d'-+
+        f4\f f8 r8 r d'-+
         fs-+ e-+ bf-+ e,4 e8
         R2.
         cs''4 cs8 r4.
         r8 d,,16 ( e a b d4.
-        e8 ) r r r d,16 ( e a b
+        e8 ) r r r d,16 _( e a b
         d2. ~
         d8 ) \shape #'((0 . 0) (0 . 0.5) (-1.5 . 0.5) (0 . -0.5)) Slur b'16 ( d e a b4. ~
         b8 ) r r f,,8 d' e
@@ -266,34 +274,34 @@ dashPlus = "staccatissimo"
       \globalA
       \relative c' {
         \clef tenor
-        cs4. cs8 ( d e )
+        cs4.\mp cs8 ( d e )
         cs4. ~ cs8 r cs (
         d e ) cs8 ~ cs4. ~
         cs4 r8 r4.
         r4. cs8 ( d e ) cs4. ~
-        cs4. ~ cs4 cs8 (
+        cs4. ~ cs4 cs8\< (
         d e ) cs ~ cs4 cs,8
         cs'2. ~
-        cs4 r8 r4.
-        cs8 ( d e ) cs4.
+        cs4\mf r8 r4.
+        cs8\mp ( d e ) cs4.
         cs8 ( d e ) cs4. ~
-        cs4. ~ cs16 r \clef bass f,,16 ( g c d
+        cs4. ~ cs16 r \clef bass f,,16\cresc ( g c d
         f8 ) e,16 ( a b d g8 ) f,16 ( g c d
-        f8 ) g,16 ( b c f g4) g8
-        \clef tenor g4 d'8 g,4 f8 g4 d'8
-        cs8 ( d e ) cs4. ~
-        cs8 r r cs8 ( d e ~
-        e4. ) d4.
-        \acciaccatura { e16 d } e4 e8 r4.
-        cs4 cs8 d4 d8
-        \tuplet 2/3 4. { cs8-> d-> e-> f-> ~ }
+        f8 ) g,16 _( b c f g4 ) g8
+        \clef tenor g4 ( d'8 ) g,4 ( f8 ) g4 ( d'8 )
+        cs8\f\> ( d e ) cs4. ~
+        cs8\! r r cs8\p ( d e ~
+        e4. ) \< d4.
+        \acciaccatura { e16 d } e4\mf e8 r4.
+        cs4->\sf cs8\p d4 d8
+        \tuplet 2/3 4. { cs8->\mf d-> e-> f-> ~ \sfp\< }
         f4. \tuplet 2/3 { e8 d }
-        cs4 cs8 r r \clef bass b-+
+        cs4\f cs8 r r \clef bass b-+
         g-+ d-+ af-+ f4 f8
         cs'16 ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
         f,4 f8 r8 e16 _( a b d
         f2. ~
-        f8 ) f,?16 ( g c d f4. ~
+        f8 ) f,?16 _( g c d f4. ~
         f8 ) e16 ( g a d e4. )
         \tuplet 2/3 4. { f,,8-> d'-> e-> cs'-> }
         e8 cs16 ( d e cs d4. )
@@ -371,7 +379,7 @@ dashPlus = "staccatissimo"
   \layout {
     \context { \Staff \RemoveEmptyStaves }
   }
-  \midi {}
+  %\midi {}
 }
 
 
