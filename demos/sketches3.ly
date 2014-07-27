@@ -139,29 +139,29 @@ mkMarc = \markup \italic "marc."
         f g )
         cs8\ff ( d e ) cs4 cs8
         cs4 cs8 r4.
-        r4. cs,,8 ( d e )
+        r4. cs,,8 ( \f d e )
         cs4. d
-        r8 cs16 ( d e8 ) d16 ( e f8 ) d16 ( e )
-        b'4.-> \tuplet 2/3 { r8 cs,8 }
+        r8 cs16\< ( d e8 ) d16 ( e f8 ) d16 ( e )
+        b'4.-> \tuplet 2/3 { r8 cs,8-> }
         %d4. ~ d8 r r
-        d4 cs''16 ( d e8 ) r r
-        r4. cs,16 ( d e8 ) d16 ( e
-        f8 ) r r r4.
-        f4. \tuplet 2/3 4. { e8 ef
+        d4-> cs''16 ( d e8\ff ) r r
+        r4. cs,16\f\> ( d e8 ) d16 ( e
+        f8\p ) r r r4.
+        f4.->\mp \cresc \tuplet 2/3 4. { e8 ef
                              d c r g' ~ }
         \tuplet 5/6 { g8 gf f e ef }
-        df8 r r e af4 ~
-        af e8 af4 af8
-        af4 af8 r4.
-        g4 g8 f4 f8
+        df8\f r r e-> af4 ~
+        af e8 af4-> af8
+        af4-> af8 r4.
+        g4 ^\markup \italic "sim." \cresc g8 f4 f8
         r4. e4 e8 
         e4 e8 e4 e8
         r4. r8 r e
-        d4 d8 d4 d8 d4 d8 r4.
+        d4\ff d8 d4 d8 d4 d8 r4.
         r8 r8 e'8 e4 e8 r4. d,,4 d8
-        r4. e'4. ef4 d8 c b bf
-        a g4 fs16 ( gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
-        d8 r r r4. %r2.
+        r4. e'4.->\> ef4 d8 c ( b ) bf-.
+        a-. \mf g4-> fs16 ( \< gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
+        d8\ff r r r4. %r2.
       }
     >>
     \new Staff \with {
@@ -247,30 +247,30 @@ mkMarc = \markup \italic "marc."
         r4.\stopTrillSpan e4. ( \<
         f g )
         cs,,8\ff ( d e ) cs'4 cs8
-        cs4 cs8 cs ( d e )
+        cs4 cs8 cs ( \f d e )
         cs4. ~ cs8 r cs (
-        d e ) b' ~ b4. ~
+        d e ) b'-> ~ b4. ~
         b8 r r r4.
-        \tuplet 2/3 4. { r8 cs, d e }
+        \tuplet 2/3 4. { r8 cs,->\< d-> e-> }
         %b'4. ~ b8 r r
-        b'4 cs,16 ( d e8 ) r r
+        b'4-> cs,16 ( d e8\ff ) r r
         R2.
-        r4. e'4. ~
+        r4. e'4.-> \mp \cresc ~
         e4 ef d
-        df8 cf bf gf'4 f8 ~
+        df8 cf bf gf'4-> f8 ~
         \tuplet 2/3 4. { f8 e ef df }
-        c8 r r d bf'4 ~
-        bf4 d,8 bf'4 bf8
-        bf4 bf8 r4.
-        b!4 b8 cs4 cs8
+        c8\f r r d-> bf'4 ~
+        bf4 d,8 bf'4-> bf8
+        bf4-> bf8 r4.
+        b!4 ^\markup \italic "sim." \cresc b8 cs4 cs8
         r4. d4 d8
         d4 d8 ds4 ds8
         r4. r8 r ds8
-        e4 e8 e4 e8 e4 e8 r4.
+        e4\ff e8 e4 e8 e4 e8 r4.
         r8 r d, d4 d8 r4. e,4 e8
-        r4. d''4. ~ \tuplet 2/3 { d8 cs8 ~ } cs4 a8
-        gs8 d,16 ( e a b e4 ) cs8 d a16 ( b e fs b8 ) cs,16 ( d a' b
-        e8 ) r r r4. %r2.
+        r4. d''4.-> \> ~ \tuplet 2/3 { d8 cs8-> ~ } cs4 a8
+        gs8 d,16\f ( e a b e4 ) cs8 d\< a16 ( b e fs b8 ) cs,16 ( d a' b
+        e8 ) \ff r r r4. %r2.
       }
     >>
     \new Staff \with {
@@ -355,29 +355,29 @@ mkMarc = \markup \italic "marc."
         d ) g, ( a bf c d e f g a bf c )
         cs8\ff ( d e ) cs,,4 cs8
         cs4 cs8 r4.
-        \clef tenor cs''8 ( d e ) cs4. ~
+        \clef tenor cs''8 ( \f d e ) cs4. ~
         cs8 r r cs ( d e )
         b'4.-> ~ b8 r r
-        r4. \tuplet 2/3 { cs,8 d }
-        e4. r8 \clef bass cs,16 ( d e8 )
+        r4. \tuplet 2/3 { cs,8->\< d-> }
+        e4.->\ff r8 \clef bass cs,16\p ( d e8 )
         d16 ( e f8 ) e16 ( f g8 ) r r
-        r cs,16 ( d e8 ) d16 ( e f8 ) e16 ( f
+        r cs,16\mp \cresc ( d e8 ) d16 ( e f8 ) e16 ( f
         g8 ) cs,16 ( d e8 ) d16 ( e f8 ) g16 ( af
         bf8 ) f16 ( g af8 ) g16 ( af bf8 ) af16 ( bf
         b!8 ) f16 ( g af8 ) g16 ( af bf8 ) b16 ( cs
-        d8 ) \clef tenor d8 d' ~ d4 d,8
-        d'4. d4 d8
-        d4 d8 r r cs ~
-        cs4 cs8 c4 c8
-        r4. bf4 bf8
+        d8 ) \f \clef tenor d8 d'-> ~ d4 d,8
+        d'4.-> d4-> d8
+        d4-> d8 r r cs-> ~
+        cs4\cresc cs8 c4-> c8
+        r4. bf4 ^\markup \italic "sim." bf8
         fs4 fs8 d4 d8
         \clef bass \tuplet 9/6 { d,,16 _( e f fs g a bf c cs } d4 ) d8
-        cs,4 cs8 cs4 cs8 cs4 cs8 r4.
+        cs,4\ff cs8 cs4 cs8 cs4 cs8 r4.
         r4 cs'8 cs4 cs8 r4. cs'4 cs8
-        r4. cs4 c8 ~ c8 b4 ~ b8 d,16 ( e gs a
-        \tuplet 2/3 { d8 ) cs } c8. a,16 ( bf c cs ds e8 ) f-> ~ f e, d
+        r4. cs4->\> c8 ~ c8 b4 ~ b8 d,16\f\< ( e gs a
+        \tuplet 2/3 { d8\> ) cs } c8.\< a,16 ( bf c cs ds e8 ) f-> ~ f e, d
         %\tuplet 2/3 { d8 ) cs } \tuplet 4/3 { c8 bf a g } fs8 [ r f8-> ] ~ f e, d
-        cs8 r r r4. %r2.
+        cs8\ff r r r4. %r2.
 
       }
     >>
