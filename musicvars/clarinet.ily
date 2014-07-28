@@ -178,6 +178,12 @@ clarOb = \new Voice \with {
   gs gs fs fs\>
   fs fs2. ~
   fs2. r4\ppp
+  r2 r4 r8 ds,8\p ^\nonEspr ~
+  ds cs4 e cs ds8 ~
+  ds cs4 cs ds8 r4
+  r2 e4 ds8 r8
+  r2 cs8 ( \pp ds ) r4
+  R2 \fermataMarkup
 }
 
 clarBsn = \relative c' {

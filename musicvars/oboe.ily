@@ -170,6 +170,12 @@ oboeOb = \relative c' {
   a a'4 a a e'8\> ~
   e e4. ~ e8 e4. ~
   e2. r4\ppp
+  R1
+  r2 gs,2\p ~ (
+  gs8 as4. ~ as2 )
+  \grace { gs16 ^( b } as8. gs16 as2.\> ~
+  as4. ) r8\ppp r2
+  R2 \fermataMarkup
 }
 
 oboeBsn = \relative c' {

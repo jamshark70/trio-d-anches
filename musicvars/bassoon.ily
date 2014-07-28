@@ -169,6 +169,13 @@ bsnOb = \new Voice \with {
       s8\!
     }
   >>
+  R1
+  \resetRelativeOctave c'
+  \clef tenor e4\p ^\nonEspr ds ds e
+  e ds e r4
+  r4 r8 ds ~ ds cs4 r8
+  r2 cs4-- \pp r4 
+  R2 \fermataMarkup
 }
 
 bsnBsn = \relative c {

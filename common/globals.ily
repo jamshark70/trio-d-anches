@@ -51,7 +51,7 @@ globalSixEight = {
   \nullMeter \time 2/2
   \tempo "Mysteriously" 4 = 72
   \cadenzaToMusic \clarCadenza s1 \bar "|"
-  \set Score.currentBarNumber = #222
+  \set Score.currentBarNumber = #227
   \mark \default
   \time 4/4 s1
   \time 3/4 s2.*2
@@ -77,7 +77,8 @@ globalOb = {
   \mark \default
   s1*7
   \time 5/4 s4*5
-  \time 4/4 s1*6
+  \time 4/4 s1*11
+  \time 2/4 s2
 }
 
 globalBsn = {
