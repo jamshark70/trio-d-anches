@@ -226,7 +226,7 @@ mkMarc = \markup \italic "marc."
         \tuplet 4/3 4. { b,8->\f\< cs-> cs-> d-> d-> e-> e-> f->\ff }
         R2.
         \tuplet 4/3 { e,8->\ff d-> d-> cs-> } r4.
-        e4\mf d8 ( e f4 ) e8 ( d
+        e4\mf ^\markup \italic "ponderously" d8 ( e f4 ) e8 ( d
         e4 ) cs2 e4
         d8 ( e f4 ) g2
         r2.
@@ -336,11 +336,11 @@ mkMarc = \markup \italic "marc."
         \tuplet 4/3 4. { r4 d8->\f\< c-> b-> a-> gs-> fs->\ff }
         r8 bf,,8->\mf bf' r d, d'
         \tuplet 4/3 { r8 d,->\ff d-> cs-> } r4.
-        r4 bf'^\mkMarc \mf af g
+        r4 bf' ^\markup \italic "ponderously" \mf af g
         fs e g f
         af g bf a
-        \clef tenor g''8\f\< ( f ) e-. d-. cs4->\!
-        \clef bass r2 bf,4\mf a
+        \clef tenor g''8\f\< ^\markup \italic "nimbly" ( f ) e-. d-. cs4->\!
+        \clef bass r2 ^\markup \italic "ponderously" bf,4\mf a
         bf g a8 ( bf c4 )
         d f e2 ~ (
         e4 d ) bf' a
@@ -349,7 +349,9 @@ mkMarc = \markup \italic "marc."
         %R2.*2
         r4. \clef tenor \tuplet 2/3 4. { bf'8->\< af->
                                          g-> gf-> f-> ef-> }
+        \override Beam.auto-knee-gap = #8
         \pitchedTrill d4.\f \startTrillSpan e \clef bass cs,,8->\stopTrillSpan cs'' r r4.
+        \revert Beam.auto-knee-gap
         \tuplet 2/3 4. { bf8-> a-> af-> gf-> }
         r8. bf,,16\< ( c cs d f g a bf c
         d ) g, ( a bf c d e f g a bf c )
