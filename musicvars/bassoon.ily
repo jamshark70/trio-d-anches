@@ -1,6 +1,7 @@
 \language "english"
 
 bsnTheme = \relative c' {
+  \override Hairpin #'to-barline = ##f
   \clef tenor
   d4--\p d8-- d4-- d8-- d4-- d8 ~
   d2. d4-- d8 ~
@@ -54,8 +55,8 @@ bsnTwelveEight = \relative c' {
 
 bsnSixEight = \relative c {
   \clef bass
-  cs8->\f\> ( cs'\! ) r8 r4.
-  r8 cs,->\f\> ( cs'\! ) r4.
+  cs8->\mf\> ( cs'\! ) r8 r4.
+  r8 cs,->\mf\> ( cs'\! ) r4.
   r4. cs4\mf\< d8 ~ (
   d4\f cs8 ) d\> ( cs ) cs
   e ( d ) cs bs4 ( cs8\p )
@@ -65,7 +66,7 @@ bsnSixEight = \relative c {
   cs8\mp ( cs' ) r8 r4.
   R2.
   f,,!8-> ( f'! ) r8 r4.
-  cs,8->\mf ( cs' ) r8 f,!8->_\markup { \italic "cresc." } ( f'! ) r8 g,8 ( c'! ) r8
+  cs,8->\mf ( cs' ) r8 f,!8-> \cresc ( f'! ) r8 g,8 ( c'! ) r8
   f,,!8 ( a' ) r8 d ( e4 )
   g,4.-> \tuplet 3/2 { d'16-> ( a d } a4 )
   g4.->\< e'32-> ( d e d e8 ) r8
@@ -83,7 +84,7 @@ bsnSixEight = \relative c {
   a-. bf4->\ff bf,,8-> ( bf' ) r8
   r8 r8 bf'-.\f bf,->\> ( bf' ) d-.
   ef4 ( d8\mp ) r8 r8 bf-.
-  bf,,16\f\> ( c ) e-. a-. cs-.\< fs-. c'-. r r ef,-. f-. b?-.
+  bf,,16\f ( c ) e-. a-. cs-.\< fs-. c'-. r r ef,-. f-. b?-.
   \clef tenor \tuplet 3/2 { e16->\ff ( [ f g } a8 ) ] r8 r8 r8 \clef bass bf,,,8->
   bf'\> ( d' ) r8 
   \shape #'((0 . -0.5) (0 . 1) (0 . 1) (0 . 0.4)) Slur
@@ -217,13 +218,14 @@ bsnBsn = \relative c {
   \unset baseMoment
   \unset beatStructure
   \set subdivideBeams = ##f
-  \clef tenor e32 ( a, e' a, ~ a8 ~ a8. ) a,16 ( \tuplet 5/4 { e'16 f a d e ) } f32\f ( e8. ) d32 (
+  \clef tenor e32 ( a, e' a, ~ a8 ~ a8. ) a,16 ( \tuplet 5/4 { e'16 f a d e ) } f32\mf ( e8. ) d32 (
   e8\> f4. ~ f8. )
   \shape #'((0 . -1) (-1 . 1) (0 . 0) (0 . 0)) Slur
   cs,16 ( g''4 ~
-  g4 ) 
+  g4 )
   \shape #'((0 . 2) (-2 . -1) (0 . -1.5) (0 . 0)) Slur
   f,16 ( b'8.\p ~ b2\> ~
+  \noBreak
   b4 cs,8\! ) r8 r2
 }
 
@@ -255,7 +257,7 @@ bsnOB = \relative c' {
   d\< ( cs c a ) \clef bass g ( e cs16 c a gf
   f8\f ) r \clef tenor d''8\mp ( cs ) d ( cs d ) f,-.
   \shape #'((0 . -0.3) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
-  cs'\< ( e cs f,\mf ) r4 r8 cs'-^\f
+  cs'\< ( e cs f,\f ) r4 r8 cs'-^
   ds\mp ( cs ) ds\< ( cs c bf af gf
   g ) f-. f-. f-. f-. e'-+ e-+ e-+\f
   R2

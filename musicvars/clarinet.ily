@@ -1,6 +1,7 @@
 \language "english"
 
 clarTheme = \relative c' {
+  \override Hairpin #'to-barline = ##f
   cs4--\p cs8-- cs4-- cs8-- cs4-- cs8 ~
   cs2. cs4-- cs8 ~
   cs4. cs4-- cs8 ~ cs4. ~
@@ -65,7 +66,7 @@ clarSixEight = \relative c' {
   cs\mp ( cs' ) cs,-. d ( cs ) bs-.
   cs\< ( b' ) cs,-. d4 ( cs8
   d4. ) cs'8->\f ( cs' ) r8
-  d,,4\mp ( cs8_\markup { \italic "cresc." } ) d8 ( e4 ) b'4.->
+  d,,4\mp ( cs8 \cresc ) d8 ( e4 ) b'4.->
   a8 ( d,4 ) f,4.->
   \tuplet 3/2 { c'!16-> ( e c } e4 ) g,4.->
   e''32->\< ( a, e' a, e'4 ) g,,4.->
@@ -196,15 +197,15 @@ clarBsn = \relative c' {
   b2 d,\p ~
   d4.\< cs8 ( d e4.\> )
   a,2.\p\< cs,4 ~
-  cs2.\f\> ~ \tupletSpan 4 \tuplet 3/2 { cs4\mp f,!8\f\> d' ( e ) r8\! } \tupletSpan \default
+  cs2.\f\> ~ \tupletSpan 4 \tuplet 3/2 { cs4\mp f,!8->\f\> d' ( e ) r8\! } \tupletSpan \default
   r4
   % r8. d16 ( \tuplet 7/4 { e16 d e d e d e } 
   \override TrillPitchAccidental.avoid-slur = #'inside
   r8 cs4.\p\< (
   \pitchedTrill d2\startTrillSpan ~ e
-  d4. ) r8\stopTrillSpan \f r4 r8 ef,->\sfz\> ~
-  ef2 \pitchedTrill d'4\startTrillSpan \mp e b''4\stopTrillSpan ~ \>
-  b4. r8\! r2
+  d4. ) r8\stopTrillSpan \f r4 r8 ef,->\sfz ~
+  ef2 \pitchedTrill d'4\startTrillSpan e b''4\stopTrillSpan ~ \>
+  b4. r8\p r2
   R1 R2.
   r2 r4 a,,4\p ~
   a2

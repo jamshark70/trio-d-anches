@@ -87,8 +87,8 @@ globalBsn = {
   \numericTimeSignature
   %\tempo 4. = 63
   \mark \default
-  \time 9/8 s8*9
   \bar "||"
+  s8*9
   \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"4" #1 } }
   %\tempo 4 = 63
   \time 2/4 s2

@@ -1,6 +1,7 @@
 \language "english"
 
 oboeTheme = \relative c' {
+  \override Hairpin #'to-barline = ##f
   e4--\p e8-- e4-- e8-- e4-- e8 ~
   e2. e4-- e8 ~
   e4. d4-- d8 ~ d4. ~
@@ -70,7 +71,7 @@ oboeSixEight = \relative c' {
   r8 r cs-.\mp e-- r8 r8
   cs\< ( gs' ) cs,-. e4. ~
   e4. cs8->\f ( cs' ) cs,-.\mp
-  e4 ( cs8_\markup { \italic "cresc." } ) b'4.-> a8 ( d,4 )
+  e4 ( cs8 \cresc ) b'4.-> a8 ( d,4 )
   b'4.-> a8 ( cs,4 )
   \tuplet 3/2 { \shape #'((0 . 0) (0 . -0.5) (0 . -0.1) (0 . 0)) Slur b'16-> ( d, b' } d,4 )
   \tuplet 3/2 { \shape #'((0 . 0) (0 . -0.8) (0 . -0.25) (0 . 0)) Slur cs'16-> ( fs, cs' } fs,4 )
@@ -161,7 +162,7 @@ oboeOb = \relative c' {
     { s4\> s4. s8\! }
   >>
   r4 r8 a?\mf ^"urgently" ( \tuplet 5/4 { cs8\< ds ) e ( gs fs ) }
-  \tuplet 3/2 { ds'16->\f\> ( b gs } a4.\mf ) \grace cs,16 ^( gs'8_\espressivo fs\! ) r8 a,\mf\< (
+  \tuplet 3/2 { ds'16->\> ( b gs } a4.\! ) \grace cs,16 ^( gs'8_\espressivo fs\! ) r8 a,\mf\< (
   cs ds ) \tuplet 3/2 { gs16->\> ( e a, e' gs8 ~ \! } gs4 ) \grace b16 ^( g8 f8 )
   \tuplet 5/4 { c8\< ( d e ) a, ( b } \tuplet 7/4 { ds8 ) f,-- g-- b-. fs'? ( e'  ) d,, _( }
   e8\f\> \grace d16 e8 ~ e2 ) e4--\p e-- ~
@@ -191,10 +192,10 @@ oboeBsn = \relative c' {
   d1\f\> ~
   d8\p r8 r4
   r2 cs'16->\mf ( b'8. ~ b4 ~
-  b4. ) r8 r4 r8 b,->\sfz\> ~
+  b4. ) r8 r4 r8 b,->\sfz ~
   \override TrillPitchAccidental.avoid-slur = #'inside
-  b2 f'4 \mp \pitchedTrill af,4\startTrillSpan ~ bf \>
-  af4. r8\stopTrillSpan \! r2
+  b2 f'4 \pitchedTrill af,4\startTrillSpan ~ \> bf
+  af4. r8\stopTrillSpan \p r2
   R1 R2.
   r4
   <<
