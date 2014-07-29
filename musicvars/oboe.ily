@@ -116,6 +116,7 @@ oboeSixEight = \relative c' {
   d1. ~ d2 s8
   \cadenzaToMusic \clarCadenzaC r1\fermata
   \cadenzaOff
+  r8 r r r
 }
 
 oboeOb = \relative c' {
@@ -291,4 +292,103 @@ oboeOB = \relative c' {
   ds-> ) r r
   d! ( ds-> ) r ds->
   %r r d!
+}
+
+oboeFinal = \relative c' {
+  cs8\mp ( d e ) cs4. ~
+  cs4. cs8 ( d e )
+  cs4 cs8 ( d8 ) \shapeECsDE e16 ( cs d e )
+  d2.
+  cs8 ( d e ) cs2.
+  cs8 ( d e ~ e ) f4\< ~ (
+  f4 e8 ) g4. ~
+  g8 af4\> ~ af4. ~
+  af8\! r r f\mf\> ( e d )
+  cs8\mp r r r4.
+  r8 r cs ( d ) \shapeECsDE e16 ( cs d e )
+  d2.
+  d4\cresc ( e8 ) d4 ( e8 )
+  d16 ( e cs d ) e8 ~ e4. ~
+  e4 e8 d4 ( e8 ) d4 ( e8 )
+  cs8 \f r8 r cs4\> cs8
+  cs4 cs8\p r4.
+  R2.
+  g'4\mf g8 r4.
+  cs,4\sf-> cs8\p e4\mf e8
+  R2.
+  r8 cs16\mf\< ( d g a d8 ) d,16 _( e a b
+  e4\f ) e8 r r cs-+ \>
+  e-+ b-+ d,-+ cs4\p cs8-.
+  cs16\mf\< ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
+  e4\f\> e8\! r4.
+  r4. c'!4\mf\> ( b8\! )
+  R2.
+  r4. r8 cs,16\mf\< _( f g b
+  cs4.-> ~ \tuplet 2/3 4. { cs8 ) f,-> \f
+                            d'-> e-> } cs'4.->
+  e,16\mf\< ( cs d e ) d8 ~ ( d4 e8 )
+  d16 ( e cs d ) e8 ~ ( e4 cs8 )
+  d8-+ \f e-+ cs-+ d-+ e-+ e,-+
+  d'-+ e'-+ d,-. cs-> ( d e )
+  cs ( d e ) cs,-> ( d e )
+  e'4-> e8-. r d4-> \<
+  %b'8-+ e-+ d,-+ b'-+ d,-+ d,-+ r d'4->
+  %a8-+ cs-+ d-+ b'-+ d,-+ d,-+ r d'4->
+  f8-> ( e-. ) d-+ f-> ( g-. ) f-+ r g4->  % b-+ b'-+ b,-+ r d4->
+  e'4-> \ff e,-> cs->
+  e,4 e8 e4 e8
+  e4 e8 r4.
+  r4. e''4 e8
+  R2.
+  bf,,4 bf8 d4 d8
+  r4. bf'4 bf8
+  R2.
+  r8 d,\mf d' r e, e' bf'8. af16-> ( g8 )
+  r8 fs, fs' gs16 ( as b a f c )
+  r8 d, d' r e, fs'32 ( es fs es
+  fs8. ) gs,16-> ( fs'8 ) f8. g,16-> ( f'8 )
+  r8 cs, d' e'8. e16-> e8
+  R2.
+  r4. e,8. e16-> e8
+  R2.
+  r8 r g g, r f'
+  f, r r e''8.\p f,16-> ( e'8 )
+  R1*3
+  e,8.\f\< ( d16 ) f8 ~ ( f16 e ) g8. ( f16\! )
+  R1*2
+  e,2\mf ( f
+  g8-. ) r8 r4 e'2 ~ ( \<
+  e f
+  g2 ) \tuplet 3/2 { r4\! d8 ( e cs d }
+  e4. \cresc ~ e8 ) e16 ( f d e
+  f4. ~ f8 ) g16 ( a f g
+  af8.\f ) bf,16-> ( af'8 ) g8. a,16-> ( g'8 ) r4.
+  e,4\< ( f g ) \!
+  r4. e'4.\< (
+  f g )
+  cs8\ff ( d e ) cs4 cs8
+  cs4 cs8 r4.
+  r4. cs,,8 ( \f d e )
+  cs4. d
+  r8 cs16\< ( d e8 ) d16 ( e f8 ) d16 ( e )
+  b'4.-> \tuplet 2/3 { r8 cs,8-> }
+  %d4. ~ d8 r r
+  d4-> cs''16 ( d e8\ff ) r r
+  r4. cs,16\f\> ( d e8 ) d16 ( e
+  f8\p ) r r r4.
+  f4.->\mp \cresc \tuplet 2/3 4. { e8 ef
+                                   d c r g' ~ }
+  \tuplet 5/6 { g8 gf f e ef }
+  df8\f r r e-> af4 ~
+  af e8 af4-> af8
+  af4-> af8 r4.
+  g4 ^\markup \italic "sim." \cresc g8 f4 f8
+  r4. e4 e8 
+  e4 e8 e4 e8
+  r4. r8 r e
+  d4\ff d8 d4 d8 d4 d8 r4.
+  r8 r8 e'8 e4 e8 r4. d,,4 d8
+  r4. e'4.->\> ef4 d8 c ( b ) bf-.
+  a-. \mf g4-> fs16 ( \< gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
+  d8\ff r r r4. %r2.
 }

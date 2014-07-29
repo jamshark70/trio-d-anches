@@ -31,24 +31,25 @@
       instrumentName = "Oboe"
       shortInstrumentName = "Ob."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight }
-      { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb \oboeSixEight }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
+      { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb \oboeSixEight \oboeFinal }
     >>
     \new Staff \with {
       instrumentName = "Clarinet"
       shortInstrumentName = "Cl."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
       { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb
         \keepWithTag #'c-score \clarSixEight
+        \clarFinal
       }
     >>
     \new Staff \with {
       instrumentName = "Bassoon"
       shortInstrumentName = "Bsn."
     } <<
-      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight }
-      { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb \bsnSixEight }
+      { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
+      { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb \bsnSixEight \bsnFinal }
     >>
   >>
   \layout {

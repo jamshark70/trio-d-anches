@@ -56,7 +56,9 @@ globalSixEight = {
   \time 4/4 s1
   \time 3/4 s2.*2
   \nullMeter \time 4/4
-  \cadenzaToMusic { \clarCadenzaB \clarCadenzaC } s1 \bar "|"
+  \cadenzaOn \cadenzaToMusic { \clarCadenzaB \clarCadenzaC } s1 \cadenzaOff \bar "|"
+  %\repeat unfold 24 { r4 } \bar "|"
+  \time 2/4 s2
 }
 
 globalOb = {
@@ -130,4 +132,30 @@ globalOB = {
   \time 3/4 s2.*2
   \time 2/2 s1
   %\time 3/4 s2.
+}
+
+globalFinal = {
+  \bar "||"
+  \tempo "Più mosso" 4. = 88
+  \time 6/8 s2.*4
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*9
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*22
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*8
+  \bar "||"
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*9
+  \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  \time 2/2 s1*3
+  \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
+  \time 6/8 s2.
+  \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  \time 2/2 s1*6
+  \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
+  \time 6/8 s2.*2
+  \time 9/8 s1*9/8
+  \time 6/8 s2.*31
+  \bar "|."
 }

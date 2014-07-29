@@ -115,6 +115,7 @@ bsnSixEight = \relative c {
   bf1. ~ bf2 ) s8
   \cadenzaToMusic \clarCadenzaC r1\fermata
   \cadenzaOff
+  r8 r r r
 }
 
 bsnOb = \new Voice \with {
@@ -298,4 +299,108 @@ bsnOB = \relative c' {
   cs-> r r
   cs ~ cs-> r cs->
   %r r cs ~
+}
+
+bsnFinal = \relative c' {
+  \clef tenor
+  cs4.\mp cs8 ( d e )
+  cs4. ~ cs8 r cs (
+  d e ) cs8 ~ cs4. ~
+  cs4 r8 r4.
+  r4. cs8 ( d e ) cs4. ~
+  cs4. ~ cs4 cs8\< (
+  d e ) cs ~ cs4 cs,8
+  cs'2. ~
+  cs4\mf r8 r4.
+  cs8\mp ( d e ) cs4.
+  cs8 ( d e ) cs4. ~
+  cs4. ~ cs16 r \clef bass f,,16\cresc ( g c d
+  f8 ) e,16 ( a b d g8 ) f,16 ( g c d
+  f8 ) g,16 _( b c f g4 ) g8
+  \clef tenor g4 ( d'8 ) g,4 ( f8 ) g4 ( d'8 )
+  cs8\f\> ( d e ) cs4. ~
+  cs8\! r r cs8\p ( d e ~
+  e4. ) \< d4.
+  \acciaccatura { e16 d } e4\mf e8 r4.
+  cs4->\sf cs8\p d4\mf d8
+  \tuplet 2/3 4. { cs8->\mf d-> e-> f-> ~ \sfp\< }
+  f4. \tuplet 2/3 { e8 d }
+  cs4\f cs8 r r \clef bass b-+\>
+  g-+ d-+ af-+ f4\p f8-.
+  cs'16\mf\< ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
+  f,4\> f8\p r8 e16\mp _( a b d
+  f2.-> ~
+  f8 ) f,?16 \cresc _( g c d f4.-> ~
+  f8 ) e16 ( g a d e4.-> )
+  \tuplet 2/3 4. { f,,8-> \f d'-> e-> cs'-> }
+  e8 cs16\mf ( d e cs d4. )
+  r4. e16\mf\< ( cs d e d8 ~
+  d4. ) b,4.->
+  r4.\! a'4. \f ~
+  a8 r r a,4.
+  a' cs,,8-> ( d e )
+  r4. \clef tenor a''4.-> \<
+  \clef bass a,-> a,-> r8 r a (
+  bf2.\ff )
+  d'4 d8 d4 d8
+  d4 d8 r4.
+  r4. bf,,4 bf8
+  R2.
+  d''4 d8 e,4 e8
+  r4. e'4 e8
+  R2.
+  bf,,8->\mf bf' r d, d' r e, e' r
+  bf,8-> bf' r fs'16 ( gs a f ef b )
+  bf,8-> bf' r d, d' r
+  bf,8-> bf' r d, d' r
+  e, r bf-> d8. d16-> d8
+  R2.
+  r8 r bf-> d' e' r
+  \tuplet 4/3 4. { r4 d8->\f\< c-> b-> a-> gs-> fs->\ff }
+  r8 bf,,8->\mf bf' r d, d'
+  \tuplet 4/3 { r8 d,->\ff d-> cs-> } r4.
+  r4 bf' ^\markup \italic "ponderously" \mf af g
+  fs e g f
+  af g bf a
+  \clef tenor g''8\f\< ^\markup \italic "nimbly" ( f ) e-. d-. cs4->\!
+  \clef bass r2 ^\markup \italic "ponderously" bf,4\mf a
+  bf g a8 ( bf c4 )
+  d f e2 ~ (
+  e4 d ) bf' a
+  bf8 ( a g4 ) \tuplet 3/2 2 { bf,,4-> bf' r
+                               e, e' r bf bf' r }
+  %R2.*2
+  r4. \clef tenor \tuplet 2/3 4. { bf'8->\< af->
+                                   g-> gf-> f-> ef-> }
+  \override Beam.auto-knee-gap = #8
+  \pitchedTrill d4.\f \startTrillSpan e \clef bass cs,,8->\stopTrillSpan cs'' r r4.
+  \revert Beam.auto-knee-gap
+  \tuplet 2/3 4. { bf8-> a-> af-> gf-> }
+  r8. bf,,16\< ( c cs d f g a bf c
+  d ) g, ( a bf c d e f g a bf c )
+  cs8\ff ( d e ) cs,,4 cs8
+  cs4 cs8 r4.
+  \clef tenor cs''8 ( \f d e ) cs4. ~
+  cs8 r r cs ( d e )
+  b'4.-> ~ b8 r r
+  r4. \tuplet 2/3 { cs,8->\< d-> }
+  e4.->\ff r8 \clef bass cs,16\p ( d e8 )
+  d16 ( e f8 ) e16 ( f g8 ) r r
+  r cs,16\mp \cresc ( d e8 ) d16 ( e f8 ) e16 ( f
+  g8 ) cs,16 ( d e8 ) d16 ( e f8 ) g16 ( af
+  bf8 ) f16 ( g af8 ) g16 ( af bf8 ) af16 ( bf
+  b!8 ) f16 ( g af8 ) g16 ( af bf8 ) b16 ( cs
+  d8 ) \f \clef tenor d8 d'-> ~ d4 d,8
+  d'4.-> d4-> d8
+  d4-> d8 r r cs-> ~
+  cs4\cresc cs8 c4-> c8
+  r4. bf4 ^\markup \italic "sim." bf8
+  fs4 fs8 d4 d8
+  \clef bass \tuplet 9/6 { d,,16 _( e f fs g a bf c cs } d4 ) d8
+  cs,4\ff cs8 cs4 cs8 cs4 cs8 r4.
+  r4 cs'8 cs4 cs8 r4. cs'4 cs8
+  r4. cs4->\> c8 ~ c8 b4 ~ b8 d,16\f\< ( e gs a
+  \tuplet 2/3 { d8\> ) cs } c8.\< a,16 ( bf c cs ds e8 ) f-> ~ f e, d
+  %\tuplet 2/3 { d8 ) cs } \tuplet 4/3 { c8 bf a g } fs8 [ r f8-> ] ~ f e, d
+  cs8\ff r r r4. %r2.
 }

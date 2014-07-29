@@ -133,6 +133,7 @@ clarSixEight = \relative c' {
   d16. ( a32 ) e'16. ( f32 ) d16.\> ( cs32\! ) r8 r8 d16.\pp ( e32 )
   R2.
   \clarCadenzaB \clarCadenzaC
+  r8 r r r
 }
 
 clarOb = \new Voice \with {
@@ -269,4 +270,108 @@ clarOB = \relative c' {
   e-> r r
   e ~ e-> r e->
   %r r e ~
+}
+
+clarFinal = \relative c' {
+  R2. %cs2.
+  cs8\mp ( d e ) cs4. ~
+  cs4 r8 r4.
+  r8 cs16\< ( d e8 ) d16 ( e f8\> ) e16 ( d
+  cs8\! ) r r r4. cs8\mp ( d e )
+  cs8 r cs ( d4 ) e8 ~ (
+  e8 d4 ~ d8 ) cs16\< ( d e8 )
+  d16 ( e f8 ) e16 ( f ) g8 ( f e )
+  f ( e d ) f4.\mf\> (
+  cs8\mp ) r r cs ( d e )
+  cs4. ~ cs8 r r
+  r d16 ( e cs d ) e4.
+  e4\cresc ( d8 ) e4 ( d8 )
+  e8-. d4 \shapeECsDE e16 ( cs d e ) d8 ~ (
+  d4 g,8 ) e'4 ( d8 ) e4 ( g,8 )
+  cs8\f r r cs4\> cs8
+  cs4 cs8\p r4.
+  \tuplet 2/3 4. { cs8->\mf d-> e-> f-> }
+  d4 d8 f,4\p f8
+  r4. g'4\mf g8
+  r4. \tuplet 2/3 { r8 f,->\sfp\< ~ }
+  f2. ~
+  %f4 f8 r8 r bf'-+
+  %f-+ ef-+ c!-+ e,4 e8
+  f4\f f8 r8 r d'-+\>
+  fs-+ e-+ bf-+ e,4\p e8-.
+  R2.
+  cs''4 cs8 r4.
+  r8 d,,16\mp ( e a b d4.->
+  e8 ) r r r d,16 \cresc _( e a b
+  d2.-> ~
+  d8 ) \shape #'((0 . 0) (0 . 0.5) (-1.5 . 0.5) (0 . -0.5)) Slur b'16 ( d e a b4.-> ~
+  b8 ) r r f,,8->\f d'-> e->
+  cs'-> g16 ( cs ) b'8-> ~ b4.
+  b,4.-> d,16\mf\< ( e cs d e8 ~
+  e ) \f d'-+ d,-+ e'-+ cs-+ d-+
+  e-- d-. e ~ e e'-+ d-+
+  e4 ( d8 ) cs-> ( d e )
+  d,4-> d8-. r cs'4-> \<
+  e8-+ d,-+ cs,-> ~ cs cs'-+ e,-+ a,4.->
+  d'4->\ff d,-> d'->
+  bf,4 bf8 bf4 bf8
+  bf4 bf8 r4.
+  r4. d'4 d8
+  %r8 r bf16 ( c cs a as b cs d
+  r8 r bf16 ( c \tuplet 9/6 { cs16 e, f g a as b cs d }
+  e4 ) e8 bf'4 bf8
+  r4. d,,4 d8
+  R2.
+  R1*9/8
+  R2.*4
+  \tuplet 8/6 { bf'16\sfp\< ( cs, d e f g gs as } \tuplet 4/3 { b8\f ) cs-> cs-> d-> }
+  R2.
+  \tuplet 4/3 4. { b,8->\f\< cs-> cs-> d-> d-> e-> e-> f->\ff }
+  R2.
+  \tuplet 4/3 { e,8->\ff d-> d-> cs-> } r4.
+  e4\mf ^\markup \italic "ponderously" d8 ( e f4 ) e8 ( d
+  e4 ) cs2 e4
+  d8 ( e f4 ) g2
+  r2.
+  e4\mf d8 ( e f4 ) g ~
+  g f d'4. ( c8 ) %c'8 ( bf a4 )
+  bf8 ( a ) g4 ~ ( g8 a ) bf4 ~ (
+  bf8 c cs4 ) d8 ( e f4 )
+  d4 d'2 ( cs4 )
+  <<
+    { d8 ( e cs d ) e2 (
+      d8 ) e16 ( cs d e ) d4. (
+      e8 ) f16 ( g e f ) g4.
+    }
+    { s1 s2. \cresc s4. s8 s s16 s\f }
+  >>
+  r4. r4. \pitchedTrill d,4. ~ \sf \startTrillSpan e
+  d2.
+  r4.\stopTrillSpan e4. ( \<
+  f g )
+  cs,,8\ff ( d e ) cs'4 cs8
+  cs4 cs8 cs ( \f d e )
+  cs4. ~ cs8 r cs (
+  d e ) b'-> ~ b4. ~
+  b8 r r r4.
+  \tuplet 2/3 4. { r8 cs,->\< d-> e-> }
+  %b'4. ~ b8 r r
+  b'4-> cs,16 ( d e8\ff ) r r
+  R2.
+  r4. e'4.-> \mp \cresc ~
+  e4 ef d
+  df8 cf bf gf'4-> f8 ~
+  \tuplet 2/3 4. { f8 e ef df }
+  c8\f r r d-> bf'4 ~
+  bf4 d,8 bf'4-> bf8
+  bf4-> bf8 r4.
+  b!4 ^\markup \italic "sim." \cresc b8 cs4 cs8
+  r4. d4 d8
+  d4 d8 ds4 ds8
+  r4. r8 r ds8
+  e4\ff e8 e4 e8 e4 e8 r4.
+  r8 r d, d4 d8 r4. e,4 e8
+  r4. d''4.-> \> ~ \tuplet 2/3 { d8 cs8-> ~ } cs4 a8
+  gs8 d,16\f ( e a b e4 ) cs8 d\< a16 ( b e fs b8 ) cs,16 ( d a' b
+  e8 ) \ff r r r4. %r2.
 }

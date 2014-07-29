@@ -30,8 +30,8 @@
   \new Staff <<
     { \compressFullBarRests
       \override MultiMeasureRest.expand-limit = #1
-      \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight
+      %{\global \globalBsn \globalTwelveEight \globalOB \globalOb%} \globalSixEight \globalFinal
     }
-    { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb R1 \oboeSixEight }
+    { %{\oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb%} \oboeSixEight \oboeFinal }
   >>
 }

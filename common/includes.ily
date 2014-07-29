@@ -1,3 +1,4 @@
+\version "2.18.2"s
 \language "english"
 
 subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }
@@ -13,3 +14,8 @@ nullMeter = {
 sempreTenuto = \markup \italic "sempre tenuto"
 nonEspr = \markup \italic "non espr."
 espres = \markup \italic "espr."
+mkMarc = \markup \italic "marc."
+
+shapeECsDE = {
+  \shape #'((0 . -0.3) (-0.4 . -0.5) (-0.25 . -0.3) (0 . 0)) Slur
+}
