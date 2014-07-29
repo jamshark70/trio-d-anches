@@ -4,6 +4,8 @@
 
 clarCadenza = \relative c {
   %\accidentalStyle Staff.neo-modern
+  %\newSpacingSection
+  %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 32)
   \accidentalStyle dodecaphonic
   \override Beam.before-line-breaking = #accidentals-by-beam-group 
   \cadenzaOn
@@ -64,9 +66,11 @@ clarCadenza = \relative c {
 }
 
 clarCadenzaB = \relative c'' {
+  \newSpacingSection
+  \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
   \cadenzaOn
   r2 e4.\ppp bf,16 [ ( c' ] ) e'8 [ ( d, ] )
-  \tuplet 3/2 { g'16 [ ( c, a, } f'8 ] ) \bar ""
+  \tuplet 3/2 { g'16 [ ( c, a, } f'8 ] ) %\bar ""
   bf,,8--^"Tenuto = stress this note" \breathe
   e'4 c?8 [ e ] 
 }

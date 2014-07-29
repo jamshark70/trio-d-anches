@@ -123,9 +123,15 @@ clarSixEight = \relative c' {
       s2 s2\> s4 s8\p
     }
   >>
-  r8 r2\fermata %R1\fermataMarkup
+  r8
+  \newSpacingSection
+  \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 32)
+  r2\fermata %R1\fermataMarkup
   % CADENZA
   \squeezeCadenza #(ly:make-moment 1 1) \clarCadenza
+
+  \newSpacingSection
+  \revert Score.SpacingSpanner.base-shortest-duration
   d16.\> ( e32 ) 
   \tag #'a-part { d16. ( cs32 ) }
   \tag #'c-score { d16. ( cs!32 ) }
@@ -134,6 +140,8 @@ clarSixEight = \relative c' {
   d16. ( a32 ) e'16. ( f32 ) d16.\> ( cs32\! ) r8 r8 d16.\pp ( e32 )
   R2.
   \clarCadenzaB \squeezeCadenza #(ly:make-moment 1 1) \clarCadenzaC
+  \newSpacingSection
+  \revert Score.SpacingSpanner.base-shortest-duration
   R2
 }
 
