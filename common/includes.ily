@@ -1,4 +1,4 @@
-\version "2.18.2"s
+\version "2.18.2"
 \language "english"
 
 subffMarkup = \markup { \center-align { \italic { "sub." } \dynamic ff } }

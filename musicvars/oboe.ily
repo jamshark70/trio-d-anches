@@ -108,15 +108,15 @@ oboeSixEight = \relative c' {
   cs4 cs2-> ~
   cs8 r8 r4 r4
   R1*6 R1\fermataMarkup
-  \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
+  \cadenzaOn R1 \cadenzaOff
   r4 r8 e8\pp^\markup { \italic "non vib." } ~ e2 ~
   e2 ~ e16 r8.
   r4 r4 d4 ~
   \cadenzaOn
   d1. ~ d2 s8
-  \cadenzaToMusic \clarCadenzaC r1\fermata
+  r1\fermata
   \cadenzaOff
-  r8 r r r
+  R2
 }
 
 oboeOb = \relative c' {

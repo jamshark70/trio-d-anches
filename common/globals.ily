@@ -50,13 +50,13 @@ globalSixEight = {
   \time 4/4 s1*7 \bar "||"
   \nullMeter \time 2/2
   \tempo "Mysteriously" 4 = 72
-  \cadenzaToMusic \clarCadenza s1 \bar "|"
+  \cadenzaOn s1 \cadenzaOff \bar "|"
   \set Score.currentBarNumber = #227
   \mark \default
   \time 4/4 s1
   \time 3/4 s2.*2
   \nullMeter \time 4/4
-  \cadenzaOn \cadenzaToMusic { \clarCadenzaB \clarCadenzaC } s1 \cadenzaOff \bar "|"
+  \cadenzaOn s1. s2 s8 s1 \cadenzaOff \bar "|"
   %\repeat unfold 24 { r4 } \bar "|"
   \time 2/4 s2
 }

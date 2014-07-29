@@ -107,15 +107,15 @@ bsnSixEight = \relative c {
   d4 d2-> ~
   d8 r8 r4 r4
   R1*6 R1\fermataMarkup
-  \cadenzaOn \cadenzaToMusic \clarCadenza R1 \cadenzaOff
+  \cadenzaOn R1 \cadenzaOff
   r4 r8 a8\pp^\markup { \italic "non vib." } ~ a2 ~
   a2 ~ a16 r8.
   r4 r4 a4 (
   \cadenzaOn
   bf1. ~ bf2 ) s8
-  \cadenzaToMusic \clarCadenzaC r1\fermata
+  r1\fermata
   \cadenzaOff
-  r8 r r r
+  R2
 }
 
 bsnOb = \new Voice \with {
@@ -357,6 +357,9 @@ bsnFinal = \relative c' {
   R2.
   r8 r bf-> d' e' r
   \tuplet 4/3 4. { r4 d8->\f\< c-> b-> a-> gs-> fs->\ff }
+  % in theory this should be unnecessary, but...
+  % somehow the tupletSpannerDuration got set to something small and it broke later tuplets
+  \unset tupletSpannerDuration
   r8 bf,,8->\mf bf' r d, d'
   \tuplet 4/3 { r8 d,->\ff d-> cs-> } r4.
   r4 bf' ^\markup \italic "ponderously" \mf af g
