@@ -28,6 +28,7 @@ clarTheme = \relative c' {
 }
 
 clarTwelveEight = \relative c' {
+  \override Hairpin #'to-barline = ##f
   R1.
   cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8\! r4. cs4\mf\> cs8
   cs4 cs8 cs4 cs8\! r4. cs4\mf\> cs8
@@ -55,6 +56,7 @@ clarTwelveEight = \relative c' {
 }
 
 clarSixEight = \relative c' {
+  \override Hairpin #'to-barline = ##f
   r8 r8 cs-.\mp e ( cs ) gs'-> ~
   gs4 r8 cs, ( e ) cs-.
   gs'\< ( a gs ~ gs4. ~
@@ -197,6 +199,7 @@ clarOb = \new Voice \with {
 }
 
 clarBsn = \relative c' {
+  \override Hairpin #'to-barline = ##f
   e2.\pp ~ e4. ~
   e8 r8 r4
   R1
@@ -231,6 +234,7 @@ clarBsn = \relative c' {
 dashPlus = "staccatissimo"
 
 clarOB = \relative c' {
+  \override Hairpin #'to-barline = ##f
   e4->\f b'-> e,-> b'-> ~
   b4. e,8-. b'-. e,-. b'4 ~
   b4. f'8-+ gf-+ bf,-+ cf-+ df-+
@@ -282,6 +286,7 @@ clarOB = \relative c' {
 }
 
 clarFinal = \relative c' {
+  \override Hairpin #'to-barline = ##f
   R2. %cs2.
   cs8\mp ( d e ) cs4. ~
   cs4 r8 r4.

@@ -34,6 +34,7 @@ oboeTheme = \relative c' {
 }
 
 oboeTwelveEight = \relative c' {
+  \override Hairpin #'to-barline = ##f
   r2. cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8
   cs4 cs8\! r4. r2.
   e4\mf\> e8 e4 e8 e4 e8\! r4.
@@ -60,6 +61,7 @@ oboeTwelveEight = \relative c' {
 }
 
 oboeSixEight = \relative c' {
+  \override Hairpin #'to-barline = ##f
   r8 r8 cs8-.\mp d ( cs ) b'-> ~
   b4 r8 cs, ( d ) cs-.
   b'4.\< ~ b8 a4->\f\> ~
@@ -181,6 +183,7 @@ oboeOb = \relative c' {
 }
 
 oboeBsn = \relative c' {
+  \override Hairpin #'to-barline = ##f
   d2.\pp ~ d4. ~
   d8 r r4
   R1
@@ -228,6 +231,7 @@ oboeBsn = \relative c' {
 dashPlus = "staccatissimo"
 
 oboeOB = \relative c' {
+  \override Hairpin #'to-barline = ##f
   d4->\f b''-> d,,-> b''-> ~
   b4. d,8-. b'-. d,-. b'4-> ~
   b4. a8-+ af-+ gf-+ f-+ d-+
@@ -296,6 +300,7 @@ oboeOB = \relative c' {
 }
 
 oboeFinal = \relative c' {
+  \override Hairpin #'to-barline = ##f
   cs8\mp ( d e ) cs4. ~
   cs4. cs8 ( d e )
   cs4 cs8 ( d8 ) \shapeECsDE e16 ( cs d e )

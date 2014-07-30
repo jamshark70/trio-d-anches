@@ -26,6 +26,7 @@ bsnTheme = \relative c' {
 }
 
 bsnTwelveEight = \relative c' {
+  \override Hairpin #'to-barline = ##f
   \clef tenor
   cs4\mf\>^\markup { \italic "sempre legato" } cs8 cs4 cs8 cs4 cs8\! r4.
   r4. cs4\mf\> cs8 cs4 cs8 cs4 cs8\!
@@ -54,6 +55,7 @@ bsnTwelveEight = \relative c' {
 }
 
 bsnSixEight = \relative c {
+  \override Hairpin #'to-barline = ##f
   \clef bass
   cs8->\mf\> ( cs'\! ) r8 r4.
   r8 cs,->\mf\> ( cs'\! ) r4.
@@ -232,6 +234,7 @@ bsnBsn = \relative c {
 dashPlus = "staccatissimo"
 
 bsnOB = \relative c' {
+  \override Hairpin #'to-barline = ##f
   \clef bass
   cs4->\f r cs-> r
   R1
@@ -304,6 +307,7 @@ bsnOB = \relative c' {
 }
 
 bsnFinal = \relative c' {
+  \override Hairpin #'to-barline = ##f
   \clef tenor
   cs4.\mp cs8 ( d e )
   cs4. ~ cs8 r cs (
