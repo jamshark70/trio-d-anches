@@ -10,9 +10,11 @@ titlepage = \markup {
       \vspace #4
       \huge \line { 2014 }
       \vspace #10
-      \huge \line { Duration: c. 11 minutes }
+      \huge \line { Duration: c. 12 minutes }
       \vspace #6
       \fontsize #5 \line { H. James Harkins }
+      \vspace #0.5
+      \huge \line { b. 1970 }
     }
   }
 }
@@ -70,18 +72,6 @@ instructionpage = \markup {
       comes close to distorting the listener’s perception of the tempo (though the tempo
       does not actually change in this variation!).
     }
-%{    \wordwrap-string
-      #"The opening sonority, consisting of the notes C#, D and E, guides the harmony
-      throughout the work. A significant feature is that the pattern of intervals
-      here (a half step and a whole step), in alternation, make up the octatonic
-      scale, which makes a frequent appearance in this work. The theme also highlights
-      the chord Bb-D-E, made up of a whole step and a major third. These intervals are
-      double the size of a half and whole step, respectively. (In the nomenclature of a
-      prominent mid-century music theorist, Allen Forte, C#-D-E is 013 and Bb-D-E is 046.
-      046 is an inversion of 026, and 026 is twice 013.) These relationships did not come
-      from conscious intention, however; they sprang from musical instinct, and turned out
-      later to correspond more than it seemed at first."
-%}
     \vspace #0.6
     \wordwrap {
       The work was composed between February and July 2014 for the Kapok Winds,

@@ -35,6 +35,7 @@
     dedication = \markup \italic "for the Kapok Winds, Guangzhou, China"
     title = "Theme and Variations"
     composer = "H. James Harkins"
+    opus = "b. 1970"  % only because this goes underneath the composer's name
     copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"
     poet = "Score in C"
   }
