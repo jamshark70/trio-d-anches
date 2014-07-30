@@ -6,7 +6,7 @@ titlepage = \markup {
       \vspace #12
       \fontsize #6 \line { "Theme and Variations" }
       \vspace #1
-      \huge \line { for Oboe, Clarinet and Bassoon }
+      \huge \line { for Oboe, Clarinet in A and Bassoon }
       \vspace #4
       \huge \line { 2014 }
       \vspace #10
