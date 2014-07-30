@@ -45,14 +45,18 @@
         instrumentName = "Oboe"
         shortInstrumentName = "Ob."
       } <<
-        { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
+        { \global
+          \keepWithTag #'part \globalBsn % need accel... marking
+          \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
         { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb \oboeSixEight \oboeFinal }
       >>
       \new Staff \with {
         instrumentName = "Clarinet"
         shortInstrumentName = "Cl."
       } <<
-        { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
+        { \global
+          \keepWithTag #'c-score \globalBsn  % do NOT need accel...
+          \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
         { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb
           \keepWithTag #'c-score \clarSixEight
           \clarFinal
@@ -62,7 +66,9 @@
         instrumentName = "Bassoon"
         shortInstrumentName = "Bsn."
       } <<
-        { \global \globalBsn \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
+        { \global
+          \keepWithTag #'c-score \globalBsn
+          \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
         { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb \bsnSixEight \bsnFinal }
       >>
     >>

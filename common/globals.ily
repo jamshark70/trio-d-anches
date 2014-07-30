@@ -98,8 +98,11 @@ globalBsn = {
   \time 2/4 s2
   \time 4/4 s1
   % I really want this as a \mark but, fml, lilypond says no, you can't
-  \override TextSpanner.bound-details.left.text = \markup \italic "accel."
-  s1\startTextSpan s2.. s8\stopTextSpan
+  \tag #'part {
+    \override TextSpanner.bound-details.left.text = \markup \italic "accel."
+    s1\startTextSpan s2.. s8\stopTextSpan
+  }
+  \tag #'c-score { s1*2 }
   \tempo 4 = 80
   s1*4
   \time 2/4 s2
