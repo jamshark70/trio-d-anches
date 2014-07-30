@@ -32,7 +32,7 @@
 
 \bookpart {
   \header {
-    dedication = "for the Kapok Winds, Guangzhou, China"
+    dedication = \markup \italic "for the Kapok Winds, Guangzhou, China"
     title = "Theme and Variations"
     composer = "H. James Harkins"
     copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"

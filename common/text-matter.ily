@@ -58,7 +58,19 @@ instructionpage = \markup {
       This composition is a classically-conceived theme and variations, beginning with an austere, contemplative theme based on a simple, three-note sonority and a lilting rhythm. The variations tease out melodic, harmonic and rhythmic elements of the theme. Some of the variations hew closely to the form of the theme; other variations fixate on a small element in the theme and discard the original form.
     }
     \vspace #0.6
-    \wordwrap-string
+    \wordwrap {
+      Classical variations typically apply different ornamental figures to a melody
+      in each variation while the melody retains its essential shape, or dress up a
+      consistent harmonic progression in various melodic and textural guises.
+      (The first movement of Mozart’s Piano Sonata no. 11, K.331, is a fine example
+      of the former; J. S. Bach’s \italic { Goldberg Varations, } BWV 988, illustrate the latter.)
+      This set of variations presses further into rhythmic transformation of the theme’s
+      mixture of triple and double divisions. This feature of the theme recurs throughout
+      the work, subtly at first; by the final variation, the interplay of metrical divisions
+      comes close to distorting the listener’s perception of the tempo (though the tempo
+      does not actually change in this variation!).
+    }
+%{    \wordwrap-string
       #"The opening sonority, consisting of the notes C#, D and E, guides the harmony
       throughout the work. A significant feature is that the pattern of intervals
       here (a half step and a whole step), in alternation, make up the octatonic
@@ -69,9 +81,12 @@ instructionpage = \markup {
       046 is an inversion of 026, and 026 is twice 013.) These relationships did not come
       from conscious intention, however; they sprang from musical instinct, and turned out
       later to correspond more than it seemed at first."
+%}
     \vspace #0.6
     \wordwrap {
-      The work was composed between February and July 2014 for the Kapok Winds, made up of principals from the Guangzhou Symphony Orchestra.
+      The work was composed between February and July 2014 for the Kapok Winds,
+      made up of principals from the Guangzhou Symphony Orchestra: Cornelius Finke
+      (oboe), Schyler Fung (clarinet) and Michael Garza (bassoon).
     }
     \vspace #1.2
     \line \large \bold { Notation }
@@ -82,7 +97,7 @@ instructionpage = \markup {
     }
     \vspace #0.6
     \wordwrap {
-      Grace notes should be played before the beat in which the main note occurs.
+      Grace notes should be played before the beat.
     }
     \vspace #1.2
     \line \large \bold { Acknowledgments }
