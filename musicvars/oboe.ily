@@ -112,7 +112,7 @@ oboeSixEight = \relative c' {
   \cadenzaOn R1 \cadenzaOff
   r4 r8 e8\pp^\markup { \italic "non vib." } ~ e2 ~
   e2 ~ e16 r8.
-  r4 r4 d4 ~
+  r4 r4 d4\ppp ~
   \cadenzaOn
   d1. ~ d2 s8
   r1\fermata
@@ -330,7 +330,7 @@ oboeFinal = \relative c' {
   e,16\mf\< ( cs d e ) d8 ~ ( d4 e8 )
   d16 ( e cs d ) e8 ~ ( e4 cs8 )
   d8-+ \f e-+ cs-+ d-+ e-+ e,-+
-  d'-+ e'-+ d,-. cs-> ( d e )
+  d' ( e'-. ) d,-. cs-> ( d e )
   cs ( d e ) cs,-> ( d e )
   e'4-> e8-. r d4-> \<
   %b'8-+ e-+ d,-+ b'-+ d,-+ d,-+ r d'4->
@@ -355,7 +355,7 @@ oboeFinal = \relative c' {
   r8 r g g, r f'
   f, r r e''8.\p f,16-> ( e'8 )
   R1*3
-  e,8.\f\< ( d16 ) f8 ~ ( f16 e ) g8. ( f16\! )
+  e,8.\mp\< ( d16 ) f8 ~ ( f16 e ) g8. ( f16\! )
   R1*2
   e,2\mf ( f
   g8-. ) r8 r4 e'2 ~ ( \<
@@ -378,9 +378,9 @@ oboeFinal = \relative c' {
   r4. cs,16\f\> ( d e8 ) d16 ( e
   f8\p ) r r r4.
   f4.->\mp \cresc \tuplet 2/3 4. { e8 ef
-                                   d c r g' ~ }
+                                   d c r g'-> ~ }
   \tuplet 5/6 { g8 gf f e ef }
-  df8\f r r e-> af4 ~
+  df8\f r r e!-> af4 ~
   af e8 af4-> af8
   af4-> af8 r4.
   g4 ^\markup \italic "sim." \cresc g8 f4 f8
@@ -388,8 +388,8 @@ oboeFinal = \relative c' {
   e4 e8 e4 e8
   r4. r8 r e
   d4\ff d8 d4 d8 d4 d8 r4.
-  r8 r8 e'8 e4 e8 r4. d,,4 d8
-  r4. e'4.->\> ef4 d8 c ( b ) bf-.
-  a-. \mf g4-> fs16 ( \< gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
-  d8\ff r r r4. %r2.
+  r8 r8 e'8 e4 e8 r4. d,,4\p d8
+  r4. e'4.->\f ef4 d8 c ( b ) bf-.
+  a-. g4-> fs16-> ( \< gs a c d fs \tuplet 2/3 { gs8 ) d8 } e16 ( fs ) g8 fs16 ( e )
+  d8-^ \ff r r r4. %r2.
 }

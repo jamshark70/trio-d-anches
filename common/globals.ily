@@ -43,7 +43,11 @@ globalSixEight = {
   s2.*15
   \bar "||"
   \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \mark \markup \left-align \bold "Violently"
+  \mark \markup \left-align \column {
+    \box \bold "211"
+    \vspace #0.2
+    \bold "Violently"
+  }
   s2.*6
   \mark \markup { \fontsize #-2 { \note #"8" #1 "=" \note #"8" #1 } }
   \time 3/4 s2.*2
@@ -57,7 +61,7 @@ globalSixEight = {
   \time 3/4 s2.*2
   \nullMeter \time 4/4
   \cadenzaOn s1. s2 s8 s1 \cadenzaOff \bar "|"
-  %\repeat unfold 24 { r4 } \bar "|"
+  \set Score.currentBarNumber = #231
   \time 2/4 s2
 }
 
@@ -136,18 +140,33 @@ globalOB = {
 
 globalFinal = {
   \bar "||"
+  \mark \default
   \tempo "Più mosso" 4. = 88
   \time 6/8 s2.*4
   \time 9/8 s1*9/8
-  \time 6/8 s2.*9
+  \time 6/8 s2.*4
+  \mark \default
+  \time 6/8 s2.*5
   \time 9/8 s1*9/8
-  \time 6/8 s2.*22
+  \mark \default
+  \time 6/8 s2.*11
+  \mark \default
+  \time 6/8 s2.*7
+  \mark \default
+  \time 6/8 s2.*4
   \time 9/8 s1*9/8
   \time 6/8 s2.*8
-  \bar "||"
+  %\bar "||"
+  \mark \default
   \time 9/8 s1*9/8
   \time 6/8 s2.*9
-  \mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  % here I must write a truly horrific workaround for a limitation of \mark
+  %\mark \markup { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \mark \markup \center-column {
+    \box \bold "288"  % hardcoded bar number -- REALLY shouldn't have to do this
+    \line { \fontsize #-2 { \note #"4." #1 "=" \note #"2" #1 } }
+  }
   \time 2/2 s1*3
   \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
   \time 6/8 s2.
@@ -156,6 +175,12 @@ globalFinal = {
   \mark \markup { \fontsize #-2 { \note #"2" #1 "=" \note #"4." #1 } }
   \time 6/8 s2.*2
   \time 9/8 s1*9/8
-  \time 6/8 s2.*31
+  \time 6/8 s2.*3
+  \mark \default
+  \time 6/8 s2.*8
+  \mark \default
+  \time 6/8 s2.*11
+  \mark \default
+  \time 6/8 s2.*9
   \bar "|."
 }

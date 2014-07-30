@@ -318,7 +318,7 @@ clarFinal = \relative c' {
   cs'-> g16 ( cs ) b'8-> ~ b4.
   b,4.-> d,16\mf\< ( e cs d e8 ~
   e ) \f d'-+ d,-+ e'-+ cs-+ d-+
-  e-- d-. e ~ e e'-+ d-+
+  e ( d-. ) e ~ e e'-+ d-+
   e4 ( d8 ) cs-> ( d e )
   d,4-> d8-. r cs'4-> \<
   e8-+ d,-+ cs,-> ~ cs cs'-+ e,-+ a,4.->
@@ -338,13 +338,13 @@ clarFinal = \relative c' {
   \tuplet 4/3 4. { b,8->\f\< cs-> cs-> d-> d-> e-> e-> f->\ff }
   R2.
   \tuplet 4/3 { e,8->\ff d-> d-> cs-> } r4.
-  e4\mf ^\markup \italic "ponderously" d8 ( e f4 ) e8 ( d
+  e4\f ^\markup \italic "ponderously" d8 ( e f4 ) e8 ( d
   e4 ) cs2 e4
   d8 ( e f4 ) g2
   r2.
-  e4\mf d8 ( e f4 ) g ~
-  g f d'4. ( c8 ) %c'8 ( bf a4 )
-  bf8 ( a ) g4 ~ ( g8 a ) bf4 ~ (
+  e4\f d8 ( e f4 ) g ~
+  g\> f d'4. ( c8 ) %c'8 ( bf a4 )
+  bf8\mf ( a ) g4 ~ ( g8 a ) bf4 ~ (
   bf8 c cs4 ) d8 ( e f4 )
   d4 d'2 ( cs4 )
   <<
@@ -379,8 +379,8 @@ clarFinal = \relative c' {
   d4 d8 ds4 ds8
   r4. r8 r ds8
   e4\ff e8 e4 e8 e4 e8 r4.
-  r8 r d, d4 d8 r4. e,4 e8
-  r4. d''4.-> \> ~ \tuplet 2/3 { d8 cs8-> ~ } cs4 a8
-  gs8 d,16\f ( e a b e4 ) cs8 d\< a16 ( b e fs b8 ) cs,16 ( d a' b
-  e8 ) \ff r r r4. %r2.
+  r8 r d, d4 d8 r4. e,4\p e8
+  r4. d''4.->\f ~ \tuplet 2/3 { d8 cs8-> ~ } cs4 a8
+  gs8 d,16-> ( e a b e4 ) \< cs8 d a16-> ( b e fs b8 ) cs,16-> ( d a' b )
+  e8-^ \ff r r r4. %r2.
 }

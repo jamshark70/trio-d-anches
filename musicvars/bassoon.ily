@@ -111,7 +111,7 @@ bsnSixEight = \relative c {
   \cadenzaOn R1 \cadenzaOff
   r4 r8 a8\pp^\markup { \italic "non vib." } ~ a2 ~
   a2 ~ a16 r8.
-  r4 r4 a4 (
+  r4 r4 a4 ( \ppp
   \cadenzaOn
   bf1. ~ bf2 ) s8
   r1\fermata
@@ -330,7 +330,7 @@ bsnFinal = \relative c' {
   cs4\f cs8 r r \clef bass b-+\>
   g-+ d-+ af-+ f4\p f8-.
   cs'16\mf\< ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
-  f,4\> f8\p r8 e16\mp _( a b d
+  f,4\f\> f8\p r8 e16\mp _( a b d
   f2.-> ~
   f8 ) f,?16 \cresc _( g c d f4.-> ~
   f8 ) e16 ( g a d e4.-> )
@@ -364,13 +364,13 @@ bsnFinal = \relative c' {
   \unset tupletSpannerDuration
   r8 bf,,8->\mf bf' r d, d'
   \tuplet 4/3 { r8 d,->\ff d-> cs-> } r4.
-  r4 bf' ^\markup \italic "ponderously" \mf af g
+  r4 bf' ^\markup \italic "ponderously" \f af g
   fs e g f
   af g bf a
-  \clef tenor g''8\f\< ^\markup \italic "nimbly" ( f ) e-. d-. cs4->\!
-  \clef bass r2 ^\markup \italic "ponderously" bf,4\mf a
-  bf g a8 ( bf c4 )
-  d f e2 ~ (
+  \clef tenor g''8\mp\< ^\markup \italic "nimbly" ( f ) e-. d-. cs4->\!
+  \clef bass r2 ^\markup \italic "ponderously" bf,4\f a
+  bf\> g a8 ( bf c4 )
+  d\mf f e2 ~ (
   e4 d ) bf' a
   bf8 ( a g4 ) \tuplet 3/2 2 { bf,,4-> bf' r
                                e, e' r bf bf' r }
@@ -403,9 +403,9 @@ bsnFinal = \relative c' {
   fs4 fs8 d4 d8
   \clef bass \tuplet 9/6 { d,,16 _( e f fs g a bf c cs } d4 ) d8
   cs,4\ff cs8 cs4 cs8 cs4 cs8 r4.
-  r4 cs'8 cs4 cs8 r4. cs'4 cs8
-  r4. cs4->\> c8 ~ c8 b4 ~ b8 d,16\f\< ( e gs a
-  \tuplet 2/3 { d8\> ) cs } c8.\< a,16 ( bf c cs ds e8 ) f-> ~ f e, d
-  %\tuplet 2/3 { d8 ) cs } \tuplet 4/3 { c8 bf a g } fs8 [ r f8-> ] ~ f e, d
-  cs8\ff r r r4. %r2.
+  r4 cs'8 cs4 cs8 r4. cs'4\p cs8
+  r4. cs4->\f c8 ~ c8 b4 ~ b8 d,16-> ( e gs a
+  %\tuplet 2/3 { d8\> ) cs } c8.\< a,16 ( bf c cs ds e8 ) f-> ~ f e, d
+  \tuplet 2/3 { d8 ) cs } c4\< a8 fs8-. [ r f8-> ] ~ f e, d
+  cs8-^ \ff r r r4. %r2.
 }
