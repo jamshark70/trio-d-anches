@@ -37,7 +37,7 @@ cclicense = \markup {
     \center-column {
       \normalsize
       \line { Creative Commons License: \bold "CC-NC-BY-SA" }
-      \line { You \italic may make derivative works, }
+      \line { You \italic may make derivative works. }
       \line { \bold "BY" (Attribution): Your derivative work must credit me. }
       \line { \bold "NC" (Non-Commercial): Your work, or performance of this work, should not be used commercially without my permission. }
       \line { \bold "SA" (ShareAlike): Your work should be published under a similar or more permissive license. }
