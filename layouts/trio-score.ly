@@ -24,7 +24,7 @@
     print-page-number = #f
   }
   \titlepage
-  \markup { \vspace #7 }
+  \markup { \vspace #14 }
   \cclicense
   \pageBreak
   \instructionpage
@@ -32,10 +32,10 @@
 
 \bookpart {
   \header {
+    dedication = "for the Kapok Winds, Guangzhou, China"
     title = "Theme and Variations"
-    subtitle = "(work in progress)"
     composer = "H. James Harkins"
-    copyright = "(c) 2014 H. James Harkins. Not licensed for performance yet."
+    copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"
     poet = "Score in C"
   }
 
