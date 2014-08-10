@@ -100,7 +100,7 @@ oboeSixEight = \relative c' {
   d2. ~
   d4 r8 \tuplet 3/2 { b'16\f ( cs e } b'8 ) d,,8->\sfp ~
   d4. ~ \tuplet 4/3 { d8 [ r8 e-.\f\< cs-. ] }
-  e16-. cs-. e-. bf'-. c32 ( e fs a\! d8 ) d,,4->\sfp ~
+  e16-. cs-. e-. bf'-. c!32 ( e fs a\! d8 ) d,,4->\sfp ~
   d4 r8 d4.->\ff
   R2.
   cs4.-> r4.
@@ -165,7 +165,9 @@ oboeOb = \relative c' {
     { gs,16 ( as8. ~ as2 ) }
     { s4\> s4. s8\! }
   >>
-  r4 r8 a?\mf ^"with urgency" ( \tuplet 5/4 { cs8\< ds ) e ( gs fs ) }
+  r4 r8
+  \shape #'((-1.8 . 1) (-1 . 1.2) (-0.6 . 0.7) (0 . 0)) Slur
+  a?\mf ^"with urgency" ( \tuplet 5/4 { cs8\< ds ) e ( gs fs ) }
   \tuplet 3/2 { ds'16->\> ( b gs } a4.\! ) \grace cs,16 ^( gs'8_\espressivo fs\! ) r8 a,\mf\< (
   cs ds ) \tuplet 3/2 { gs16->\> ( e a, e' gs8 ~ \! } gs4 ) \grace b16 ^( g8 f8 )
   \tuplet 5/4 { c8\< ( d e ) a, ( b } \tuplet 7/4 { ds8 ) f,-- g-- b-. fs'? ( e'  ) d,, _( }
@@ -281,7 +283,7 @@ oboeOB = \relative c' {
   e4. r8 e''2->\ff\> ~
   e2. r4\p
   f,,8^"upper notes to the fore" ( e ) f ( e ) fs\cresc ( e ) fs ( e )
-  f ( e ) g ( f ) g ( f ) g ( fs )
+  f! ( e ) g ( f ) g ( f ) g ( fs )
   g ( fs ) g-. g-. g-. g-+\f\< g-+ g-+
   g-+ g-+ g-+\ff r8 r2
   R1\fermataMarkup
@@ -293,7 +295,7 @@ oboeOB = \relative c' {
   ds->\ff r r d ( ds-> ) r d ( ds-> )
   r ds-> r4
   r4 cs8\f ( ds ) cs ( ds ) cs ( ds )
-  \tuplet 5/4 { cs4->\ff d!-> cs-> d-> cs }
+  \tuplet 5/4 { cs4->\ff d!-> cs-> d-> cs-> }
   r4 r8 d (
   ds4-> ) r d (
   ds-> ) r r
@@ -331,7 +333,7 @@ oboeFinal = \relative c' {
   e4\f\> e8\! r4.
   r4. c'!4\mf\> ( b8\! )
   R2.
-  r4. r8 cs,16\mf\< _( f g b
+  r4. r8 ^"breath accent" cs,16\mf\< _( f g b
   cs4.-> ~ \tuplet 2/3 4. { cs8 ) f,-> \f
                             d'-> e-> } cs'4.->
   e,16\mf\< ( cs d e ) d8 ~ ( d4 e8 )
@@ -344,23 +346,23 @@ oboeFinal = \relative c' {
   %a8-+ cs-+ d-+ b'-+ d,-+ d,-+ r d'4->
   f8-> ( e-. ) d-+ f-> ( g-. ) f-+ r g4->  % b-+ b'-+ b,-+ r d4->
   e'4-> \ff e,-> cs->
-  e,4 e8 e4 e8
-  e4 e8 r4.
-  r4. e''4 e8
+  e,4-> e8 e4-> e8
+  e4-> e8 r4.
+  r4. e''4-> e8
   R2.
-  bf,,4 bf8 d4 d8
-  r4. bf'4 bf8
+  bf,,4-> bf8 d4-> d8
+  r4. bf'4-> bf8
   R2.
-  r8 d,\mf d' r e, e' bf'8. af16-> ( g8 )
-  r8 fs, fs' gs16 ( as b a f c )
-  r8 d, d' r e, fs'32 ( es fs es
+  r8 d,-.\mf d'-. r e,-. e'-. bf'8. af16-> ( g8 )
+  r8 fs,-. fs'-. gs16 ( as b a f c )
+  r8 d,-. d'-. r e, fs'32 ( es fs es
   fs8. ) gs,16-> ( fs'8 ) f8. g,16-> ( f'8 )
-  r8 cs, d' e'8. e16-> e8
+  r8 cs,-> d'-. e'8. e16-> e8
   R2.
   r4. e,8. e16-> e8
   R2.
-  r8 r g g, r f'
-  f, r r e''8.\p f,16-> ( e'8 )
+  r8 r g-> g,-. r f'->
+  f,-. r r e''8.\p f,16-> ( e'8 )
   \once \override MultiMeasureRest.minimum-length = #15
   R1*3
   e,8.\mp\< ( d16 ) f8 ~ ( f16 e ) g8. ( f16\! )

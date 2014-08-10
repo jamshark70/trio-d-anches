@@ -227,7 +227,7 @@ clarBsn = \relative c' {
   \unset crescendoText
   \unset crescendoSpanner
   bf2\mf c2\>
-  cs2. d4 ~ 
+  cs!2. d4 ~ 
   d4. r8\pp r2
 }
 
@@ -266,7 +266,7 @@ clarOB = \relative c' {
   d,8-.\pp d-. r d-. r4 d'4\mp ~
   d4. r8 d''2->\ff\> ~
   d4 e,,8\p ( f e f e f )
-  e ( fs ) e ( fs ) e\cresc ( f ) e ( f )
+  e ( fs! ) e ( fs ) e\cresc ( f ) e ( f )
   e ( f ) d ( e ) d ( e ) d ( e )
   \tupletSpan 2 \tuplet 6/4 { d8 ( e d bf d e a b! af' e! d bf }
   \tupletSpan \default \tuplet 3/2 { d,8 [ e d ] } bf8\ff ) r8 r2
@@ -315,7 +315,7 @@ clarFinal = \relative c' {
   fs-+ e-+ bf-+ e,4\p e8-.
   R2.
   cs''4 cs8 r4.
-  r8 d,,16\mp ( e a b d4.->
+  r8 ^"breath accents" d,,16\mp ( e a b d4.->
   e8 ) r r r d,16 \cresc _( e a b
   d2.-> ~
   d8 ) \shape #'((0 . 0) (0 . 0.5) (-1.5 . 0.5) (0 . -0.5)) Slur b'16 ( d e a b4.-> ~
@@ -328,13 +328,13 @@ clarFinal = \relative c' {
   d,4-> d8-. r cs'4-> \<
   e8-+ d,-+ cs,-> ~ cs cs'-+ e,-+ a,4.->
   d'4->\ff d,-> d'->
-  bf,4 bf8 bf4 bf8
-  bf4 bf8 r4.
-  r4. d'4 d8
+  bf,4-> bf8 bf4-> bf8
+  bf4-> bf8 r4.
+  r4. d'4-> d8
   %r8 r bf16 ( c cs a as b cs d
   r8 r bf16 ( c \tuplet 9/6 { cs16 e, f g a as b cs d }
-  e4 ) e8 bf'4 bf8
-  r4. d,,4 d8
+  e4 ) e8 bf'4-> bf8
+  r4. d,,4-> d8
   R2.
   R1*9/8
   R2.*4

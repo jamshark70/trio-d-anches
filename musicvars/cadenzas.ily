@@ -37,6 +37,7 @@ clarCadenza = \relative c {
   \once \override NoteColumn.X-offset = #1
   b''8\mf\> g,,4 b'' g,, b''\p \bar "" r2\fermata \bar ""
   %\tag #'c-score { \break }
+  \shape #'((0 . 0) (0 . 0.7) (0 . 0.7) (0 . 0)) Slur
   e,16\mp^\markup "with increasing urgency" [ ( g e ) cs, ] e''8 [ ( cs b ] ) \bar ""
   e,,-- g4 ( e8 ) \bar ""
   \tuplet 5/4 { e''16\cresc [ ( cs e cs e ] ) } \bar ""
@@ -82,7 +83,7 @@ clarCadenzaC = \relative c'' {
   \override Beam.before-line-breaking = #accidentals-by-beam-group 
   d,,-- f''4..
   <<
-    { c,16-- ( g''2.\fermata ) }
+    { \shape #'((-1 . -1) (-1 . 0.5) (-0.5 . 0.5) (0 . 0)) Slur c,16-- ( g''2.\fermata ) }
     { s16 s2\> s8 s8\! }
   >> \bar ""
   r2 e4.\ppp\< \appoggiatura { \slurUp bf,16 [ d ] } f'4

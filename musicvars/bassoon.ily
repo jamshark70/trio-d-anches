@@ -249,7 +249,7 @@ bsnOB = \relative c' {
   %{\clef tenor%} cs''8\p ( ds ) cs ( ds ) cs ( d ) cs ( d )
   cs ( ds ) cs ( ds ) cs ( d ) cs ( d )
   \clef tenor cs16\f\< ( d e a\! b8-> ) r8 \clef bass cs,\p ( ds ) cs ( ds )
-  cs\< ( d ) cs ( d ) cs ( ds cs ) f,!->\sfp ~ (
+  cs\< ( d! ) cs ( d ) cs ( ds cs ) f,!->\sfp ~ (
   f cs' f,\< cs' ) f,4-- f->
   f,-> f-> f'->\f r4
   \clef tenor
@@ -291,10 +291,10 @@ bsnOB = \relative c' {
   r4 \clef tenor d'16->\sfz\> ( e8. ~ e2 ~
   e2.\fermata ) r4\p
   d8\f ( cs ) d ( cs ) ds ( cs ) ds ( cs )
-  d8 ( cs ) d ( cs ) ds ( cs ) ds ( cs )
-  \tupletSpan 2 \tuplet 3/2 { cs4->\ff d-> cs-> r cs-> d-> } \tupletSpan \default
+  d!8 ( cs ) d ( cs ) ds ( cs ) ds ( cs )
+  \tupletSpan 2 \tuplet 3/2 { cs4->\ff d!-> cs-> r cs-> d-> } \tupletSpan \default
   cs4-> r8 ds-.\f cs ( ds ) cs ( ds )
-  cs\< ( d ) cs ( d ) cs r8 cs,-. d-.
+  cs\< ( d! ) cs ( d ) cs r8 cs,-. d-.
   cs->\ff r r cs' ~ cs-> r cs ~ cs->
   r cs-> r4
   r4 d8\f ( cs ) d ( cs ) d ( cs )
@@ -335,7 +335,7 @@ bsnFinal = \relative c' {
   g-+ d-+ af-+ f4\p f8-.
   cs'16\mf\< ( d e8 ) d16 ( e f8 ) e16 ( f g8 )
   f,4\f\> f8\p r8 e16\mp _( a b d
-  f2.-> ~
+  f2.-> ^"breath accents" ~
   f8 ) f,?16 \cresc _( g c d f4.-> ~
   f8 ) e16 ( g a d e4.-> )
   \tuplet 2/3 4. { f,,8-> \f d'-> e-> cs'-> }
@@ -348,12 +348,12 @@ bsnFinal = \relative c' {
   r4. \clef tenor a''4.-> \<
   \clef bass a,-> a,-> r8 r a (
   bf2.\ff )
-  d'4 d8 d4 d8
-  d4 d8 r4.
-  r4. bf,,4 bf8
+  d'4-> d8 d4-> d8
+  d4-> d8 r4.
+  r4. bf,,4-> bf8
   R2.
-  d''4 d8 e,4 e8
-  r4. e'4 e8
+  d''4-> d8 e,4-> e8
+  r4. e'4-> e8
   R2.
   bf,,8->\mf bf' r d, d' r e, e' r
   bf,8-> bf' r fs'16 ( gs a f ef b )
