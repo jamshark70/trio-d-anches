@@ -20,8 +20,8 @@
 %}
 
 \header {
+  dedication = \markup \italic "for the Kapok Winds, Guangzhou, China"
   title = "Theme and Variations"
-  subtitle = "(work in progress)"
   composer = "H. James Harkins"
   copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"
   poet = "Oboe"
