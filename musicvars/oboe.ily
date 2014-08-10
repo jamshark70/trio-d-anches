@@ -111,7 +111,9 @@ oboeSixEight = \relative c' {
   cs4 cs2-> ~
   cs8 r8 r4 r4
   R1*6 R1\fermataMarkup
-  \cadenzaOn R1 \cadenzaOff
+  \tag #'c-score { \cadenzaOn R1 \cadenzaOff }
+  % this was a failed effort: It puts the markups on the barline
+  \tag #'part { \cadenzaOn R1\fermataMarkup ^"Clarinet cadenza" \cadenzaOff }
   r4 r8 e8\pp^\markup { \italic "non vib." } ~ e2 ~
   e2 ~ e16 r8.
   r4 r4 d4\ppp ~
@@ -163,7 +165,7 @@ oboeOb = \relative c' {
     { gs,16 ( as8. ~ as2 ) }
     { s4\> s4. s8\! }
   >>
-  r4 r8 a?\mf ^"urgently" ( \tuplet 5/4 { cs8\< ds ) e ( gs fs ) }
+  r4 r8 a?\mf ^"with urgency" ( \tuplet 5/4 { cs8\< ds ) e ( gs fs ) }
   \tuplet 3/2 { ds'16->\> ( b gs } a4.\! ) \grace cs,16 ^( gs'8_\espressivo fs\! ) r8 a,\mf\< (
   cs ds ) \tuplet 3/2 { gs16->\> ( e a, e' gs8 ~ \! } gs4 ) \grace b16 ^( g8 f8 )
   \tuplet 5/4 { c8\< ( d e ) a, ( b } \tuplet 7/4 { ds8 ) f,-- g-- b-. fs'? ( e'  ) d,, _( }
@@ -359,6 +361,7 @@ oboeFinal = \relative c' {
   R2.
   r8 r g g, r f'
   f, r r e''8.\p f,16-> ( e'8 )
+  \once \override MultiMeasureRest.minimum-length = #15
   R1*3
   e,8.\mp\< ( d16 ) f8 ~ ( f16 e ) g8. ( f16\! )
   R1*2

@@ -206,8 +206,8 @@ bsnBsn = \relative c {
   \clef bass \tuplet 3/2 { f,,8->\mf\> d' ( e ) } \tuplet 5/4 { b'16 ( \< cs ) f,! d' e }
   \clef tenor cs'4->\f ~ \tuplet 3/2 { cs8 c ( d ) }
   \override TrillPitchAccidental.avoid-slur = #'inside
-  cs16\> ( as gs g ) \tuplet 5/4 { a16\< ( fs e ds b ) } \pitchedTrill c!2->\sfz\>\startTrillSpan ~ d
-  c2 \clef bass bf,4\mp\stopTrillSpan c,\> ~
+  cs16\> ( as gs g ) \tuplet 5/4 { a16\< ( fs e ds b ) } \pitchedTrill c!2->\sfz\startTrillSpan ~ d
+  c2 \clef bass bf,4\stopTrillSpan c,\> ~
   c4. \breathe cs8\p f g \tuplet 5/4 { bf16 ( c ) ef f a }
   \clef tenor g'32->\mp ( e8.. ) g32-> ( e8.. ~ e8\> ) d32 ( e16. ~ e4 ~
   e8 ) r8\! r16 \clef bass cs,,16\p\< f g \tuplet 7/4 { bf16 ( c ) ef ( f a b d ) }

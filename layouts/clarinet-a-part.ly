@@ -22,7 +22,7 @@
   title = "Theme and Variations"
   subtitle = "(work in progress)"
   composer = "H. James Harkins"
-  copyright = "(c) 2014 H. James Harkins. Not licensed for performance yet."
+  copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"
   poet = "Clarinet in A"
 }
 
@@ -30,12 +30,15 @@
   \new Staff <<
     { \compressFullBarRests
       \override MultiMeasureRest.expand-limit = #1
-      \global \globalBsn \globalTwelveEight \globalOB
+      \global
+      \keepWithTag #'part \globalBsn % need accel... marking
+      \globalTwelveEight \globalOB
       \transpose a c' \globalOb
-      s1 \globalSixEight
+      \globalSixEight \globalFinal
     }
-    \transpose a c' { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb R1
+    \transpose a c' { \clarTheme \clarBsn \clarTwelveEight \clarOB \clarOb
                       \keepWithTag #'a-part \clarSixEight
+                      \clarFinal
     }
   >>
 }

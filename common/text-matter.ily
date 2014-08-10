@@ -48,6 +48,21 @@ cclicense = \markup {
   }
 }
 
+notationComments = \markup {
+  \column {
+    \line \large \bold { Notation }
+    \vspace #0.6
+    \normalsize
+    \wordwrap {
+      A \bold "0" centered in the staff after a bar line indicates unmetered music (a cadenza).
+    }
+    \vspace #0.6
+    \wordwrap {
+      Grace notes should be played before the beat.
+    }
+  }
+}
+
 instructionpage = \markup {
   \column {
     % title again here
@@ -79,16 +94,7 @@ instructionpage = \markup {
       (oboe), Schyler Fung (clarinet) and Michael Garza (bassoon).
     }
     \vspace #1.2
-    \line \large \bold { Notation }
-    \vspace #0.6
-    \normalsize
-    \wordwrap {
-      A \bold "0" centered in the staff after a bar line indicates unmetered music (a cadenza).
-    }
-    \vspace #0.6
-    \wordwrap {
-      Grace notes should be played before the beat.
-    }
+    \notationComments
     \vspace #1.2
     \line \large \bold { Acknowledgments }
     \vspace #0.6

@@ -8,6 +8,7 @@
 %\include "../musicvars/oboe.ily"
 %\include "../musicvars/clarinet.ily"
 \include "../musicvars/bassoon.ily"
+\include "../common/text-matter.ily"
 
 %#(set-global-staff-size 16)
 
@@ -22,7 +23,7 @@
   title = "Theme and Variations"
   subtitle = "(work in progress)"
   composer = "H. James Harkins"
-  copyright = "(c) 2014 H. James Harkins. Not licensed for performance yet."
+  copyright = "Licensed under Creative Commons CC-BY-NC-SA 4.0"
   poet = "Bassoon"
 }
 
@@ -30,8 +31,20 @@
   \new Staff <<
     { \compressFullBarRests
       \override MultiMeasureRest.expand-limit = #1
-      \global \globalBsn \globalTwelveEight \globalOB \globalOb s1 \globalSixEight
+      \global
+      \keepWithTag #'part \globalBsn % need accel... marking
+      \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal
     }
-    { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb R1 \override MultiMeasureRest.expand-limit = #1 \bsnSixEight }
+    { \bsnTheme \bsnBsn \bsnTwelveEight \bsnOB \bsnOb
+      \bsnSixEight
+      \bsnFinal
+    }
   >>
+}
+
+\markup {
+  \column {
+    \vspace #2
+    \notationComments
+  }
 }

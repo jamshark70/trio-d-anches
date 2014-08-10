@@ -33,7 +33,7 @@ clarCadenza = \relative c {
       f8 [ ( d' ] ) s4. \bar "" bf4-- s4 \bar "" f8-- s4.
     }
   >> \oneVoice
-  \tuplet 5/4 { d8\< [ e bf, e'' cs ] } \bar "" \tuplet 3/2 { f,,,8 [ d' ] e4 d8 [ e ] } \bar ""
+  \tuplet 5/4 { d8\< [ e! bf, e'' cs ] } \bar "" \tuplet 3/2 { f,,,8 [ d' ] e4 d8 [ e ] } \bar ""
   \once \override NoteColumn.X-offset = #1
   b''8\mf\> g,,4 b'' g,, b''\p \bar "" r2\fermata \bar ""
   %\tag #'c-score { \break }
@@ -44,7 +44,7 @@ clarCadenza = \relative c {
   fs32 [ ( e'16 ) fs,32 ( e'8 ) ] \bar "" 
   \once \override TextSpanner.bound-details.left.text = "Tenuto = stress this note"
   f,,8--\startTextSpan
-  \tuplet 5/4 { %{ \shape #'((0 . 0) (0 . 0) (0.8 . -1) (0 . 1.5)) Slur %} f'16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
+  \tuplet 5/4 { %{ \shape #'((0 . 0) (0 . 0) (0.8 . -1) (0 . 1.5)) Slur %} f'!16 [ ( fs e' fs, e' ] ) } \bar "" g,,8--
   e''' [ ( cs b ] ) \bar ""
   \tuplet 6/4 { f,16 [ ( fs e' ) bf ( c a' ] ) } \bar "" b,,8--\mf [ ( cs\stopTextSpan ] ) \bar ""
   \tuplet 5/4 { d'16\< [ ( e b' fs e' ] ) } \bar ""
@@ -86,6 +86,7 @@ clarCadenzaC = \relative c'' {
     { s16 s2\> s8 s8\! }
   >> \bar ""
   r2 e4.\ppp\< \appoggiatura { \slurUp bf,16 [ d ] } f'4
+  \tag #'a-part \shape #'((0 . 2.5) (0 . -3.2) (0 . -5.2) (0 . -1)) Slur
   cs,16--\> [ ( g''8. ~ ] g4 ~ g8 e4 f8\pppp )
   \cadenzaOff
   \accidentalStyle Staff.default

@@ -49,7 +49,10 @@
         { \global
           \keepWithTag #'part \globalBsn % need accel... marking
           \globalTwelveEight \globalOB \globalOb \globalSixEight \globalFinal }
-        { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb \oboeSixEight \oboeFinal }
+        { \oboeTheme \oboeBsn \oboeTwelveEight \oboeOB \oboeOb
+          \keepWithTag #'c-score \oboeSixEight
+          \oboeFinal
+        }
       >>
       \new Staff \with {
         instrumentName = "Clarinet"

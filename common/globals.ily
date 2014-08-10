@@ -29,7 +29,7 @@ globalTwelveEight = {
 globalSixEight = {
   \numericTimeSignature
   \mark \default
-  \tempo 4. = 72
+  \tempo "Playfully" 4. = 72
   \bar "||"
   \key c \major
   \time 6/8 s2.*6
@@ -69,7 +69,7 @@ globalOb = {
   \time 3/4 s2.
   \bar "||"
   \time 4/4 \numericTimeSignature
-  \tempo 4 = 92
+  \tempo "Lyrically" 4 = 92
   \mark \default
   \key cs \minor
   s1*7
@@ -130,7 +130,7 @@ globalOB = {
   \time 2/2 s1*10
   \mark \default
   s1*14
-  \tempo "Frantic" 2 = 116
+  \tempo "Frantically" 2 = 116
   \mark \default
   s1*6
   \time 1/2 s2
