@@ -270,17 +270,17 @@ bsnOB = \relative c' {
   \tuplet 3/2 { f,,4-^\sf g-. d'-> } r2
   r8 e'-+\f e-+ e-+ r2
   R1
-  %{\clef bass%} cs,,8\fff ( ds ) cs ( ds ) cs8 ( d ) cs ( d )
+  %{\clef bass%} cs,,4.->\fff ds'8-^ cs8 ( d ) cs ( d )
   cs8 ( ds ) cs ( ds ) cs8 ( ds ) cs ( d )
   cs8\> ( d ) cs ( d ) cs ( d\! ) r4
   R1
-  bf8-^\ff r8 r4 r2
+  bf,8-^\ff r8 r4 r2
   bf''8-^ r8 
   \shape #'((0 . 0) (0 . 0) (0 . 0) (-0.5 . -1)) Slur
   d2.->\sff ~ (
   d2 f,,8 ) r8 r4
-  r4 d!8\fff ( cs ) d ( cs d ) cs-> (
-  ds cs ds cs ds cs ) r bf''8->\sfp ~
+  r4 d'!8\fff ( cs ) d ( cs d ) cs-> (
+  ds cs ds cs ds cs ) r bf'8->\sfp ~
   bf1
   cs,,8-.\pp cs-. r cs-. r4 bf''4\mp ~
   bf4. r8 bf,,2->\ff\> ~
